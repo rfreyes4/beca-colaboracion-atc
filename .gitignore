@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Archivos temporales
+*.tmp
+*.bak
+*~
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Configuración local
+.env
+.env.*
+*.key
+*.pem
+
+# Archivos temporales de editores
+.idea/
