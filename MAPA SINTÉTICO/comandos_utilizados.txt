@@ -7,4 +7,28 @@ Salida = None: el programa utilizara la carpeta de salida que se ha definido en 
 
 
 
-
+python3 /usr/share/sumo/tools/randomTrips.py \
+  -n red_5x5/red_5x5.net.xml \
+  -b 0 \
+  -e 3600 \
+  -p 7.2 \
+  --random-depart \
+  --seed 42 \
+  -o red_5x5/trips_500.trips.xml \
+  -r red_5x5/rutas_500.rou.xml
+ 
+sumo-gui \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/500_rutas/rutas_500.rou.xml \
+  --begin 0 \
+  --end 3600 \
+  --delay 200
+  
+time sumo \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/500_rutas/rutas_500.rou.xml \
+  --begin 0 \
+  --end 3600 \
+  --duration-log.statistics \
+  --statistic-output red_5x5/500_rutas/micro_500_stats.xml \
+  --log red_5x5/500_rutas/micro_500.log

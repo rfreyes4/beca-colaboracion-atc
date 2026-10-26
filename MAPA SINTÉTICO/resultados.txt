@@ -1,0 +1,38 @@
+fel1xrr@fel1xrr-Aspire-A515-45:~/Escritorio/Proyectos de investigacion/REPO BECA
+ ATC/MAPA SINTÉTICO$ time sumo \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/500_rutas/rutas_500.rou.xml \
+  --begin 0 \
+  --end 3600 \
+  --duration-log.statistics \
+  --statistic-output red_5x5/500_rutas/micro_500_stats.xml \
+  --log red_5x5/500_rutas/micro_500.log
+Loading net-file from 'red_5x5/red_5x5.net.xml' ... done (4ms).
+Loading route-files incrementally from 'red_5x5/500_rutas/rutas_500.rou.xml'
+Loading done.
+Simulation version 1.28.0 started with time: 0.00.
+Step #0.00 (0ms ?*RT. ?UPS, vehicles TOT 0 ACT 0 BUF 0)                         Step #100.00 (0ms ?*RT. ?UPS, vehicles TOT 9 ACT 5 BUF 0)                       Step #200.00 (0ms ?*RT. ?UPS, vehicles TOT 21 ACT 6 BUF 0)                      Step #300.00 (0ms ?*RT. ?UPS, vehicles TOT 45 ACT 17 BUF 0)                     Step #400.00 (0ms ?*RT. ?UPS, vehicles TOT 57 ACT 5 BUF 0)                      Step #500.00 (0ms ?*RT. ?UPS, vehicles TOT 71 ACT 7 BUF 0)                      Step #600.00 (0ms ?*RT. ?UPS, vehicles TOT 84 ACT 7 BUF 0)                      Step #700.00 (0ms ?*RT. ?UPS, vehicles TOT 97 ACT 7 BUF 0)                      Step #800.00 (0ms ?*RT. ?UPS, vehicles TOT 104 ACT 5 BUF 0)                     Step #900.00 (0ms ?*RT. ?UPS, vehicles TOT 123 ACT 11 BUF 0)                    Step #1000.00 (0ms ?*RT. ?UPS, vehicles TOT 136 ACT 9 BUF 0)                    Step #1100.00 (0ms ?*RT. ?UPS, vehicles TOT 151 ACT 8 BUF 0)                    Step #1200.00 (0ms ?*RT. ?UPS, vehicles TOT 165 ACT 3 BUF 0)                    Step #1300.00 (0ms ?*RT. ?UPS, vehicles TOT 181 ACT 11 BUF 0)                   Step #1400.00 (0ms ?*RT. ?UPS, vehicles TOT 189 ACT 5 BUF 0)                    Step #1500.00 (0ms ?*RT. ?UPS, vehicles TOT 199 ACT 4 BUF 0)                    Step #1600.00 (0ms ?*RT. ?UPS, vehicles TOT 212 ACT 9 BUF 0)                    Step #1700.00 (0ms ?*RT. ?UPS, vehicles TOT 226 ACT 4 BUF 1)                    Step #1800.00 (0ms ?*RT. ?UPS, vehicles TOT 249 ACT 11 BUF 0)                   Step #1900.00 (0ms ?*RT. ?UPS, vehicles TOT 262 ACT 8 BUF 0)                    Step #2000.00 (0ms ?*RT. ?UPS, vehicles TOT 277 ACT 8 BUF 0)                    Step #2100.00 (0ms ?*RT. ?UPS, vehicles TOT 285 ACT 6 BUF 0)                    Step #2200.00 (0ms ?*RT. ?UPS, vehicles TOT 296 ACT 8 BUF 0)                    Step #2300.00 (0ms ?*RT. ?UPS, vehicles TOT 316 ACT 8 BUF 0)                    Step #2400.00 (0ms ?*RT. ?UPS, vehicles TOT 330 ACT 7 BUF 0)                    Step #2500.00 (0ms ?*RT. ?UPS, vehicles TOT 341 ACT 8 BUF 0)                    Step #2600.00 (1ms ~= 1000.00*RT, ~6000.00UPS, vehicles TOT 351 ACT 6 BUF 0)    Step #2700.00 (0ms ?*RT. ?UPS, vehicles TOT 363 ACT 4 BUF 0)                    Step #2800.00 (0ms ?*RT. ?UPS, vehicles TOT 378 ACT 8 BUF 0)                    Step #2900.00 (0ms ?*RT. ?UPS, vehicles TOT 390 ACT 6 BUF 1)                    Step #3000.00 (1ms ~= 1000.00*RT, ~9000.00UPS, vehicles TOT 409 ACT 9 BUF 0)    Step #3100.00 (0ms ?*RT. ?UPS, vehicles TOT 424 ACT 12 BUF 0)                   Step #3200.00 (0ms ?*RT. ?UPS, vehicles TOT 438 ACT 7 BUF 0)                    Step #3300.00 (0ms ?*RT. ?UPS, vehicles TOT 455 ACT 9 BUF 0)                    Step #3400.00 (0ms ?*RT. ?UPS, vehicles TOT 469 ACT 8 BUF 0)                    Step #3500.00 (0ms ?*RT. ?UPS, vehicles TOT 484 ACT 8 BUF 0)                    Step #3600.00 (0ms ?*RT. ?UPS, vehicles TOT 501 ACT 8 BUF 0)                              
+Simulation ended at time: 3600.00.
+Reason: The final simulation step has been reached.
+Performance:
+ Duration: 0.09s
+ Real time factor: 42352.9
+ UPS: 314376.470588
+Vehicles:
+ Inserted: 501
+ Running: 8
+ Waiting: 0
+Statistics (avg of 493):
+ RouteLength: 579.83
+ Speed: 10.94
+ Duration: 53.71
+ WaitingTime: 0.16
+ TimeLoss: 9.94
+ DepartDelay: 0.55
+
+real	0m0,151s
+user	0m0,122s
+sys	0m0,025s
+fel1xrr@fel1xrr-Aspire-A515-45:~/Escritorio/Proyectos de investigacion/REPO BECA ATC/MAPA SINTÉTICO$ 
+
+
