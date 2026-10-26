@@ -160,8 +160,8 @@ Las pruebas se han realizado con **SUMO 1.28.0**.
 | 1.000 | 1.001 | 981 | 0 | 0,59 | 54,84 | 10,70 | 0 | 0,220 |
 | 1.500 | 1.500 | 1.471 | 0 | 1,56 | 56,95 | 10,37 | 0 | 0,327 |
 | 2.000 | 2.000 | 1.956 | 0 | 3,97 | 60,84 | 9,83 | 0 | 0,432 |
-| 2.500 | 2.500 | 2.442 | 0 | 9,55 | 70,64 | 8,95 | 0 | 0,577 |
-| 3.000 | 2.970 | 2.817 | 31 | 33,45 | 107,26 | 7,07 | 0 | 0,911 |
+| 2.500 | 2.500 | 2.442 | 0 | **9,55** | 70,64 | 8,95 | 0 | 0,577 |
+| **3.000** | 2.970 | 2.817 | **31** | **33,45** | **107,26** | 7,07 | 0 | 0,911 |
 | **3.500** | **1.105** | **597** | **2.395** | **323,41** | **430,00** | **6,25** | **127** | **5,826** |
 
 **Significado de los resultados:**
@@ -171,7 +171,7 @@ Las pruebas se han realizado con **SUMO 1.28.0**.
 - **Waiting:** vehículos que siguen esperando para incorporarse al finalizar la simulación.
 - **Espera media:** tiempo medio que los vehículos han pasado detenidos durante sus recorridos.
 - **Viaje medio:** tiempo medio necesario para completar los recorridos.
-- **Velocidad:** velocidad media registrada durante los viajes completados.
+- **Velocidad:** velocidad media registrada para los viajes completados.
 - **Teletransportes:** veces que SUMO ha tenido que intervenir para resolver bloqueos prolongados.
 - **Tiempo real:** tiempo que ha tardado el ordenador en ejecutar la simulación.
 
@@ -179,8 +179,8 @@ Los tiempos medios se calculan sobre los vehículos que han completado sus recor
 
 ### Observaciones
 
-- **De 500 a 2.500 vehículos:** la red funciona con normalidad, aunque los tiempos de espera van aumentando.
-- **Con 3.000 vehículos:** empieza a observarse una congestión importante y aparecen vehículos que no consiguen incorporarse.
-- **Con 3.500 vehículos:** la red presenta una saturación mucho mayor, con 2.395 vehículos esperando y 127 teletransportes.
+- **De 500 a 2.500 vehículos:** la red permite incorporar todos los vehículos, aunque los tiempos de espera van aumentando.
+- **Con 3.000 vehículos:** la congestión aumenta considerablemente y aparecen los primeros vehículos pendientes de incorporarse.
+- **Con 3.500 vehículos:** se observa una saturación mucho mayor, con **2.395 vehículos esperando** y **127 teletransportes**.
 
-También se observa que, a medida que aumenta la congestión, SUMO necesita más tiempo para completar la simulación.
+También se observa un aumento importante del tiempo de ejecución, pasando de **0,911 s a 5,826 s** entre las dos últimas pruebas.
