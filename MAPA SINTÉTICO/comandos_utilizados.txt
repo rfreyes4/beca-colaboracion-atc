@@ -1,0 +1,10 @@
+python3 "MAPA SINTÉTICO/mapa_sintetico.py" -n 5 --longitud 100 --semilla 42
+
+N = 5 : red de 5 filas y 5 columnas
+longitud = 100: separacion de 100 metros entre intersecciones
+semilla = 42: permite reproducir la misma distribucion aleatoria
+Salida = None: el programa utilizara la carpeta de salida que se ha definido en el codigo
+
+
+
+

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<nodes>
+  <node id="j-0-0" x="0.00" y="400.00" type="priority" rightOfWay="edgePriority" keepClear="true" />
+  <node id="j-0-1" x="100.00" y="400.00" type="priority" rightOfWay="edgePriority" keepClear="true" />
+  <node id="j-0-2" x="200.00" y="400.00" type="priority" rightOfWay="edgePriority" keepClear="true" />
+  <node id="j-0-3" x="300.00" y="400.00" type="priority" rightOfWay="edgePriority" keepClear="true" />
+  <node id="j-0-4" x="400.00" y="400.00" type="priority" rightOfWay="edgePriority" keepClear="true" />
+  <node id="j-1-0" x="0.00" y="300.00" type="priority" rightOfWay="edgePriority" keepClear="true" />
+  <node id="j-1-1" x="100.00" y="300.00" type="priority" rightOfWay="edgePriority" keepClear="true" />
+  <node id="j-1-2" x="200.00" y="300.00" type="priority" rightOfWay="edgePriority" keepClear="true" />
+  <node id="j-1-3" x="300.00" y="300.00" type="priority" rightOfWay="edgePriority" keepClear="true" />
+  <node id="j-1-4" x="400.00" y="300.00" type="priority" rightOfWay="edgePriority" keepClear="true" />
+  <node id="j-2-0" x="0.00" y="200.00" type="priority" rightOfWay="edgePriority" keepClear="true" />
+  <node id="j-2-1" x="100.00" y="200.00" type="priority" rightOfWay="edgePriority" keepClear="true" />
+  <node id="j-2-2" x="200.00" y="200.00" type="priority" rightOfWay="edgePriority" keepClear="true" />
+  <node id="j-2-3" x="300.00" y="200.00" type="priority" rightOfWay="edgePriority" keepClear="true" />
+  <node id="j-2-4" x="400.00" y="200.00" type="priority" rightOfWay="edgePriority" keepClear="true" />
+  <node id="j-3-0" x="0.00" y="100.00" type="priority" rightOfWay="edgePriority" keepClear="true" />
+  <node id="j-3-1" x="100.00" y="100.00" type="priority" rightOfWay="edgePriority" keepClear="true" />
+  <node id="j-3-2" x="200.00" y="100.00" type="priority" rightOfWay="edgePriority" keepClear="true" />
+  <node id="j-3-3" x="300.00" y="100.00" type="priority" rightOfWay="edgePriority" keepClear="true" />
+  <node id="j-3-4" x="400.00" y="100.00" type="priority" rightOfWay="edgePriority" keepClear="true" />
+  <node id="j-4-0" x="0.00" y="0.00" type="priority" rightOfWay="edgePriority" keepClear="true" />
+  <node id="j-4-1" x="100.00" y="0.00" type="priority" rightOfWay="edgePriority" keepClear="true" />
+  <node id="j-4-2" x="200.00" y="0.00" type="priority" rightOfWay="edgePriority" keepClear="true" />
+  <node id="j-4-3" x="300.00" y="0.00" type="priority" rightOfWay="edgePriority" keepClear="true" />
+  <node id="j-4-4" x="400.00" y="0.00" type="priority" rightOfWay="edgePriority" keepClear="true" />
+</nodes>

@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<edges>
+  <edge id="h-0-0-a-1" from="j-0-0" to="j-0-1" priority="1" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="h-0-1-a-2" from="j-0-1" to="j-0-2" priority="3" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="h-0-2-a-3" from="j-0-2" to="j-0-3" priority="3" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="h-0-3-a-4" from="j-0-3" to="j-0-4" priority="3" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="h-1-4-a-3" from="j-1-4" to="j-1-3" priority="3" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="h-1-3-a-2" from="j-1-3" to="j-1-2" priority="3" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="h-1-2-a-1" from="j-1-2" to="j-1-1" priority="1" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="h-1-1-a-0" from="j-1-1" to="j-1-0" priority="1" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="h-2-0-a-1" from="j-2-0" to="j-2-1" priority="1" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="h-2-1-a-2" from="j-2-1" to="j-2-2" priority="1" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="h-2-2-a-3" from="j-2-2" to="j-2-3" priority="3" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="h-2-3-a-4" from="j-2-3" to="j-2-4" priority="3" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="h-3-4-a-3" from="j-3-4" to="j-3-3" priority="1" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="h-3-3-a-2" from="j-3-3" to="j-3-2" priority="1" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="h-3-2-a-1" from="j-3-2" to="j-3-1" priority="1" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="h-3-1-a-0" from="j-3-1" to="j-3-0" priority="1" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="h-4-0-a-1" from="j-4-0" to="j-4-1" priority="1" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="h-4-1-a-2" from="j-4-1" to="j-4-2" priority="3" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="h-4-2-a-3" from="j-4-2" to="j-4-3" priority="3" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="h-4-3-a-4" from="j-4-3" to="j-4-4" priority="3" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="v-0-0-a-1" from="j-0-0" to="j-1-0" priority="3" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="v-0-1-a-2" from="j-1-0" to="j-2-0" priority="3" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="v-0-2-a-3" from="j-2-0" to="j-3-0" priority="3" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="v-0-3-a-4" from="j-3-0" to="j-4-0" priority="1" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="v-1-4-a-3" from="j-4-1" to="j-3-1" priority="3" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="v-1-3-a-2" from="j-3-1" to="j-2-1" priority="3" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="v-1-2-a-1" from="j-2-1" to="j-1-1" priority="3" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="v-1-1-a-0" from="j-1-1" to="j-0-1" priority="3" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="v-2-0-a-1" from="j-0-2" to="j-1-2" priority="1" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="v-2-1-a-2" from="j-1-2" to="j-2-2" priority="3" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="v-2-2-a-3" from="j-2-2" to="j-3-2" priority="3" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="v-2-3-a-4" from="j-3-2" to="j-4-2" priority="1" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="v-3-4-a-3" from="j-4-3" to="j-3-3" priority="3" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="v-3-3-a-2" from="j-3-3" to="j-2-3" priority="1" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="v-3-2-a-1" from="j-2-3" to="j-1-3" priority="1" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="v-3-1-a-0" from="j-1-3" to="j-0-3" priority="1" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="v-4-0-a-1" from="j-0-4" to="j-1-4" priority="3" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="v-4-1-a-2" from="j-1-4" to="j-2-4" priority="1" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="v-4-2-a-3" from="j-2-4" to="j-3-4" priority="3" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="v-4-3-a-4" from="j-3-4" to="j-4-4" priority="1" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="retorno-inicial" from="j-1-0" to="j-0-0" priority="1" numLanes="1" speed="13.89" spreadType="right" />
+  <edge id="retorno-final" from="j-4-4" to="j-3-4" priority="1" numLanes="1" speed="13.89" spreadType="right" />
+</edges>
