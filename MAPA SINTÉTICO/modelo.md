@@ -184,3 +184,17 @@ Los tiempos medios se calculan sobre los vehículos que han completado sus recor
 - **Con 3.500 vehículos:** se observa una saturación mucho mayor, con **2.395 vehículos esperando** y **127 teletransportes**.
 
 También se observa un aumento importante del tiempo de ejecución, pasando de **0,911 s a 5,826 s** entre las dos últimas pruebas.
+
+### Gráficas de los resultados
+
+**Estado de los vehículos al finalizar**
+
+![Estado de los vehículos](imagenes/01_estado_vehiculos.png)
+
+**Tiempos medios de espera y viaje**
+
+![Tiempos de espera y viaje](imagenes/02_tiempos_espera_viaje.png)
+
+**Tiempo real de ejecución**
+
+![Tiempo de ejecución](imagenes/03_tiempo_ejecucion.png)
