@@ -110,7 +110,7 @@ El parámetro `--time-to-teleport 300` permite teletransportar vehículos cuando
 
 | Vehículos* | Insertados | Velocidad (m/s) | Espera (s) | Teleports | Tiempo real (s) |
 |---:|---:|---:|---:|---:|---:|
-| 2000 | 2000 | 9,49 | 3,77 | — | 0,506 |
+| 2000 | 2000 | 9,49 | 3,77 | 0 | 0,506 |
 | 2500 | 2500 | 8,98 | 6,77 | 0 | 0,652 |
 | 3000 | 3001 | 8,43 | 10,56 | 0 | 0,782 |
 | 3500 | 3500 | 7,66 | 17,82 | 0 | 0,984 |
