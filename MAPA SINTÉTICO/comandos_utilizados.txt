@@ -32,3 +32,15 @@ time sumo \
   --duration-log.statistics \
   --statistic-output red_5x5/500_rutas/micro_500_stats.xml \
   --log red_5x5/500_rutas/micro_500.log
+ 
+
+fel1xrr@fel1xrr-Aspire-A515-45:~/Escritorio/Proyectos de investigacion/REPO BECA
+ ATC/MAPA SINTÉTICO$ time sumo \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/500_rutas/rutas_500.rou.xml \
+  --begin 0 \
+  --end 3600 \
+  --mesosim \
+  --duration-log.statistics \
+  --statistic-output red_5x5/500_rutas/meso_500_stats.xml \
+  --log red_5x5/500_rutas/meso_500.log

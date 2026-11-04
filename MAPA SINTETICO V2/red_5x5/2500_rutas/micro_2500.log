@@ -1,0 +1,21 @@
+Loading net-file from 'red_5x5/red_5x5.net.xml' ... done (11ms).
+Loading route-files incrementally from 'red_5x5/2500_rutas/rutas_2500.rou.xml'
+Loading done.
+Simulation version 1.28.0 started with time: 0.00.
+Simulation ended at time: 3600.00.
+Reason: The final simulation step has been reached.
+Performance:
+ Duration: 0.58s
+ Real time factor: 6239.17
+ UPS: 310251.299827
+Vehicles:
+ Inserted: 2500
+ Running: 53
+ Waiting: 0
+Statistics (avg of 2447):
+ RouteLength: 626.43
+ Speed: 8.98
+ Duration: 72.28
+ WaitingTime: 6.77
+ TimeLoss: 24.21
+ DepartDelay: 0.54

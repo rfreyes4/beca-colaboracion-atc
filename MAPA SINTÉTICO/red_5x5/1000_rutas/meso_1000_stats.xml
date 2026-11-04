@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-10-27T18:45:43.388358+01:00 by Eclipse SUMO sumo 1.28.0
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="red_5x5/red_5x5.net.xml"/>
+        <route-files value="red_5x5/1000_rutas/rutas_1000.rou.xml"/>
+    </input>
+
+    <output>
+        <statistic-output value="red_5x5/1000_rutas/meso_1000_stats.xml"/>
+    </output>
+
+    <time>
+        <begin value="0"/>
+        <end value="3600"/>
+    </time>
+
+    <report>
+        <log value="red_5x5/1000_rutas/meso_1000.log"/>
+        <duration-log.statistics value="true"/>
+    </report>
+
+    <mesoscopic>
+        <mesosim value="true"/>
+    </mesoscopic>
+
+</sumoConfiguration>
+-->
+
+<statistics xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/statistic_file.xsd">
+    <performance clockBegin="1793123143.39" clockEnd="1793123143.44" clockDuration="0.05" traciDuration="3.57" realTimeFactor="73469.39" vehicleUpdatesPerSecond="874428.57" personUpdatesPerSecond="0.00" begin="0.00" end="3600.00" duration="3600.00"/>
+    <vehicles loaded="1001" inserted="1001" running="11" waiting="0"/>
+    <teleports total="0" jam="0" yield="0" wrongLane="0"/>
+    <safety collisions="0" emergencyStops="0" emergencyBraking="0"/>
+    <persons loaded="0" running="0" jammed="0"/>
+    <personTeleports total="0" abortWait="0" wrongDest="0"/>
+    <vehicleTripStatistics count="990" routeLength="579.95" speed="13.56" duration="43.03" waitingTime="0.11" timeLoss="0.65" departDelay="0.40" departDelayWaiting="-1.00" totalTravelTime="42601.00" totalDepartDelay="397.20"/>
+    <pedestrianStatistics number="0" routeLength="0.00" duration="0.00" timeLoss="0.00"/>
+    <rideStatistics number="0"/>
+    <transportStatistics number="0"/>
+</statistics>

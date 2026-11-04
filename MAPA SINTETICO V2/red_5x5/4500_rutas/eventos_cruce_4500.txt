@@ -1,0 +1,49 @@
+Cruce: j-2-2; coordenadas: (300.0, 300.0); ventana: 290-430s
+Las entradas NO demuestran, por si solas, por qué se concedió el paso.
+Las prioridades, huecos y vehículos conflictivos deben analizarse conjuntamente.
+
+  293.0 s | ENTRA AL CRUCE 274, desde e-j-3-2-a-j-2-2_0, velocidad 4.98 m/s
+  294.0 s | ENTRA AL CRUCE 215, desde e-j-2-1-a-j-2-2_0, velocidad 2.32 m/s
+  296.0 s | ENTRA AL CRUCE 260, desde e-j-2-3-a-j-2-2_0, velocidad 10.11 m/s
+  305.0 s | ENTRA AL CRUCE 255, desde e-j-2-3-a-j-2-2_0, velocidad 5.06 m/s
+  308.0 s | ENTRA AL CRUCE 320, desde e-j-2-3-a-j-2-2_0, velocidad 5.86 m/s
+  309.0 s | ENTRA AL CRUCE 318, desde e-j-1-2-a-j-2-2_0, velocidad 7.14 m/s
+  313.0 s | ENTRA AL CRUCE 281, desde e-j-2-3-a-j-2-2_0, velocidad 8.21 m/s
+  315.0 s | ENTRA AL CRUCE 279, desde e-j-2-1-a-j-2-2_0, velocidad 2.59 m/s
+  315.0 s | REANUDA 279: estaba detenido al menos 6 s; carril :j-2-2_11_0
+  327.0 s | ENTRA AL CRUCE 207, desde e-j-2-1-a-j-2-2_0, velocidad 2.37 m/s
+  327.0 s | REANUDA 207: estaba detenido al menos 5 s; carril :j-2-2_10_0
+  328.0 s | ENTRA AL CRUCE 364, desde e-j-1-2-a-j-2-2_0, velocidad 0.74 m/s
+  332.0 s | ENTRA AL CRUCE 326, desde e-j-1-2-a-j-2-2_0, velocidad 5.08 m/s
+  335.0 s | ENTRA AL CRUCE 328, desde e-j-1-2-a-j-2-2_0, velocidad 5.15 m/s
+  336.0 s | ENTRA AL CRUCE 277, desde e-j-2-3-a-j-2-2_0, velocidad 0.83 m/s
+  336.0 s | REANUDA 277: estaba detenido al menos 10 s; carril :j-2-2_4_0
+  337.0 s | REANUDA 344: estaba detenido al menos 2 s; carril e-j-2-3-a-j-2-2_0
+  339.0 s | ENTRA AL CRUCE 238, desde e-j-3-2-a-j-2-2_0, velocidad 0.91 m/s
+  339.0 s | ENTRA AL CRUCE 344, desde e-j-2-3-a-j-2-2_0, velocidad 4.83 m/s
+  339.0 s | REANUDA 238: estaba detenido al menos 13 s; carril :j-2-2_8_0
+  340.0 s | REANUDA 329: estaba detenido al menos 12 s; carril e-j-3-2-a-j-2-2_0
+  343.0 s | ENTRA AL CRUCE 329, desde e-j-3-2-a-j-2-2_0, velocidad 5.99 m/s
+  345.0 s | ENTRA AL CRUCE 303, desde e-j-2-1-a-j-2-2_0, velocidad 2.07 m/s
+  345.0 s | REANUDA 303: estaba detenido al menos 6 s; carril :j-2-2_11_0
+  348.0 s | ENTRA AL CRUCE 266, desde e-j-2-1-a-j-2-2_0, velocidad 5.92 m/s
+  355.0 s | ENTRA AL CRUCE 388, desde e-j-2-1-a-j-2-2_0, velocidad 8.23 m/s
+  392.0 s | ENTRA AL CRUCE 383, desde e-j-2-1-a-j-2-2_0, velocidad 2.39 m/s
+  392.0 s | REANUDA 383: estaba detenido al menos 18 s; carril :j-2-2_11_0
+  395.0 s | ENTRA AL CRUCE 362, desde e-j-2-1-a-j-2-2_0, velocidad 5.19 m/s
+  397.0 s | ENTRA AL CRUCE 380, desde e-j-1-2-a-j-2-2_0, velocidad 2.18 m/s
+  397.0 s | REANUDA 380: estaba detenido al menos 22 s; carril :j-2-2_2_0
+  398.0 s | REANUDA 374: estaba detenido al menos 18 s; carril e-j-1-2-a-j-2-2_0
+  400.0 s | ENTRA AL CRUCE 374, desde e-j-1-2-a-j-2-2_0, velocidad 4.74 m/s
+  407.0 s | ENTRA AL CRUCE 333, desde e-j-1-2-a-j-2-2_0, velocidad 6.92 m/s
+  408.0 s | ENTRA AL CRUCE 398, desde e-j-2-3-a-j-2-2_0, velocidad 1.96 m/s
+  408.0 s | REANUDA 398: estaba detenido al menos 26 s; carril :j-2-2_4_0
+  409.0 s | REANUDA 363: estaba detenido al menos 23 s; carril e-j-2-3-a-j-2-2_0
+  410.0 s | REANUDA 426: estaba detenido al menos 22 s; carril e-j-2-3-a-j-2-2_0
+  411.0 s | ENTRA AL CRUCE 363, desde e-j-2-3-a-j-2-2_0, velocidad 6.17 m/s
+  412.0 s | ENTRA AL CRUCE 317, desde e-j-3-2-a-j-2-2_0, velocidad 0.37 m/s
+  413.0 s | ENTRA AL CRUCE 426, desde e-j-2-3-a-j-2-2_0, velocidad 6.59 m/s
+  413.0 s | REANUDA 317: estaba detenido al menos 35 s; carril :j-2-2_8_0
+  414.0 s | REANUDA 406: estaba detenido al menos 29 s; carril e-j-3-2-a-j-2-2_0
+  415.0 s | ENTRA AL CRUCE 401, desde e-j-2-1-a-j-2-2_0, velocidad 5.96 m/s
+  417.0 s | ENTRA AL CRUCE 406, desde e-j-3-2-a-j-2-2_0, velocidad 5.84 m/s

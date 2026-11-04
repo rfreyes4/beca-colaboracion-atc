@@ -1,0 +1,24 @@
+python3 /usr/share/sumo/tools/randomTrips.py \
+  -n red_5x5/red_5x5.net.xml \
+  -b 0 \
+  -e 3600 \
+  -p 1.8 \
+  --random-depart \
+  --seed 42 \
+  --fringe-factor max \
+  --fringe-junctions \
+  --min-distance 200 \
+  -o red_5x5/2000_rutas/viajes_2000.trips.xml \
+  --route-file red_5x5/2000_rutas/rutas_2000.rou.xml
+  
+  
+fel1xrr@fel1xrr-Aspire-A515-45:~/Escritorio/Proyectos de investigacion/REPO BECA ATC/MAPA SINTETICO V2$ time sumo \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/2000_rutas/rutas_2000.rou.xml \
+  --begin 0 \
+  --end 3600 \
+  --time-to-teleport 300 \
+  --duration-log.statistics \
+  --statistic-output red_5x5/2000_rutas/micro_2000_stats.xml \
+  --log red_5x5/2000_rutas/micro_2000.log
+

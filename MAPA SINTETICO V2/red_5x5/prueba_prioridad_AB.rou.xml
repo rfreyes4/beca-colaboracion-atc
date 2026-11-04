@@ -1,0 +1,27 @@
+<routes>
+
+    <vType id="coche_prueba"
+           accel="2.6"
+           decel="4.5"
+           sigma="0"
+           length="5"
+           minGap="2.5"
+           maxSpeed="13.89"/>
+
+    <!-- A: NORTE -> OESTE, giro a la derecha -->
+    <vehicle id="A" type="coche_prueba"
+             depart="0" departSpeed="0">
+        <route edges="
+            e-j-1-2-a-j-2-2
+            e-j-2-2-a-j-2-1"/>
+    </vehicle>
+
+    <!-- B: ESTE -> OESTE, continúa recto -->
+    <vehicle id="B" type="coche_prueba"
+             depart="0" departSpeed="0">
+        <route edges="
+            e-j-2-3-a-j-2-2
+            e-j-2-2-a-j-2-1"/>
+    </vehicle>
+
+</routes>
