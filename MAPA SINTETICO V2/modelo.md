@@ -1,58 +1,108 @@
 # Mapa sintético V2
 
-En esta segunda versión se ha desarrollado una red de carreteras sintética para realizar simulaciones de tráfico con **SUMO 1.28.0**.
+En esta segunda versión se ha desarrollado una red de carreteras sintética para realizar pruebas de tráfico con **SUMO 1.28.0**.
 
-El mapa se genera mediante el script [mapa_sintetico_v2.py](./mapa_sintetico_v2.py), que permite crear una red de tamaño `N × N` y modificar la distancia entre intersecciones.
+La red se genera mediante el script [mapa_sintetico_v2.py](./mapa_sintetico_v2.py), que permite modificar el número de intersecciones y la distancia entre ellas.
+
+Para las pruebas se ha utilizado una malla de **5 × 5 intersecciones**.
 
 ![Mapa sintético V2](imagenes/mapa_sintetico_v2.png)
 
 ## 1. Características del mapa
 
-Para las pruebas se ha utilizado una red de **5 × 5 intersecciones**, con las siguientes características:
+La red presenta las siguientes características:
 
 - **25 intersecciones**, separadas 100 metros.
 - **Carreteras bidireccionales**, con un carril por sentido.
-- **Velocidad máxima de 50 km/h** aproximadamente.
-- **Prioridad por la derecha** (`right_before_left`), sin semáforos.
+- **Velocidad máxima de 13,89 m/s**, aproximadamente 50 km/h.
+- **Prioridad por la derecha**, sin semáforos.
 - **20 tramos exteriores** para permitir la entrada y salida de vehículos.
 - **Sin giros en U**.
 
 ### Diferencias respecto a V1
 
-La principal diferencia es que ahora todas las calles permiten circular en ambos sentidos.
+La principal diferencia es que ahora las calles permiten circular en ambos sentidos.
 
 También se han introducido algunos cambios:
 
 - **`right_before_left`:** los vehículos deben ceder el paso a los que llegan por su derecha.
-- **`keepClear="true"`:** intenta evitar que los vehículos entren en una intersección si no tienen espacio suficiente para salir de ella.
-- **`fringe="outer"`:** identifica los extremos exteriores de la red, utilizados para generar los viajes.
-- **`--no-turnarounds.fringe true`:** evita los giros en U en los extremos exteriores.
+- **`keepClear="true"`:** intenta evitar que un vehículo entre en una intersección cuando no tiene espacio suficiente para salir de ella. No elimina todos los atascos.
+- **`fringe="outer"`:** identifica los nodos exteriores de la red para facilitar la generación de viajes desde sus extremos.
+- **Giros permitidos:** los vehículos pueden continuar recto o girar a izquierda y derecha, pero no realizar giros en U.
 
-### Generación del mapa
+## 2. Generación de la red
 
-Desde la carpeta `MAPA SINTETICO V2`:
+El mapa se crea ejecutando:
 
 ```bash
 python3 mapa_sintetico_v2.py -n 5 --longitud 100
 ```
 
-Donde `-n 5` indica las filas y columnas, y `--longitud 100` establece la separación entre intersecciones en metros.
+Donde:
 
-El programa genera automáticamente la carpeta `red_5x5`, que contiene los archivos de la red.
+- `-n 5`: indica que queremos una red de 5 filas y 5 columnas.
+- `--longitud 100`: establece una separación de 100 metros entre intersecciones y en los tramos exteriores.
 
-Para visualizarla:
+El script crea automáticamente la carpeta `red_5x5`.
+
+### Archivos generados
+
+Antes de construir la red definitiva, Python genera tres archivos:
+
+| Archivo | Contenido |
+|---|---|
+| `red_5x5.nod.xml` | Posición y configuración de los nodos e intersecciones. |
+| `red_5x5.edg.xml` | Carreteras, sentidos, carriles y velocidades. |
+| `red_5x5.con.xml` | Conexiones y movimientos permitidos entre carreteras. |
+
+Una vez creados, el propio script ejecuta **`netconvert`** para generar el archivo definitivo:
+
+`red_5x5.net.xml`
+
+Este es el archivo que utiliza SUMO para realizar las simulaciones.
+
+### Configuración de netconvert
+
+El generador utiliza las siguientes opciones:
+
+```bash
+netconvert \
+  --node-files red_5x5/red_5x5.nod.xml \
+  --edge-files red_5x5/red_5x5.edg.xml \
+  --connection-files red_5x5/red_5x5.con.xml \
+  --output-file red_5x5/red_5x5.net.xml \
+  --no-turnarounds true \
+  --no-turnarounds.fringe true \
+  --default.junctions.type right_before_left
+```
+
+**¿Para qué sirve cada una?**
+
+- **`--node-files`:** carga los nodos que ha creado Python.
+- **`--edge-files`:** carga las carreteras.
+- **`--connection-files`:** indica qué movimientos están permitidos.
+- **`--output-file`:** establece dónde se guarda la red final.
+- **`--no-turnarounds true`:** evita que `netconvert` genere conexiones de giro en U.
+- **`--no-turnarounds.fringe true`:** evita esos giros también en los nodos exteriores, que funcionan como extremos de la red.
+- **`--default.junctions.type right_before_left`:** establece la prioridad por la derecha como tipo predeterminado de intersección.
+
+Además, el propio script Python evita crear conexiones de giro en U. Por tanto, esta restricción se aplica tanto al generar las conexiones como al construir la red con `netconvert`.
+
+**Importante:** no es necesario ejecutar este comando manualmente. El script Python ya se encarga de llamar a `netconvert`.
+
+### Visualización
+
+Para abrir el mapa:
 
 ```bash
 sumo-gui -n red_5x5/red_5x5.net.xml
 ```
 
----
+## 3. Generación de vehículos
 
-## 2. Generación de vehículos
+Para generar los viajes utilizamos `randomTrips.py`, una herramienta incluida en SUMO.
 
-Para generar los viajes se utiliza `randomTrips.py`, una herramienta incluida en SUMO.
-
-Por ejemplo, para una demanda aproximada de **5000 vehículos**:
+Por ejemplo, para generar aproximadamente **5000 vehículos**:
 
 ```bash
 mkdir -p red_5x5/5000_rutas
@@ -67,27 +117,30 @@ python3 /usr/share/sumo/tools/randomTrips.py \
   --route-file red_5x5/5000_rutas/rutas_5000.rou.xml
 ```
 
-**Parámetros principales:**
+### Parámetros utilizados
 
-- `-b 0 -e 3600`: genera las salidas durante una hora simulada.
-- `-p 0.72`: establece el intervalo nominal entre viajes. Cuanto menor sea, más vehículos se generan.
-- `--random-depart`: distribuye aleatoriamente los instantes de salida.
-- `--seed 42`: permite reproducir los resultados.
-- `--fringe-factor max --fringe-junctions`: favorece los accesos exteriores de la red.
-- `--min-distance 200`: establece una distancia mínima de 200 metros entre origen y destino.
-- `-o` y `--route-file`: guardan los viajes y sus rutas.
+- **`-n`:** indica la red sobre la que se generan los vehículos.
+- **`-b 0 -e 3600`:** genera los viajes durante una hora simulada.
+- **`-p 0.72`:** establece el intervalo nominal de generación. Cuanto menor sea, mayor será la cantidad de vehículos.
+- **`--random-depart`:** distribuye aleatoriamente los instantes de salida.
+- **`--seed 42`:** permite reproducir la generación de los viajes.
+- **`--fringe-factor max`:** favorece los recorridos asociados a los extremos de la red.
+- **`--fringe-junctions`:** utiliza los nodos marcados como exteriores.
+- **`--min-distance 200`:** establece una distancia mínima de 200 metros entre origen y destino.
+- **`-o`:** guarda los viajes generados.
+- **`--route-file`:** guarda las rutas que seguirán los vehículos.
 
-Para generar otras cantidades de vehículos, basta con modificar el valor de `-p` y los nombres de los archivos de salida.
+Para las pruebas se han utilizado distintas cantidades de vehículos, desde **2000 hasta 5000**, modificando principalmente el parámetro `-p`.
 
----
+En la última prueba se generaron **5001 vehículos**.
 
-## 3. Simulación microscópica
+## 4. Simulación microscópica
 
-Se han realizado varias pruebas con diferentes cantidades de vehículos para estudiar cómo aumenta la congestión.
+Se han realizado varias simulaciones para observar cómo se comporta la red a medida que aumenta el tráfico.
 
-Todas las simulaciones tienen una duración de **3600 segundos simulados** y utilizan la misma red.
+Todas las pruebas utilizan la misma red y tienen una duración de **3600 segundos simulados**.
 
-### Comando de simulación
+### Comando de ejecución
 
 Ejemplo para 5000 vehículos:
 
@@ -102,15 +155,20 @@ time sumo \
   --log red_5x5/5000_rutas/micro_5000.log
 ```
 
-Se utiliza `time` para medir el tiempo real que tarda SUMO en ejecutar la simulación.
+Los parámetros más importantes son:
 
-El parámetro `--time-to-teleport 300` permite teletransportar vehículos cuando se producen determinadas esperas o bloqueos prolongados.
+- **`time sumo`:** mide el tiempo real de ejecución de la simulación.
+- **`--begin 0 --end 3600`:** establece la duración de una hora simulada.
+- **`--time-to-teleport 300`:** permite teletransportar vehículos en determinadas situaciones de bloqueo o espera prolongada.
+- **`--duration-log.statistics`:** muestra las estadísticas generales al finalizar.
+- **`--statistic-output`:** guarda las estadísticas en un archivo XML.
+- **`--log`:** guarda los mensajes de ejecución.
 
-### Resultados
+### Resultados obtenidos
 
 | Vehículos* | Insertados | Velocidad (m/s) | Espera (s) | Teleports | Tiempo real (s) |
 |---:|---:|---:|---:|---:|---:|
-| 2000 | 2000 | 9,49 | 3,77 | 0 | 0,506 |
+| 2000 | 2000 | 9,49 | 3,77 | — | 0,506 |
 | 2500 | 2500 | 8,98 | 6,77 | 0 | 0,652 |
 | 3000 | 3001 | 8,43 | 10,56 | 0 | 0,782 |
 | 3500 | 3500 | 7,66 | 17,82 | 0 | 0,984 |
@@ -118,55 +176,54 @@ El parámetro `--time-to-teleport 300` permite teletransportar vehículos cuando
 | 4500 | 4481 | 5,42 | 56,11 | 0 | 2,106 |
 | **5000** | **3180** | **3,96** | **229,07** | **130** | **6,976** |
 
-*La primera columna indica la demanda aproximada. El número de vehículos generado puede variar ligeramente. El guion indica un dato no comprobado.*
+*La primera columna indica la demanda aproximada. La cantidad generada puede variar ligeramente. El guion indica un dato no comprobado.*
 
 **Significado de las columnas:**
 
 - **Insertados:** vehículos que consiguieron incorporarse a la red.
-- **Velocidad:** velocidad media de los viajes finalizados.
-- **Espera:** tiempo medio que permanecieron detenidos los vehículos cuyos viajes finalizaron.
-- **Teleports:** vehículos teletransportados por SUMO debido a esperas o bloqueos prolongados.
+- **Velocidad:** velocidad media registrada para los viajes finalizados.
+- **Espera:** tiempo medio de espera de los vehículos que completaron su recorrido.
+- **Teleports:** vehículos teletransportados debido a determinadas situaciones de bloqueo.
 - **Tiempo real:** segundos que tardó el ordenador en ejecutar la simulación.
 
 ### Observaciones
 
-A medida que aumenta la cantidad de vehículos, disminuye la velocidad y aumenta el tiempo de espera.
+A medida que aumenta la cantidad de vehículos, disminuye la velocidad media y aumentan los tiempos de espera.
 
 La diferencia más importante aparece entre **4500 y 5000 vehículos**.
 
-Con 4500 vehículos, prácticamente todos consiguen entrar en la red y no se producen teletransportaciones.
+Con 4500 vehículos, prácticamente todos consiguen incorporarse a la red y no se producen teletransportaciones.
 
-Sin embargo, con una demanda aproximada de 5000 vehículos:
+Sin embargo, con 5000 vehículos:
 
-- Se generan **5001 vehículos**, pero solo **3180** consiguen incorporarse.
-- Quedan **1821 vehículos esperando para entrar**.
-- Se producen **130 teletransportaciones**: 109 por cesión de paso (`yield`) y 21 por atascos (`jam`).
+- Se generan **5001 vehículos**, pero solo **3180** consiguen entrar.
+- Quedan **1821 vehículos esperando para incorporarse**.
+- La espera media de los viajes finalizados alcanza los **229,07 segundos**.
+- Se producen **130 teletransportaciones**: 109 por esperas al ceder el paso (`yield`) y 21 por atascos (`jam`).
 
 Estos resultados muestran que la red alcanza una situación de **saturación severa**.
 
----
+## 5. Bloqueo circular en las intersecciones
 
-## 4. Bloqueo circular en las intersecciones
+Durante las simulaciones también se observaron situaciones en las que varios vehículos permanecían detenidos en una intersección, esperando a que otro avanzara.
 
-Durante las simulaciones se observaron situaciones en las que varios vehículos permanecían detenidos en una intersección, esperando a que otro avanzara.
-
-Este problema puede aparecer cuando cuatro vehículos llegan a un cruce con prioridad por la derecha.
+Este comportamiento puede aparecer cuando cuatro vehículos llegan a un cruce con prioridad por la derecha.
 
 ### Ejemplo con cuatro vehículos
 
 ```text
-                 NORTE
-                   A
-                   ↓
-                   |
-      OESTE  B →---+---← D  ESTE
-                   |
-                   ↑
-                   C
-                  SUR
+                  NORTE
+                    A
+                    ↓
+                    |
+       OESTE  B →---+---← D  ESTE
+                    |
+                    ↑
+                    C
+                   SUR
 ```
 
-Supongamos que los cuatro vehículos quieren seguir recto y llegan al mismo tiempo.
+Supongamos que los cuatro vehículos quieren continuar recto y llegan al mismo tiempo.
 
 Según la prioridad por la derecha:
 
@@ -179,45 +236,78 @@ Se forma una dependencia circular:
 
 **A → B → C → D → A**
 
-Ninguno puede avanzar porque todos están esperando a otro. Es el problema conocido como *bloqueo circular* o *circular yielding*.
+Ninguno puede avanzar porque todos están esperando a otro. Es el problema conocido como **bloqueo circular** (*circular yielding*).
 
 ### ¿Cómo intenta resolverlo SUMO?
 
-SUMO 1.28.0 incorpora un mecanismo para intentar romper estas dependencias circulares.
+SUMO 1.28.0 incorpora un mecanismo para intentar resolver estas situaciones.
 
-Se encuentra en su código fuente, concretamente en:
+Se encuentra en su código fuente:
 
 **[MSVehicle.cpp — SUMO 1.28.0, líneas 2999–3019](https://github.com/eclipse-sumo/sumo/blob/v1_28_0/src/microsim/MSVehicle.cpp#L2999-L3019)**
 
-Cuando SUMO detecta una dependencia circular durante la evaluación de un vehículo, puede hacer que este **retire temporalmente su solicitud de paso**.
+Su funcionamiento es el siguiente:
 
-Para decidirlo utiliza un número pseudoaleatorio entre 0 y 1 y lo compara con un umbral:
+1. SUMO comprueba si el vehículo está esperando en una conexión de prioridad equivalente.
+2. Busca si existe una cadena circular de vehículos que se bloquean mutuamente.
+3. Si detecta esa dependencia, genera un número pseudoaleatorio entre 0 y 1.
+4. Según la maniobra del vehículo, decide si retira temporalmente su solicitud de paso.
+
+Para esa última decisión utiliza dos probabilidades:
 
 | Maniobra | Probabilidad de retirar la solicitud |
 |---|---:|
-| Continuar recto | 25 % |
-| Girar a izquierda o derecha | 75 % |
+| Continuar recto | **25 %** |
+| Girar a izquierda o derecha | **75 %** |
 
-Estas probabilidades solo se aplican cuando se cumplen las condiciones de detección del bloqueo circular.
+Estas probabilidades solo se aplican cuando se cumplen las condiciones del mecanismo de bloqueo circular.
 
-Por ejemplo, imaginemos que SUMO está evaluando al vehículo **B**, que quiere continuar recto.
+### Ejemplo de funcionamiento
 
-Su umbral es `0.25`.
+Volvamos a nuestros cuatro vehículos: A, B, C y D.
 
-Si SUMO genera el número `0.12`:
+Supongamos que todos quieren continuar recto y que SUMO detecta una dependencia circular.
+
+**Primero evalúa al vehículo A.**
+
+Como quiere seguir recto, su umbral es `0.25`.
+
+Imaginemos que genera:
 
 ```text
+Número aleatorio = 0.68
+
+0.68 > 0.25
+```
+
+La condición no se cumple, por lo que **A mantiene su solicitud**.
+
+Después, supongamos que SUMO evalúa al vehículo B mientras el bloqueo sigue existiendo.
+
+Ahora genera:
+
+```text
+Número aleatorio = 0.12
+
 0.12 < 0.25
 ```
 
-Se cumple la condición y **B retira temporalmente su solicitud de paso**.
+Esta vez se cumple la condición.
 
-De esta manera, A puede dejar de estar bloqueado por B y encontrar una oportunidad para avanzar. Si A consigue cruzar, pueden ir desapareciendo las dependencias de los demás vehículos.
+Por tanto, **B retira temporalmente su solicitud de paso**.
 
-**Esto no significa que SUMO seleccione directamente un ganador.** Evalúa cada vehículo individualmente y puede retirar una o varias solicitudes según las condiciones que encuentre.
+Esto puede permitir que A deje de estar bloqueado por B y encuentre una oportunidad para avanzar.
 
-Tampoco garantiza que la intersección se desbloquee inmediatamente, ya que siguen influyendo los demás conflictos y el espacio disponible.
+Si A consigue atravesar la intersección, pueden empezar a desaparecer las dependencias del resto de vehículos.
 
-Este mecanismo permite intentar resolver ciertos bloqueos circulares sin modificar las prioridades de la red.
+**SUMO no selecciona directamente a un ganador.** Evalúa los vehículos individualmente y puede retirar solicitudes cuando detecta una dependencia circular.
 
----
+Tampoco está obligado a retirar exactamente una solicitud ni garantiza que el bloqueo se resuelva inmediatamente.
+
+Este mecanismo es diferente de `keepClear="true"` y de las teletransportaciones:
+
+- **`keepClear`:** intenta evitar que un vehículo bloquee físicamente una intersección.
+- **Bloqueo circular:** SUMO puede retirar temporalmente solicitudes para romper dependencias de prioridad.
+- **Teletransportación:** permite resolver determinadas situaciones en las que un vehículo lleva demasiado tiempo bloqueado.
+
+En nuestras pruebas de 5000 vehículos se observaron esperas prolongadas y teletransportaciones, aunque eso no demuestra por sí solo que se haya activado el mecanismo de bloqueo circular en cada caso.
