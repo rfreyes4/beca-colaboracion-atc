@@ -311,3 +311,40 @@ Este mecanismo es diferente de `keepClear="true"` y de las teletransportaciones:
 - **`keepClear`:** intenta evitar que un vehículo bloquee físicamente una intersección.
 - **Bloqueo circular:** SUMO puede retirar temporalmente solicitudes para romper dependencias de prioridad.
 - **Teletransportación:** permite resolver determinadas situaciones en las que un
+
+---
+
+## 6. Gráficas de la simulación microscópica
+
+A partir de los resultados anteriores, se han generado cuatro gráficas para observar cómo afecta el aumento de vehículos al funcionamiento de la red.
+
+Las imágenes se han creado con el script [graficas_micro.py](imagenes/graficas_micro.py).
+
+### Velocidad media
+
+![Velocidad media](imagenes/grafica_velocidad.png)
+
+La velocidad media disminuye progresivamente al aumentar el tráfico. La reducción es especialmente notable cuando la red comienza a saturarse.
+
+### Tiempo de espera
+
+![Tiempo de espera](imagenes/grafica_espera.png)
+
+El tiempo de espera aumenta con la cantidad de vehículos. El cambio más importante se observa entre 4500 y 5000 vehículos, donde la espera media de los viajes finalizados pasa de 56,11 a 229,07 segundos.
+
+### Tiempo de ejecución
+
+![Tiempo de ejecución](imagenes/grafica_tiempo.png)
+
+El tiempo de ejecución también aumenta al introducir más vehículos. Con 5000 vehículos, SUMO necesita aproximadamente 7 segundos para simular una hora de tráfico.
+
+### Vehículos generados e insertados
+
+![Vehículos insertados](imagenes/grafica_insertados.png)
+
+Hasta los 4500 vehículos, prácticamente todos consiguen incorporarse a la red.
+
+Sin embargo, en la última prueba se generan 5001 vehículos y solo 3180 consiguen entrar durante la hora simulada. Los otros 1821 permanecen pendientes de incorporarse.
+
+Este resultado, junto con las 130 teletransportaciones registradas, muestra que la red alcanza una situación de saturación severa.
+
