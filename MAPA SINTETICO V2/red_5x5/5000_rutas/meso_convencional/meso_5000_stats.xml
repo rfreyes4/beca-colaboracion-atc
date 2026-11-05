@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-11-05T00:07:29.056079+01:00 by Eclipse SUMO sumo 1.28.0
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="red_5x5/red_5x5.net.xml"/>
+        <route-files value="red_5x5/5000_rutas/rutas_5000.rou.xml"/>
+    </input>
+
+    <output>
+        <statistic-output value="red_5x5/5000_rutas/meso_convencional/meso_5000_stats.xml"/>
+    </output>
+
+    <time>
+        <begin value="0"/>
+        <end value="3600"/>
+    </time>
+
+    <processing>
+        <time-to-teleport value="300"/>
+        <time-to-impatience value="180"/>
+    </processing>
+
+    <report>
+        <log value="red_5x5/5000_rutas/meso_convencional/meso_5000.log"/>
+        <duration-log.statistics value="true"/>
+    </report>
+
+    <mesoscopic>
+        <mesosim value="true"/>
+        <meso-ltm value="false"/>
+        <meso-edgelength value="50"/>
+        <meso-tauff value="1.13"/>
+        <meso-taufj value="1.13"/>
+        <meso-taujf value="1.73"/>
+        <meso-taujj value="1.40"/>
+        <meso-jam-threshold value="-1"/>
+        <meso-junction-control value="true"/>
+        <meso-junction-control.limited value="false"/>
+        <meso-minor-penalty value="0"/>
+        <meso-overtaking value="false"/>
+        <meso-recheck value="0"/>
+    </mesoscopic>
+
+</sumoConfiguration>
+-->
+
+<statistics xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/statistic_file.xsd">
+    <performance clockBegin="1793833649.06" clockEnd="1793833649.68" clockDuration="0.62" traciDuration="0.00" realTimeFactor="5778.49" vehicleUpdatesPerSecond="2787117.17" personUpdatesPerSecond="0.00" begin="0.00" end="3600.00" duration="3600.00"/>
+    <vehicles loaded="5001" inserted="1213" running="560" waiting="3788"/>
+    <teleports total="115" jam="115" yield="0" wrongLane="0"/>
+    <safety collisions="0" emergencyStops="0" emergencyBraking="0"/>
+    <persons loaded="0" running="0" jammed="0"/>
+    <personTeleports total="0" abortWait="0" wrongDest="0"/>
+    <vehicleTripStatistics count="653" routeLength="621.11" speed="3.73" duration="1176.57" waitingTime="330.85" timeLoss="1131.31" departDelay="31.91" departDelayWaiting="-1.00" totalTravelTime="768303.00" totalDepartDelay="20837.08"/>
+    <pedestrianStatistics number="0" routeLength="0.00" duration="0.00" timeLoss="0.00"/>
+    <rideStatistics number="0"/>
+    <transportStatistics number="0"/>
+</statistics>

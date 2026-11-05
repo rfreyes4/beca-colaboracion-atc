@@ -348,3 +348,94 @@ Sin embargo, en la última prueba se generan 5001 vehículos y solo 3180 consigu
 
 Este resultado, junto con las 130 teletransportaciones registradas, muestra que la red alcanza una situación de saturación severa.
 
+
+
+
+---
+
+## 7. Simulación mesoscópica convencional
+
+En el modelo mesoscópico de SUMO, los vehículos se representan mediante colas dentro de segmentos de carretera, en lugar de calcular continuamente su posición y velocidad como en el microscópico.
+
+Para esta primera prueba utilizamos la misma red V2, las mismas rutas de **5001 vehículos** y una duración de **3600 segundos**.
+
+### 7.1. Comando de ejecución
+
+```bash
+time sumo \
+  --mesosim true \
+  --meso-ltm false \
+  --meso-junction-control true \
+  --meso-junction-control.limited false \
+  --meso-edgelength 50 \
+  --meso-jam-threshold -1 \
+  --meso-tauff 1.13 \
+  --meso-taufj 1.13 \
+  --meso-taujf 1.73 \
+  --meso-taujj 1.40 \
+  --meso-recheck 0 \
+  --meso-minor-penalty 0 \
+  --time-to-impatience 180 \
+  --meso-overtaking false \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/5000_rutas/rutas_5000.rou.xml \
+  --begin 0 \
+  --end 3600 \
+  --time-to-teleport 300 \
+  --duration-log.statistics \
+  --statistic-output red_5x5/5000_rutas/meso_convencional/meso_5000_stats.xml \
+  --log red_5x5/5000_rutas/meso_convencional/meso_5000.log
+```
+
+### 7.2. Parámetros utilizados
+
+| Parámetro | Valor | ¿Para qué sirve? |
+|---|---|---|
+| `mesosim` | `true` | Activa la simulación mesoscópica. |
+| `meso-ltm` | `false` | Utiliza el modelo convencional en lugar de LTM. |
+| `meso-junction-control` | `true` | Comprueba los conflictos de prioridad en los cruces. |
+| `meso-junction-control.limited` | `false` | Mantiene el control de prioridades también cuando el segmento de destino está libre. |
+| `meso-edgelength` | `50` | Establece la longitud máxima de los segmentos. Las carreteras interiores quedan divididas en dos segmentos. |
+| `meso-jam-threshold` | `-1` | Calcula automáticamente el umbral que distingue un segmento libre de uno congestionado. |
+| `meso-tauff` | `1.13 s` | Intervalo temporal mínimo para pasar de un segmento libre a otro libre. |
+| `meso-taufj` | `1.13 s` | Intervalo temporal mínimo para pasar de un segmento libre a uno congestionado. |
+| `meso-taujf` | `1.73 s` | Intervalo temporal mínimo para pasar de un segmento congestionado a otro libre. |
+| `meso-taujj` | `1.40 s` | Controla la propagación hacia atrás de los huecos en segmentos congestionados. |
+| `meso-recheck` | `0 s` | No añade retrasos fijos al reintentar entrar en un segmento lleno; utiliza los eventos del simulador. |
+| `meso-minor-penalty` | `0 s` | No añade tiempo extra al atravesar conexiones sin prioridad. |
+| `time-to-impatience` | `180 s` | Tiempo necesario para pasar de impaciencia 0 a 1. Una mayor impaciencia permite aceptar conflictos de prioridad más ajustados. |
+| `meso-overtaking` | `false` | Desactiva los adelantamientos mediante intercambios de posición en las colas. |
+
+**Otros parámetros:** `--begin 0 --end 3600` establece una hora de simulación; `--time-to-teleport 300` permite teletransportar vehículos bloqueados según las condiciones de SUMO. Los archivos `.xml` y `.log` guardan las estadísticas y el registro de ejecución.
+
+### 7.3. Resultados: microscópico frente a mesoscópico
+
+Se han utilizado las mismas rutas de 5001 vehículos durante 3600 segundos simulados.
+
+| Métrica | Microscópico | Mesoscópico convencional |
+|---|---:|---:|
+| Vehículos generados | 5001 | 5001 |
+| Vehículos insertados | 3180 | 1213 |
+| Vehículos finalizados | 2511 | 653 |
+| Vehículos circulando al finalizar | 669 | 560 |
+| Vehículos pendientes de entrar | 1821 | 3788 |
+| Velocidad media | 3,96 m/s | 3,73 m/s |
+| Duración media | 324,65 s | 1176,57 s |
+| Tiempo de espera medio | 229,07 s | 330,85 s |
+| Tiempo perdido medio | 274,79 s | 1131,31 s |
+| Teletransportaciones | 130 | 115 |
+| Tiempo real de ejecución | 6,976 s | 0,725 s |
+
+**Observaciones:**
+
+- El mesoscópico fue aproximadamente **9,6 veces más rápido** en esta ejecución.
+- El mesoscópico presentó mayor congestión: solamente consiguió insertar 1213 vehículos, frente a 3180 del microscópico.
+- Las medias de tiempo corresponden únicamente a los vehículos que finalizaron sus recorridos, por lo que no representan exactamente el mismo conjunto de vehículos.
+- Se mantiene esta configuración como referencia para estudiar posteriormente el efecto de modificar los parámetros.
+
+### 7.4. Próximas pruebas
+
+Probar cambios individuales en `meso-jam-threshold`, `meso-taujf` y `time-to-impatience` para observar cómo afectan a la congestión.
+
+Se mantendrán los dos segmentos por carretera y el control completo de prioridades para que la comparación sea coherente con nuestra red V2.
+
