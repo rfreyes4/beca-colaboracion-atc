@@ -241,28 +241,101 @@ En ambas ejecuciones utilizamos el valor **`real`** proporcionado por el comando
 
 ---
 
-### 4.3. Resultados obtenidos
+### 4.3. Resultados: vehículos cargados, insertados y finalizados
 
-| Vehículos | Insertados | Finalizados | Velocidad (m/s) | Espera (s) | Teleports |
+| Vehículos | Cargados | Insertados | Finalizados | Circulando | Pendientes de entrar |
 |---:|---:|---:|---:|---:|---:|
-| 3000 | 2992 | 2897 | 10,81 | 9,77 | 0 |
-| 3500 | 3486 | 3368 | 10,04 | 17,29 | 0 |
-| 4000 | 3969 | 3792 | 9,00 | 31,07 | 0 |
-| 4500 | 4379 | 4124 | 7,87 | 56,62 | 0 |
-| **5000** | **3698** | **2684** | **7,25** | **127,11** | **96** |
-| **5500** | **3986** | **2888** | **6,71** | **134,09** | **122** |
+| 3000 | 3001 | 2992 | 2897 | 95 | 9 |
+| 3500 | 3500 | 3486 | 3368 | 118 | 14 |
+| 4000 | 4000 | 3969 | 3792 | 177 | 31 |
+| 4500 | 4500 | 4379 | 4124 | 255 | 121 |
+| **5000** | **5001** | **3698** | **2684** | **1014** | **1303** |
+| **5500** | **5501** | **3986** | **2888** | **1098** | **1515** |
 
 **Significado de las columnas:**
 
-- **Insertados:** vehículos que consiguieron incorporarse a la red.
-- **Finalizados:** vehículos que completaron sus recorridos.
-- **Velocidad:** velocidad media de los viajes finalizados.
-- **Espera:** tiempo medio que permanecieron detenidos los vehículos que finalizaron.
-- **Teleports:** teletransportaciones realizadas por SUMO.
+- **Cargados (`Loaded`):** vehículos cargados desde el archivo de rutas.
+- **Insertados (`Inserted`):** vehículos que consiguieron incorporarse a la red.
+- **Finalizados:** vehículos que completaron su recorrido antes de terminar la simulación.
+- **Circulando (`Running`):** vehículos que todavía estaban dentro de la red al llegar al segundo 3600.
+- **Pendientes (`Waiting`):** vehículos que tenían prevista su salida, pero todavía no habían podido incorporarse a la red.
 
-### 4.4. Tiempos reales de ejecución
+Se observa que, con 5000 y 5500 vehículos, aumenta considerablemente la cantidad de vehículos pendientes de entrar.
 
-Se han registrado los tiempos de ambas ejecuciones para comparar el rendimiento computacional.
+---
+
+### 4.4. Resultados: velocidad, duración y tiempos medios
+
+| Vehículos | Recorrido (m) | Velocidad (m/s) | Duración (s) | Detenido (s) | Tiempo perdido (s) | Retraso incorporación (s) |
+|---:|---:|---:|---:|---:|---:|---:|
+| 3000 | 1102,87 | 10,81 | 105,98 | 9,77 | 25,57 | 4,03 |
+| 3500 | 1099,53 | 10,04 | 117,03 | 17,29 | 36,88 | 6,64 |
+| 4000 | 1106,50 | 9,00 | 138,14 | 31,07 | 57,44 | 13,44 |
+| 4500 | 1097,62 | 7,87 | 173,00 | 56,62 | 92,71 | 34,05 |
+| **5000** | **1096,76** | **7,25** | **248,06** | **127,11** | **165,64** | **32,58** |
+| **5500** | **1088,74** | **6,71** | **262,23** | **134,09** | **179,94** | **60,07** |
+
+**Significado de las columnas:**
+
+- **Recorrido (`RouteLength`):** longitud media de las rutas que han completado los vehículos.
+- **Velocidad (`Speed`):** velocidad media registrada para los viajes finalizados.
+- **Duración (`Duration`):** tiempo medio desde que un vehículo se incorpora a la red hasta que llega a su destino.
+- **Detenido (`WaitingTime`):** tiempo medio que los vehículos permanecieron prácticamente parados por circunstancias del tráfico.
+- **Tiempo perdido (`TimeLoss`):** tiempo adicional empleado respecto a circular sin demoras a la velocidad deseada.
+- **Retraso de incorporación (`DepartDelay`):** diferencia entre el instante en que un vehículo tenía programada su salida y el momento en que consiguió incorporarse realmente a la red.
+
+**Importante:** estas medias corresponden a los vehículos que finalizaron sus recorridos. No incluyen los tiempos de los vehículos que continuaban circulando o estaban pendientes de entrar al finalizar la simulación.
+
+Además, `DepartDelay` no representa el instante exacto de incorporación de cada vehículo, sino el **retraso medio respecto a su salida programada**.
+
+### Observaciones
+
+A medida que aumenta la cantidad de vehículos:
+
+- La velocidad media disminuye progresivamente.
+- Aumenta el tiempo necesario para completar los recorridos.
+- Los vehículos permanecen más tiempo detenidos.
+- Aumenta el tiempo perdido respecto a una circulación sin demoras.
+
+El cambio más importante aparece entre **4500 y 5000 vehículos**.
+
+Con 4500 vehículos, el tiempo detenido medio es de 56,62 segundos.
+
+Con 5000 vehículos, aumenta hasta 127,11 segundos.
+
+También se observa que el retraso de incorporación llega a **60,07 segundos con 5500 vehículos**, aunque la media corresponde únicamente a los viajes finalizados.
+
+---
+
+### 4.5. Resultados: teletransportes y frenadas de emergencia
+
+| Vehículos | Teleports `yield` | Teleports `jam` | Total teleports | Frenadas de emergencia |
+|---:|---:|---:|---:|---:|
+| 3000 | 0 | 0 | 0 | 1 |
+| 3500 | 0 | 0 | 0 | 1 |
+| 4000 | 0 | 0 | 0 | 0 |
+| 4500 | 0 | 0 | 0 | 1 |
+| **5000** | **92** | **4** | **96** | **0** |
+| **5500** | **110** | **12** | **122** | **1** |
+
+**Significado de las columnas:**
+
+- **`yield`:** teletransporte asociado a una espera prolongada al ceder el paso.
+- **`jam`:** teletransporte asociado a una situación de atasco.
+- **Total teleports:** número total de teletransportes registrados durante la simulación.
+- **Frenadas de emergencia (`Emergency Braking`):** número de eventos en los que un vehículo necesitó desacelerar más bruscamente de lo deseado.
+
+Una frenada de emergencia no implica necesariamente que se haya producido una colisión.
+
+En las simulaciones de 3000 a 4500 vehículos no se registraron teletransportes.
+
+Sin embargo, con 5000 vehículos aparecieron 96 teletransportes y con 5500 aumentaron hasta 122.
+
+---
+
+### 4.6. Resultados: tiempos reales de ejecución
+
+Se han registrado los tiempos de ambas ejecuciones utilizando el comando `time` de Linux.
 
 | Vehículos | Tiempo real completo (s) | Tiempo real limpio (s) |
 |---:|---:|---:|
@@ -280,21 +353,4 @@ Se han registrado los tiempos de ambas ejecuciones para comparar el rendimiento 
 
 Ambos tiempos representan segundos reales de ejecución, no los 3600 segundos simulados.
 
-### 4.5. Teletransportes y frenadas de emergencia
-
-También se han registrado los teletransportes y las frenadas de emergencia producidas durante las simulaciones.
-
-| Vehículos | Teleports `yield` | Teleports `jam` | Total teleports | Frenadas de emergencia |
-|---:|---:|---:|---:|---:|
-| 3000 | 0 | 0 | 0 | 1 |
-| 3500 | 0 | 0 | 0 | 1 |
-| 4000 | 0 | 0 | 0 | 0 |
-| 4500 | 0 | 0 | 0 | 1 |
-| 5000 | 92 | 4 | 96 | 0 |
-| 5500 | 110 | 12 | 122 | 1 |
-
-- **`yield`:** teletransporte asociado a una espera prolongada al ceder el paso.
-- **`jam`:** teletransporte asociado a una situación de atasco.
-- **Frenada de emergencia:** sucede cuando un vehículo necesita desacelerar más bruscamente de lo deseado.
-
-Una frenada de emergencia no significa necesariamente que se haya producido una colisión.
+Se observa que el tiempo de ejecución aumenta progresivamente con la cantidad de vehículos, especialmente a partir de 5000.
