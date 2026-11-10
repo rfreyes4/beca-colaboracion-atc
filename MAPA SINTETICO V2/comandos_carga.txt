@@ -1,0 +1,81 @@
+1. Simulación de 4500 vehículos
+
+cd "/home/fel1xrr/Escritorio/Proyectos de investigacion/REPO BECA ATC/MAPA SINTÉTICO"
+
+sumo-gui \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/4500_rutas/rutas_4500.rou.xml \
+  --begin 0 \
+  --end 3600 \
+  --time-to-teleport 300 \
+  --delay 500
+  
+  
+2. Simulación de 5000 vehículos
+cd "/home/fel1xrr/Escritorio/Proyectos de investigacion/REPO BECA ATC/MAPA SINTÉTICO"
+
+sumo-gui \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/5000_rutas/rutas_5000.rou.xml \
+  --begin 0 \
+  --end 3600 \
+  --time-to-teleport 300 \
+  --delay 500
+  
+  
+  
+1. SUMO-GUI mesoscópico — 4500 vehículos
+cd "/home/fel1xrr/Escritorio/Proyectos de investigacion/REPO BECA ATC/MAPA SINTÉTICO"
+
+sumo-gui \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/4500_rutas/rutas_4500.rou.xml \
+  --begin 0 \
+  --end 3600 \
+  --mesosim true \
+  --meso-ltm false \
+  --meso-junction-control true \
+  --meso-edgelength 50 \
+  --meso-jam-threshold -1 \
+  --meso-tauff 1.13 \
+  --meso-taufj 1.13 \
+  --meso-taujf 1.73 \
+  --meso-taujj 1.40 \
+  --time-to-teleport 300 \
+  --delay 500
+  
+  
+2. SUMO-GUI mesoscópico — 5000 vehículos
+cd "/home/fel1xrr/Escritorio/Proyectos de investigacion/REPO BECA ATC/MAPA SINTÉTICO"
+
+sumo-gui \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/5000_rutas/rutas_5000.rou.xml \
+  --begin 0 \
+  --end 3600 \
+  --mesosim true \
+  --meso-ltm false \
+  --meso-junction-control true \
+  --meso-edgelength 50 \
+  --meso-jam-threshold -1 \
+  --meso-tauff 1.13 \
+  --meso-taufj 1.13 \
+  --meso-taujf 1.73 \
+  --meso-taujj 1.40 \
+  --time-to-teleport 300 \
+  --delay 500
+  
+  
+ 
+ #Warnings
+
+        <no-warnings value="true" />
+        <no-step-log value="true" />
+ 
+para el .sumocfg
+
+también prueba <verbose value="false" />
+
+ 
+ 
+ 

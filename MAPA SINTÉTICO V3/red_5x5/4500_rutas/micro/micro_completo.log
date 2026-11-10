@@ -1,0 +1,28 @@
+Loading net-file from 'red_5x5/red_5x5.net.xml' ... done (5ms).
+Loading route-files incrementally from 'red_5x5/4500_rutas/rutas_4500.rou.xml'
+Loading done.
+Simulation version 1.28.0 started with time: 0.00.
+Step #0.00 (0ms ?*RT. ?UPS, vehicles TOT 0 ACT 0 BUF 0)                                   Step #100.00 (0ms ?*RT. ?UPS, vehicles TOT 98 ACT 82 BUF 1)                               Warning: Vehicle '159' performs emergency braking on lane 'e-j-3-0-a-j-3-1_0' with decel=9.00, wished=4.50, severity=1.00, time=187.00.
+Step #200.00 (0ms ?*RT. ?UPS, vehicles TOT 211 ACT 113 BUF 11)                            Step #300.00 (1ms ~= 1000.00*RT, ~170000.00UPS, vehicles TOT 352 ACT 170 BUF 15)          Step #400.00 (0ms ?*RT. ?UPS, vehicles TOT 471 ACT 166 BUF 17)                            Step #500.00 (0ms ?*RT. ?UPS, vehicles TOT 581 ACT 154 BUF 25)                            Step #600.00 (0ms ?*RT. ?UPS, vehicles TOT 709 ACT 169 BUF 17)                            Step #700.00 (0ms ?*RT. ?UPS, vehicles TOT 822 ACT 179 BUF 23)                            Step #800.00 (0ms ?*RT. ?UPS, vehicles TOT 935 ACT 162 BUF 25)                            Step #900.00 (0ms ?*RT. ?UPS, vehicles TOT 1040 ACT 160 BUF 28)                           Step #1000.00 (1ms ~= 1000.00*RT, ~176000.00UPS, vehicles TOT 1163 ACT 176 BUF 35)        Step #1100.00 (0ms ?*RT. ?UPS, vehicles TOT 1283 ACT 169 BUF 29)                          Step #1200.00 (0ms ?*RT. ?UPS, vehicles TOT 1417 ACT 193 BUF 32)                          Step #1300.00 (0ms ?*RT. ?UPS, vehicles TOT 1547 ACT 221 BUF 47)                          Step #1400.00 (1ms ~= 1000.00*RT, ~248000.00UPS, vehicles TOT 1676 ACT 248 BUF 31)        Step #1500.00 (0ms ?*RT. ?UPS, vehicles TOT 1800 ACT 220 BUF 29)                          Step #1600.00 (1ms ~= 1000.00*RT, ~204000.00UPS, vehicles TOT 1921 ACT 204 BUF 37)        Step #1700.00 (0ms ?*RT. ?UPS, vehicles TOT 2032 ACT 190 BUF 54)                          Step #1800.00 (0ms ?*RT. ?UPS, vehicles TOT 2150 ACT 193 BUF 56)                          Step #1900.00 (1ms ~= 1000.00*RT, ~201000.00UPS, vehicles TOT 2274 ACT 201 BUF 54)        Step #2000.00 (0ms ?*RT. ?UPS, vehicles TOT 2389 ACT 215 BUF 65)                          Step #2100.00 (0ms ?*RT. ?UPS, vehicles TOT 2513 ACT 214 BUF 64)                          Step #2200.00 (0ms ?*RT. ?UPS, vehicles TOT 2618 ACT 205 BUF 77)                          Step #2300.00 (1ms ~= 1000.00*RT, ~238000.00UPS, vehicles TOT 2776 ACT 238 BUF 70)        Step #2400.00 (0ms ?*RT. ?UPS, vehicles TOT 2912 ACT 268 BUF 69)                          Step #2500.00 (1ms ~= 1000.00*RT, ~275000.00UPS, vehicles TOT 3027 ACT 275 BUF 74)        Step #2600.00 (1ms ~= 1000.00*RT, ~285000.00UPS, vehicles TOT 3155 ACT 285 BUF 70)        Step #2700.00 (0ms ?*RT. ?UPS, vehicles TOT 3293 ACT 293 BUF 67)                          Step #2800.00 (0ms ?*RT. ?UPS, vehicles TOT 3399 ACT 260 BUF 82)                          Step #2900.00 (0ms ?*RT. ?UPS, vehicles TOT 3528 ACT 262 BUF 98)                          Step #3000.00 (1ms ~= 1000.00*RT, ~241000.00UPS, vehicles TOT 3649 ACT 241 BUF 99)        Step #3100.00 (1ms ~= 1000.00*RT, ~247000.00UPS, vehicles TOT 3768 ACT 247 BUF 99)        Step #3200.00 (0ms ?*RT. ?UPS, vehicles TOT 3894 ACT 271 BUF 107)                         Step #3300.00 (1ms ~= 1000.00*RT, ~276000.00UPS, vehicles TOT 4044 ACT 276 BUF 99)        Step #3400.00 (0ms ?*RT. ?UPS, vehicles TOT 4145 ACT 244 BUF 119)                         Step #3500.00 (0ms ?*RT. ?UPS, vehicles TOT 4262 ACT 235 BUF 119)                         Step #3600.00 (1ms ~= 1000.00*RT, ~255000.00UPS, vehicles TOT 4379 ACT 255 BUF 121)       
+Simulation ended at time: 3600.00.
+Reason: The final simulation step has been reached.
+Performance:
+ Duration: 1.55s
+ Real time factor: 2318.09
+ UPS: 484470.057952
+Vehicles:
+ Inserted: 4379 (Loaded: 4500)
+ Running: 255
+ Waiting: 121
+ Emergency Braking: 1
+Statistics (avg of 4124):
+ RouteLength: 1097.62
+ Speed: 7.87
+ Duration: 173.00
+ WaitingTime: 56.62
+ TimeLoss: 92.71
+ DepartDelay: 34.05
+
+real	0m1,621s
+user	0m1,593s
+sys	0m0,028s

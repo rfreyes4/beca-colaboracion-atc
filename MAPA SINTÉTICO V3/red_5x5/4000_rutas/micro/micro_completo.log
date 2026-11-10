@@ -1,0 +1,26 @@
+Loading net-file from 'red_5x5/red_5x5.net.xml' ... done (6ms).
+Loading route-files incrementally from 'red_5x5/4000_rutas/rutas_4000.rou.xml'
+Loading done.
+Simulation version 1.28.0 started with time: 0.00.
+Step #0.00 (0ms ?*RT. ?UPS, vehicles TOT 0 ACT 0 BUF 0)                                   Step #100.00 (0ms ?*RT. ?UPS, vehicles TOT 87 ACT 72 BUF 1)                               Step #200.00 (0ms ?*RT. ?UPS, vehicles TOT 187 ACT 102 BUF 3)                             Step #300.00 (0ms ?*RT. ?UPS, vehicles TOT 303 ACT 135 BUF 14)                            Step #400.00 (0ms ?*RT. ?UPS, vehicles TOT 412 ACT 133 BUF 13)                            Step #500.00 (1ms ~= 1000.00*RT, ~133000.00UPS, vehicles TOT 518 ACT 133 BUF 11)          Step #600.00 (0ms ?*RT. ?UPS, vehicles TOT 626 ACT 133 BUF 7)                             Step #700.00 (0ms ?*RT. ?UPS, vehicles TOT 718 ACT 125 BUF 18)                            Step #800.00 (0ms ?*RT. ?UPS, vehicles TOT 832 ACT 131 BUF 5)                             Step #900.00 (0ms ?*RT. ?UPS, vehicles TOT 930 ACT 121 BUF 5)                             Step #1000.00 (0ms ?*RT. ?UPS, vehicles TOT 1045 ACT 130 BUF 4)                           Step #1100.00 (0ms ?*RT. ?UPS, vehicles TOT 1145 ACT 128 BUF 7)                           Step #1200.00 (0ms ?*RT. ?UPS, vehicles TOT 1266 ACT 150 BUF 4)                           Step #1300.00 (0ms ?*RT. ?UPS, vehicles TOT 1374 ACT 147 BUF 23)                          Step #1400.00 (0ms ?*RT. ?UPS, vehicles TOT 1477 ACT 141 BUF 17)                          Step #1500.00 (0ms ?*RT. ?UPS, vehicles TOT 1589 ACT 149 BUF 14)                          Step #1600.00 (0ms ?*RT. ?UPS, vehicles TOT 1694 ACT 160 BUF 25)                          Step #1700.00 (0ms ?*RT. ?UPS, vehicles TOT 1813 ACT 175 BUF 21)                          Step #1800.00 (0ms ?*RT. ?UPS, vehicles TOT 1924 ACT 170 BUF 21)                          Step #1900.00 (0ms ?*RT. ?UPS, vehicles TOT 2041 ACT 178 BUF 14)                          Step #2000.00 (0ms ?*RT. ?UPS, vehicles TOT 2151 ACT 169 BUF 20)                          Step #2100.00 (0ms ?*RT. ?UPS, vehicles TOT 2262 ACT 172 BUF 17)                          Step #2200.00 (1ms ~= 1000.00*RT, ~152000.00UPS, vehicles TOT 2364 ACT 152 BUF 13)        Step #2300.00 (0ms ?*RT. ?UPS, vehicles TOT 2491 ACT 182 BUF 25)                          Step #2400.00 (0ms ?*RT. ?UPS, vehicles TOT 2619 ACT 186 BUF 12)                          Step #2500.00 (0ms ?*RT. ?UPS, vehicles TOT 2710 ACT 150 BUF 27)                          Step #2600.00 (0ms ?*RT. ?UPS, vehicles TOT 2828 ACT 141 BUF 15)                          Step #2700.00 (0ms ?*RT. ?UPS, vehicles TOT 2949 ACT 157 BUF 17)                          Step #2800.00 (0ms ?*RT. ?UPS, vehicles TOT 3060 ACT 160 BUF 21)                          Step #2900.00 (0ms ?*RT. ?UPS, vehicles TOT 3179 ACT 164 BUF 28)                          Step #3000.00 (0ms ?*RT. ?UPS, vehicles TOT 3287 ACT 183 BUF 27)                          Step #3100.00 (0ms ?*RT. ?UPS, vehicles TOT 3401 ACT 174 BUF 20)                          Step #3200.00 (0ms ?*RT. ?UPS, vehicles TOT 3512 ACT 184 BUF 27)                          Step #3300.00 (0ms ?*RT. ?UPS, vehicles TOT 3628 ACT 190 BUF 41)                          Step #3400.00 (0ms ?*RT. ?UPS, vehicles TOT 3733 ACT 174 BUF 47)                          Step #3500.00 (0ms ?*RT. ?UPS, vehicles TOT 3863 ACT 187 BUF 26)                          Step #3600.00 (0ms ?*RT. ?UPS, vehicles TOT 3969 ACT 177 BUF 31)                          
+Simulation ended at time: 3600.00.
+Reason: The final simulation step has been reached.
+Performance:
+ Duration: 1.08s
+ Real time factor: 3321.03
+ UPS: 499059.040590
+Vehicles:
+ Inserted: 3969 (Loaded: 4000)
+ Running: 177
+ Waiting: 31
+Statistics (avg of 3792):
+ RouteLength: 1106.50
+ Speed: 9.00
+ Duration: 138.14
+ WaitingTime: 31.07
+ TimeLoss: 57.44
+ DepartDelay: 13.44
+
+real	0m1,152s
+user	0m1,131s
+sys	0m0,021s

@@ -1,0 +1,198 @@
+Loading net-file from 'red_5x5/red_5x5.net.xml' ... done (6ms).
+Loading route-files incrementally from 'red_5x5/5000_rutas/rutas_5000.rou.xml'
+Loading done.
+Simulation version 1.28.0 started with time: 0.00.
+Step #0.00 (0ms ?*RT. ?UPS, vehicles TOT 1 ACT 1 BUF 0)                                   Step #100.00 (0ms ?*RT. ?UPS, vehicles TOT 107 ACT 89 BUF 1)                              Step #200.00 (0ms ?*RT. ?UPS, vehicles TOT 241 ACT 152 BUF 4)                             Step #300.00 (0ms ?*RT. ?UPS, vehicles TOT 372 ACT 186 BUF 33)                            Step #400.00 (0ms ?*RT. ?UPS, vehicles TOT 501 ACT 193 BUF 40)                            Step #500.00 (1ms ~= 1000.00*RT, ~209000.00UPS, vehicles TOT 634 ACT 209 BUF 41)          Step #600.00 (0ms ?*RT. ?UPS, vehicles TOT 755 ACT 216 BUF 58)                            Step #700.00 (0ms ?*RT. ?UPS, vehicles TOT 880 ACT 209 BUF 67)                            Step #800.00 (0ms ?*RT. ?UPS, vehicles TOT 1004 ACT 224 BUF 71)                           Step #900.00 (0ms ?*RT. ?UPS, vehicles TOT 1118 ACT 221 BUF 78)                           Step #1000.00 (0ms ?*RT. ?UPS, vehicles TOT 1243 ACT 239 BUF 91)                          Step #1100.00 (0ms ?*RT. ?UPS, vehicles TOT 1363 ACT 233 BUF 95)                          Step #1200.00 (0ms ?*RT. ?UPS, vehicles TOT 1505 ACT 238 BUF 98)                          Step #1300.00 (0ms ?*RT. ?UPS, vehicles TOT 1653 ACT 253 BUF 108)                         Step #1400.00 (1ms ~= 1000.00*RT, ~251000.00UPS, vehicles TOT 1774 ACT 251 BUF 119)       Step #1500.00 (1ms ~= 1000.00*RT, ~259000.00UPS, vehicles TOT 1898 ACT 259 BUF 129)       Step #1600.00 (1ms ~= 1000.00*RT, ~275000.00UPS, vehicles TOT 2031 ACT 275 BUF 138)       Step #1700.00 (1ms ~= 1000.00*RT, ~308000.00UPS, vehicles TOT 2166 ACT 308 BUF 144)       Step #1800.00 (0ms ?*RT. ?UPS, vehicles TOT 2277 ACT 298 BUF 165)                         Warning: Teleporting vehicle '2049'; waited too long (yield), lane='e-j-2-1-a-j-2-2_0', time=1881.00.
+Step #1900.00 (1ms ~= 1000.00*RT, ~330000.00UPS, vehicles TOT 2390 ACT 330 BUF 187)       Warning: Teleporting vehicle '1896'; waited too long (yield), lane='e-j-3-1-a-j-3-2_0', time=1961.00.
+Step #2000.00 (1ms ~= 1000.00*RT, ~384000.00UPS, vehicles TOT 2508 ACT 384 BUF 217)       Warning: Teleporting vehicle '2262'; waited too long (yield), lane='e-j-4-2-a-j-3-2_0', time=2032.00.
+Warning: Teleporting vehicle '2301'; waited too long (yield), lane='e-j-2-1-a-j-3-1_0', time=2040.00.
+Warning: Vehicle '2049' ends teleporting on edge 'e-j-2-2-a-j-1-2', time=2050.00.
+Step #2100.00 (1ms ~= 1000.00*RT, ~411000.00UPS, vehicles TOT 2607 ACT 411 BUF 251)       Warning: Teleporting vehicle '2062'; waited too long (yield), lane='e-j-2-1-a-j-2-2_0', time=2186.00.
+Step #2200.00 (0ms ?*RT. ?UPS, vehicles TOT 2697 ACT 448 BUF 296)                         Warning: Teleporting vehicle '2408'; waited too long (yield), lane='e-j-1-1-a-j-2-1_0', time=2217.00.
+Warning: Vehicle '2408' ends teleporting on edge 'e-j-2-1-a-j-2-2', time=2233.00.
+Warning: Teleporting vehicle '1978'; waited too long (yield), lane='e-j-3-1-a-j-3-2_0', time=2271.00.
+Warning: Teleporting vehicle '2581'; waited too long (yield), lane='e-j-3-4-a-j-3-3_0', time=2274.00.
+Warning: Teleporting vehicle '2575'; waited too long (yield), lane='e-j-4-3-a-j-3-3_0', time=2289.00.
+Warning: Teleporting vehicle '2679'; waited too long (yield), lane='e-j-4-1-a-j-4-2_0', time=2290.00.
+Step #2300.00 (2ms ~= 500.00*RT, ~252000.00UPS, vehicles TOT 2802 ACT 504 BUF 349)        Warning: Teleporting vehicle '2291'; waited too long (yield), lane='e-j-4-2-a-j-3-2_0', time=2341.00.
+Warning: Vehicle '2679' ends teleporting on edge 'e-j-4-2-a-j-3-2', time=2341.00.
+Warning: Teleporting vehicle '2373'; waited too long (yield), lane='e-j-2-1-a-j-3-1_0', time=2350.00.
+Warning: Teleporting vehicle '1915'; waited too long (yield), lane='e-j-3-2-a-j-2-2_0', time=2357.00.
+Warning: Vehicle '1978' ends teleporting on edge 'e-j-3-2-a-j-2-2', time=2357.00.
+Warning: Vehicle '1896' ends teleporting on edge 'e-j-1-2-a-j-0-2', time=2364.00.
+Warning: Teleporting vehicle '2268'; waited too long (yield), lane='e-j-1-2-a-j-1-1_0', time=2389.00.
+Warning: Vehicle '2062' ends teleporting on edge 'e-j-1-2-a-j-1-1', time=2389.00.
+Warning: Teleporting vehicle '2703'; waited too long (yield), lane='e-j-2-3-a-j-1-3_0', time=2390.00.
+Step #2400.00 (2ms ~= 500.00*RT, ~274500.00UPS, vehicles TOT 2897 ACT 549 BUF 405)        Warning: Vehicle '2575' ends teleporting on edge 'e-j-3-3-a-j-3-2', time=2405.00.
+Warning: Teleporting vehicle '2855'; waited too long (yield), lane='e-ext-s-2-a-j-4-2_0', time=2413.00.
+Warning: Vehicle '2268' ends teleporting on edge 'e-j-1-1-a-j-2-1', time=2425.00.
+Warning: Vehicle '2262' teleports beyond arrival edge 'e-j-2-2-a-j-1-2', time=2434.00.
+Warning: Vehicle '2581' ends teleporting on edge 'e-j-3-3-a-j-3-2', time=2434.00.
+Warning: Vehicle '2301' ends teleporting on edge 'e-j-2-2-a-j-2-3', time=2443.00.
+Warning: Teleporting vehicle '1576'; waited too long (yield), lane='e-j-2-2-a-j-1-2_0', time=2445.00.
+Warning: Vehicle '1915' ends teleporting on edge 'e-j-2-2-a-j-1-2', time=2445.00.
+Warning: Teleporting vehicle '751'; waited too long (jam), lane='e-j-2-2-a-j-1-2_0', time=2446.00.
+Warning: Vehicle '751' teleports beyond arrival edge 'e-j-2-2-a-j-1-2', time=2446.00.
+Step #2500.00 (2ms ~= 500.00*RT, ~298000.00UPS, vehicles TOT 2985 ACT 596 BUF 452)        Warning: Teleporting vehicle '2206'; waited too long (yield), lane='e-j-2-1-a-j-2-2_0', time=2539.00.
+Warning: Teleporting vehicle '2093'; waited too long (yield), lane='e-j-3-1-a-j-3-2_0', time=2584.00.
+Warning: Vehicle '2703' ends teleporting on edge 'e-j-1-2-a-j-0-2', time=2592.00.
+Warning: Teleporting vehicle '2972'; waited too long (yield), lane='e-j-4-1-a-j-4-2_0', time=2598.00.
+Step #2600.00 (2ms ~= 500.00*RT, ~330000.00UPS, vehicles TOT 3070 ACT 660 BUF 507)        Warning: Teleporting vehicle '3144'; waited too long (yield), lane='e-j-2-0-a-j-2-1_0', time=2630.00.
+Warning: Teleporting vehicle '2296'; waited too long (yield), lane='e-j-4-2-a-j-3-2_0', time=2646.00.
+Warning: Vehicle '2972' ends teleporting on edge 'e-j-4-2-a-j-3-2', time=2646.00.
+Warning: Vehicle '1576' ends teleporting on edge 'e-j-1-1-a-j-1-0', time=2647.00.
+Warning: Teleporting vehicle '3148'; waited too long (yield), lane='e-j-2-4-a-j-1-4_0', time=2648.00.
+Warning: Teleporting vehicle '2389'; waited too long (yield), lane='e-j-2-1-a-j-3-1_0', time=2671.00.
+Warning: Teleporting vehicle '3242'; waited too long (yield), lane='e-j-2-0-a-j-3-0_0', time=2684.00.
+Warning: Teleporting vehicle '2744'; waited too long (yield), lane='e-j-2-3-a-j-1-3_0', time=2695.00.
+Step #2700.00 (2ms ~= 500.00*RT, ~360000.00UPS, vehicles TOT 3149 ACT 720 BUF 582)        Warning: Teleporting vehicle '2227'; waited too long (yield), lane='e-j-1-2-a-j-1-1_0', time=2702.00.
+Warning: Teleporting vehicle '2860'; waited too long (yield), lane='e-ext-s-2-a-j-4-2_0', time=2719.00.
+Warning: Teleporting vehicle '1825'; waited too long (yield), lane='e-j-2-2-a-j-1-2_0', time=2754.00.
+Warning: Vehicle '2373' ends teleporting on edge 'e-j-2-2-a-j-2-3', time=2757.00.
+Warning: Teleporting vehicle '3349'; waited too long (yield), lane='e-ext-e-1-a-j-1-4_0', time=2758.00.
+Warning: Vehicle '1825' ends teleporting on edge 'e-j-1-2-a-j-1-1', time=2763.00.
+Warning: Vehicle '2206' ends teleporting on edge 'e-j-1-2-a-j-1-1', time=2763.00.
+Warning: Vehicle '2291' ends teleporting on edge 'e-j-1-2-a-j-1-1', time=2763.00.
+Warning: Teleporting vehicle '3104'; waited too long (yield), lane='e-j-4-3-a-j-3-3_0', time=2773.00.
+Warning: Teleporting vehicle '2872'; waited too long (yield), lane='e-j-1-4-a-j-1-3_0', time=2786.00.
+Warning: Vehicle '3148' ends teleporting on edge 'e-j-1-4-a-j-1-3', time=2786.00.
+Step #2800.00Warning: Vehicle '2093' ends teleporting on edge 'e-j-2-2-a-j-2-3', time=2800.00.
+ (2ms ~= 500.00*RT, ~375000.00UPS, vehicles TOT 3209 ACT 750 BUF 654)        Warning: Teleporting vehicle '3270'; waited too long (yield), lane='e-j-4-4-a-j-3-4_0', time=2803.00.
+Warning: Vehicle '2855' ends teleporting on edge 'e-j-2-2-a-j-1-2', time=2816.00.
+Warning: Teleporting vehicle '3454'; waited too long (yield), lane='e-ext-o-3-a-j-3-0_0', time=2831.00.
+Warning: Vehicle '3144' ends teleporting on edge 'e-j-2-2-a-j-2-3', time=2835.00.
+Warning: Vehicle '2296' ends teleporting on edge 'e-j-3-2-a-j-2-2', time=2840.00.
+Warning: Teleporting vehicle '2878'; waited too long (yield), lane='e-j-3-4-a-j-3-3_0', time=2861.00.
+Warning: Vehicle '3270' ends teleporting on edge 'e-j-3-4-a-j-3-3', time=2861.00.
+Warning: Teleporting vehicle '2920'; waited too long (yield), lane='e-j-3-4-a-j-3-3_0', time=2862.00.
+Warning: Teleporting vehicle '2119'; waited too long (yield), lane='e-j-2-2-a-j-2-3_0', time=2862.00.
+Warning: Vehicle '2389' teleports beyond arrival edge 'e-j-3-1-a-j-3-2', time=2872.00.
+Warning: Teleporting vehicle '2002'; waited too long (yield), lane='e-j-3-1-a-j-3-2_0', time=2899.00.
+Step #2900.00 (4ms ~= 250.00*RT, ~197750.00UPS, vehicles TOT 3295 ACT 791 BUF 737)        Warning: Vehicle '2878' ends teleporting on edge 'e-j-3-3-a-j-3-2', time=2901.00.
+Warning: Vehicle '2227' teleports beyond arrival edge 'e-j-1-1-a-j-2-1', time=2903.00.
+Warning: Teleporting vehicle '3052'; waited too long (yield), lane='e-j-4-1-a-j-4-2_0', time=2904.00.
+Warning: Vehicle '2860' ends teleporting on edge 'e-j-4-2-a-j-3-2', time=2915.00.
+Warning: Vehicle '2920' ends teleporting on edge 'e-j-3-3-a-j-3-2', time=2927.00.
+Warning: Vehicle '3104' ends teleporting on edge 'e-j-3-3-a-j-3-2', time=2927.00.
+Warning: Vehicle '3242' ends teleporting on edge 'e-j-3-1-a-j-2-1', time=2941.00.
+Warning: Teleporting vehicle '3187'; waited too long (yield), lane='e-j-2-4-a-j-1-4_0', time=2955.00.
+Warning: Vehicle '3349' ends teleporting on edge 'e-j-1-3-a-j-2-3', time=2960.00.
+Warning: Teleporting vehicle '3266'; waited too long (yield), lane='e-j-2-0-a-j-3-0_0', time=2992.00.
+Step #3000.00Warning: Teleporting vehicle '2759'; waited too long (yield), lane='e-j-2-3-a-j-1-3_0', time=3000.00.
+Warning: Vehicle '2119' ends teleporting on edge 'e-j-2-3-a-j-1-3', time=3000.00.
+ (3ms ~= 333.33*RT, ~275333.33UPS, vehicles TOT 3371 ACT 826 BUF 796)        Warning: Teleporting vehicle '2673'; waited too long (yield), lane='e-j-1-1-a-j-2-1_0', time=3008.00.
+Warning: Teleporting vehicle '2639'; waited too long (yield), lane='e-j-2-1-a-j-3-1_0', time=3009.00.
+Warning: Teleporting vehicle '1524'; waited too long (yield), lane='e-j-1-2-a-j-1-1_0', time=3025.00.
+Warning: Vehicle '2744' ends teleporting on edge 'e-j-1-2-a-j-1-1', time=3025.00.
+Warning: Teleporting vehicle '2225'; waited too long (yield), lane='e-j-1-2-a-j-1-1_0', time=3026.00.
+Warning: Vehicle '2872' ends teleporting on edge 'e-j-1-2-a-j-1-1', time=3026.00.
+Warning: Teleporting vehicle '3785'; waited too long (yield), lane='e-ext-o-4-a-j-4-0_0', time=3061.00.
+Warning: Teleporting vehicle '3523'; waited too long (yield), lane='e-ext-e-1-a-j-1-4_0', time=3063.00.
+Warning: Teleporting vehicle '2827'; waited too long (yield), lane='e-j-1-4-a-j-1-3_0', time=3095.00.
+Warning: Vehicle '3187' ends teleporting on edge 'e-j-1-4-a-j-1-3', time=3095.00.
+Step #3100.00Warning: Vehicle '2002' teleports beyond arrival edge 'e-j-3-2-a-j-2-2', time=3100.00.
+ (5ms ~= 200.00*RT, ~176400.00UPS, vehicles TOT 3445 ACT 882 BUF 855)        Warning: Teleporting vehicle '3854'; waited too long (yield), lane='e-ext-s-3-a-j-4-3_0', time=3113.00.
+Warning: Vehicle '1524' teleports beyond arrival edge 'e-j-1-1-a-j-2-1', time=3114.00.
+Warning: Vehicle '3052' ends teleporting on edge 'e-j-3-2-a-j-2-2', time=3119.00.
+Warning: Vehicle '2225' ends teleporting on edge 'e-j-2-1-a-j-2-0', time=3134.00.
+Warning: Teleporting vehicle '2408'; waited too long (yield), lane='e-j-2-1-a-j-2-2_0', time=3172.00.
+Warning: Vehicle '2673' ends teleporting on edge 'e-j-2-1-a-j-2-2', time=3172.00.
+Warning: Teleporting vehicle '3689'; waited too long (yield), lane='e-j-0-2-a-j-0-1_0', time=3186.00.
+Step #3200.00 (3ms ~= 333.33*RT, ~299333.33UPS, vehicles TOT 3490 ACT 898 BUF 963)        Warning: Teleporting vehicle '3880'; waited too long (yield), lane='e-ext-o-2-a-j-2-0_0', time=3203.00.
+Warning: Teleporting vehicle '3151'; waited too long (yield), lane='e-j-2-0-a-j-2-1_0', time=3204.00.
+Warning: Vehicle '3880' ends teleporting on edge 'e-j-2-0-a-j-2-1', time=3204.00.
+Warning: Teleporting vehicle '3037'; waited too long (yield), lane='e-j-4-1-a-j-4-2_0', time=3209.00.
+Warning: Teleporting vehicle '1965'; waited too long (yield), lane='e-j-3-1-a-j-3-2_0', time=3210.00.
+Warning: Vehicle '2639' ends teleporting on edge 'e-j-3-1-a-j-3-2', time=3210.00.
+Warning: Teleporting vehicle '3997'; waited too long (yield), lane='e-j-0-3-a-j-0-2_0', time=3218.00.
+Warning: Teleporting vehicle '2371'; waited too long (yield), lane='e-j-4-2-a-j-3-2_0', time=3220.00.
+Warning: Vehicle '3037' ends teleporting on edge 'e-j-4-2-a-j-3-2', time=3220.00.
+Warning: Vehicle '3454' ends teleporting on edge 'e-j-3-2-a-j-4-2', time=3234.00.
+Warning: Teleporting vehicle '2546'; waited too long (yield), lane='e-j-3-0-a-j-3-1_0', time=3251.00.
+Warning: Teleporting vehicle '3274'; waited too long (yield), lane='e-ext-s-2-a-j-4-2_0', time=3254.00.
+Warning: Teleporting vehicle '3223'; waited too long (yield), lane='e-j-2-4-a-j-1-4_0', time=3261.00.
+Warning: Teleporting vehicle '3042'; waited too long (yield), lane='e-j-4-2-a-j-4-3_0', time=3272.00.
+Warning: Teleporting vehicle '3218'; waited too long (yield), lane='e-j-4-3-a-j-3-3_0', time=3279.00.
+Warning: Vehicle '3042' ends teleporting on edge 'e-j-4-3-a-j-3-3', time=3279.00.
+Warning: Vehicle '3785' ends teleporting on edge 'e-j-3-0-a-j-2-0', time=3283.00.
+Warning: Teleporting vehicle '4016'; waited too long (yield), lane='e-ext-o-3-a-j-3-0_0', time=3284.00.
+Warning: Teleporting vehicle '3226'; waited too long (yield), lane='e-j-2-0-a-j-3-0_0', time=3297.00.
+Step #3300.00 (4ms ~= 250.00*RT, ~238000.00UPS, vehicles TOT 3562 ACT 952 BUF 1046)       Warning: Vehicle '3854' ends teleporting on edge 'e-j-3-3-a-j-2-3', time=3315.00.
+Warning: Teleporting vehicle '2025'; waited too long (yield), lane='e-j-2-1-a-j-3-1_0', time=3318.00.
+Warning: Teleporting vehicle '3086'; waited too long (yield), lane='e-j-2-3-a-j-1-3_0', time=3321.00.
+Warning: Teleporting vehicle '4105'; waited too long (yield), lane='e-ext-s-0-a-j-4-0_0', time=3323.00.
+Warning: Teleporting vehicle '2892'; waited too long (yield), lane='e-j-1-1-a-j-2-1_0', time=3327.00.
+Warning: Teleporting vehicle '4131'; waited too long (yield), lane='e-j-1-0-a-j-2-0_0', time=3327.00.
+Warning: Teleporting vehicle '2784'; waited too long (yield), lane='e-j-2-1-a-j-2-0_0', time=3334.00.
+Warning: Teleporting vehicle '3946'; waited too long (yield), lane='e-j-3-4-a-j-2-4_0', time=3348.00.
+Warning: Teleporting vehicle '3357'; waited too long (yield), lane='e-j-0-1-a-j-1-1_0', time=3354.00.
+Warning: Vehicle '3689' ends teleporting on edge 'e-j-0-1-a-j-1-1', time=3354.00.
+Warning: Teleporting vehicle '3856'; waited too long (yield), lane='e-ext-o-4-a-j-4-0_0', time=3367.00.
+Warning: Teleporting vehicle '3558'; waited too long (yield), lane='e-ext-e-1-a-j-1-4_0', time=3368.00.
+Warning: Vehicle '2408' ends teleporting on edge 'e-j-1-2-a-j-1-3', time=3374.00.
+Warning: Teleporting vehicle '2383'; waited too long (yield), lane='e-j-1-2-a-j-1-1_0', time=3384.00.
+Warning: Vehicle '2759' ends teleporting on edge 'e-j-1-2-a-j-1-1', time=3384.00.
+Warning: Teleporting vehicle '2463'; waited too long (yield), lane='e-j-2-2-a-j-1-2_0', time=3389.00.
+Warning: Teleporting vehicle '3439'; waited too long (yield), lane='e-j-2-3-a-j-2-4_0', time=3391.00.
+Warning: Teleporting vehicle '1941'; waited too long (yield), lane='e-j-2-2-a-j-2-3_0', time=3399.00.
+Step #3400.00 (3ms ~= 333.33*RT, ~327333.33UPS, vehicles TOT 3611 ACT 982 BUF 1132)       Warning: Vehicle '3151' ends teleporting on edge 'e-j-2-2-a-j-3-2', time=3406.00.
+Warning: Vehicle '1965' teleports beyond arrival edge 'e-j-3-2-a-j-2-2', time=3411.00.
+Warning: Teleporting vehicle '2693'; waited too long (yield), lane='e-j-1-3-a-j-1-2_0', time=3418.00.
+Warning: Vehicle '3086' ends teleporting on edge 'e-j-1-3-a-j-1-2', time=3418.00.
+Warning: Vehicle '3997' ends teleporting on edge 'e-j-1-2-a-j-2-2', time=3420.00.
+Warning: Teleporting vehicle '2698'; waited too long (jam), lane='e-j-1-3-a-j-1-2_0', time=3422.00.
+Warning: Vehicle '2698' ends teleporting on edge 'e-j-1-2-a-j-0-2', time=3422.00.
+Warning: Teleporting vehicle '3751'; waited too long (jam), lane='e-j-0-4-a-j-1-4_0', time=3433.00.
+Warning: Teleporting vehicle '4313'; waited too long (yield), lane='e-ext-e-0-a-j-0-4_0', time=3434.00.
+Warning: Teleporting vehicle '1808'; waited too long (yield), lane='e-j-3-2-a-j-2-2_0', time=3436.00.
+Warning: Vehicle '3266' ends teleporting on edge 'e-j-3-2-a-j-2-2', time=3436.00.
+Warning: Teleporting vehicle '2699'; waited too long (yield), lane='e-j-1-4-a-j-1-3_0', time=3447.00.
+Warning: Vehicle '3223' ends teleporting on edge 'e-j-1-4-a-j-1-3', time=3447.00.
+Warning: Vehicle '2546' ends teleporting on edge 'e-j-3-2-a-j-4-2', time=3453.00.
+Warning: Teleporting vehicle '4342'; waited too long (jam), lane='e-j-2-3-a-j-2-2_0', time=3457.00.
+Warning: Teleporting vehicle '2850'; waited too long (yield), lane='e-j-1-4-a-j-1-3_0', time=3461.00.
+Warning: Teleporting vehicle '4354'; waited too long (yield), lane='e-ext-n-1-a-j-0-1_0', time=3464.00.
+Warning: Vehicle '2892' ends teleporting on edge 'e-j-2-1-a-j-2-2', time=3466.00.
+Warning: Vehicle '3218' ends teleporting on edge 'e-j-3-2-a-j-3-1', time=3481.00.
+Warning: Vehicle '2383' ends teleporting on edge 'e-j-1-1-a-j-2-1', time=3484.00.
+Warning: Vehicle '4016' ends teleporting on edge 'e-j-3-1-a-j-4-1', time=3486.00.
+Warning: Teleporting vehicle '3983'; waited too long (yield), lane='e-j-0-2-a-j-0-1_0', time=3491.00.
+Warning: Vehicle '2827' ends teleporting on edge 'e-j-1-1-a-j-1-0', time=3498.00.
+Warning: Vehicle '3226' ends teleporting on edge 'e-j-3-1-a-j-2-1', time=3499.00.
+Step #3500.00 (4ms ~= 250.00*RT, ~250750.00UPS, vehicles TOT 3654 ACT 1003 BUF 1219)      Warning: Teleporting vehicle '2352'; waited too long (yield), lane='e-j-4-1-a-j-4-2_0', time=3515.00.
+Warning: Vehicle '2025' teleports beyond arrival edge 'e-j-3-1-a-j-3-2', time=3519.00.
+Warning: Teleporting vehicle '4011'; waited too long (yield), lane='e-j-0-3-a-j-0-2_0', time=3522.00.
+Warning: Vehicle '4105' ends teleporting on edge 'e-j-3-0-a-j-2-0', time=3525.00.
+Warning: Vehicle '2784' ends teleporting on edge 'e-j-3-0-a-j-4-0', time=3536.00.
+Warning: Vehicle '4354' ends teleporting on edge 'e-j-0-1-a-j-1-1', time=3538.00.
+Warning: Vehicle '3946' ends teleporting on edge 'e-j-1-4-a-j-0-4', time=3550.00.
+Warning: Teleporting vehicle '2584'; waited too long (yield), lane='e-j-3-0-a-j-3-1_0', time=3556.00.
+Warning: Teleporting vehicle '3301'; waited too long (yield), lane='e-ext-s-2-a-j-4-2_0', time=3560.00.
+Warning: Teleporting vehicle '3189'; waited too long (yield), lane='e-j-2-4-a-j-1-4_0', time=3567.00.
+Warning: Vehicle '3856' ends teleporting on edge 'e-j-3-0-a-j-2-0', time=3569.00.
+Warning: Vehicle '3558' ends teleporting on edge 'e-j-1-3-a-j-2-3', time=3570.00.
+Warning: Teleporting vehicle '4268'; waited too long (yield), lane='e-ext-o-3-a-j-3-0_0', time=3589.00.
+Warning: Vehicle '2463' teleports beyond arrival edge 'e-j-1-2-a-j-1-1', time=3590.00.
+Step #3600.00 (4ms ~= 250.00*RT, ~253500.00UPS, vehicles TOT 3698 ACT 1014 BUF 1303)      
+Simulation ended at time: 3600.00.
+Reason: The final simulation step has been reached.
+Performance:
+ Duration: 5.25s
+ Real time factor: 685.453
+ UPS: 309222.391470
+Vehicles:
+ Inserted: 3698 (Loaded: 5001)
+ Running: 1014
+ Waiting: 1303
+ Teleports: 96 (Jam: 4, Yield: 92)
+Statistics (avg of 2684):
+ RouteLength: 1096.76
+ Speed: 7.25
+ Duration: 248.06
+ WaitingTime: 127.11
+ TimeLoss: 165.64
+ DepartDelay: 32.58
+
+real	0m5,330s
+user	0m5,285s
+sys	0m0,043s
