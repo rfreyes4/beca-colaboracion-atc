@@ -1,0 +1,165 @@
+=========================================================================================================
+ PRUEBA 01 - CALIBRACION TAUFF EN SUMO
+=========================================================================================================
+Fecha: 2026-11-11 16:25:12.855008
+Red: /home/fel1xrr/Escritorio/Proyectos de investigacion/REPO BECA ATC/MAPA SINTÉTICO V3/red_5x5/red_5x5.net.xml
+Vehiculos: [3500, 4000, 4500, 5000, 5500]
+Valores tauff: [1.13, 3.0, 4.0, 4.5, 5.0, 5.5, 6.0]
+Penalizacion MESO: 4
+Control limitado: activado en las pruebas LIMITADO
+Simulacion: 0 - 3600 segundos
+Teletransporte: 300 segundos
+Total simulaciones: 50
+
+=========================================================================================================
+ EXPERIMENTO - 3500 VEHICULOS
+=========================================================================================================
+[01/50] MICRO     | tauff=  -  | Fin=3368 | TimeLoss=  36.88s | Teleports=  0 | Speed=10.04 | real=0.889s
+[02/50] LIMITADO  | tauff=1.13 | Fin=3405 | TimeLoss=  15.11s | Teleports=  0 | Speed=11.69 | real=0.227s
+[03/50] LIMITADO  | tauff=3.00 | Fin=3403 | TimeLoss=  17.44s | Teleports=  0 | Speed=11.41 | real=0.224s
+[04/50] LIMITADO  | tauff=4.00 | Fin=3400 | TimeLoss=  18.98s | Teleports=  0 | Speed=11.29 | real=0.225s
+[05/50] LIMITADO  | tauff=4.50 | Fin=3401 | TimeLoss=  22.07s | Teleports=  0 | Speed=10.99 | real=0.221s
+[06/50] LIMITADO  | tauff=5.00 | Fin=3396 | TimeLoss=  24.61s | Teleports=  0 | Speed=10.75 | real=0.224s
+[07/50] LIMITADO  | tauff=5.50 | Fin=3386 | TimeLoss=  28.03s | Teleports=  0 | Speed=10.48 | real=0.222s
+[08/50] LIMITADO  | tauff=6.00 | Fin=3388 | TimeLoss=  32.59s | Teleports=  0 | Speed=10.11 | real=0.228s
+[09/50] SIN_CTRL  | tauff=3.00 | Fin=3402 | TimeLoss=  18.13s | Teleports=  0 | Speed=11.33 | real=0.234s
+[10/50] SIN_CTRL  | tauff=6.00 | Fin=3391 | TimeLoss=  31.31s | Teleports=  0 | Speed=10.10 | real=0.208s
+
+=========================================================================================================
+ EXPERIMENTO - 4000 VEHICULOS
+=========================================================================================================
+[11/50] MICRO     | tauff=  -  | Fin=3792 | TimeLoss=  57.44s | Teleports=  0 | Speed= 9.00 | real=1.199s
+[12/50] LIMITADO  | tauff=1.13 | Fin=3891 | TimeLoss=  15.62s | Teleports=  0 | Speed=11.63 | real=0.244s
+[13/50] LIMITADO  | tauff=3.00 | Fin=3889 | TimeLoss=  18.61s | Teleports=  0 | Speed=11.28 | real=0.292s
+[14/50] LIMITADO  | tauff=4.00 | Fin=3883 | TimeLoss=  23.15s | Teleports=  0 | Speed=10.91 | real=0.245s
+[15/50] LIMITADO  | tauff=4.50 | Fin=3882 | TimeLoss=  26.49s | Teleports=  0 | Speed=10.62 | real=0.249s
+[16/50] LIMITADO  | tauff=5.00 | Fin=3876 | TimeLoss=  31.87s | Teleports=  0 | Speed=10.21 | real=0.245s
+[17/50] LIMITADO  | tauff=5.50 | Fin=3871 | TimeLoss=  36.66s | Teleports=  0 | Speed= 9.86 | real=0.257s
+[18/50] LIMITADO  | tauff=6.00 | Fin=3867 | TimeLoss=  44.72s | Teleports=  0 | Speed= 9.39 | real=0.253s
+[19/50] SIN_CTRL  | tauff=3.00 | Fin=3890 | TimeLoss=  19.43s | Teleports=  0 | Speed=11.19 | real=0.239s
+[20/50] SIN_CTRL  | tauff=6.00 | Fin=3863 | TimeLoss=  37.53s | Teleports=  0 | Speed= 9.63 | real=0.242s
+
+=========================================================================================================
+ EXPERIMENTO - 4500 VEHICULOS
+=========================================================================================================
+[21/50] MICRO     | tauff=  -  | Fin=4124 | TimeLoss=  92.71s | Teleports=  0 | Speed= 7.87 | real=1.682s
+[22/50] LIMITADO  | tauff=1.13 | Fin=4383 | TimeLoss=  15.92s | Teleports=  0 | Speed=11.57 | real=0.297s
+[23/50] LIMITADO  | tauff=3.00 | Fin=4380 | TimeLoss=  19.66s | Teleports=  0 | Speed=11.14 | real=0.287s
+[24/50] LIMITADO  | tauff=4.00 | Fin=4371 | TimeLoss=  29.54s | Teleports=  0 | Speed=10.36 | real=0.279s
+[25/50] LIMITADO  | tauff=4.50 | Fin=4367 | TimeLoss=  36.66s | Teleports=  0 | Speed= 9.89 | real=0.286s
+[26/50] LIMITADO  | tauff=5.00 | Fin=4351 | TimeLoss=  45.82s | Teleports=  0 | Speed= 9.32 | real=0.279s
+[27/50] LIMITADO  | tauff=5.50 | Fin=4328 | TimeLoss=  55.56s | Teleports=  0 | Speed= 8.82 | real=0.298s
+[28/50] LIMITADO  | tauff=6.00 | Fin=4022 | TimeLoss=  82.49s | Teleports=  0 | Speed= 8.07 | real=0.286s
+[29/50] SIN_CTRL  | tauff=3.00 | Fin=4377 | TimeLoss=  20.48s | Teleports=  0 | Speed=11.05 | real=0.272s
+[30/50] SIN_CTRL  | tauff=6.00 | Fin=4359 | TimeLoss=  45.17s | Teleports=  0 | Speed= 9.08 | real=0.264s
+
+=========================================================================================================
+ EXPERIMENTO - 5000 VEHICULOS
+=========================================================================================================
+[31/50] MICRO     | tauff=  -  | Fin=2684 | TimeLoss= 165.64s | Teleports= 96 | Speed= 7.25 | real=5.313s
+[32/50] LIMITADO  | tauff=1.13 | Fin=4867 | TimeLoss=  16.23s | Teleports=  0 | Speed=11.53 | real=0.296s
+[33/50] LIMITADO  | tauff=3.00 | Fin=4863 | TimeLoss=  21.16s | Teleports=  0 | Speed=11.00 | real=0.305s
+[34/50] LIMITADO  | tauff=4.00 | Fin=4779 | TimeLoss=  49.04s | Teleports=  0 | Speed= 9.38 | real=0.308s
+[35/50] LIMITADO  | tauff=4.50 | Fin=4111 | TimeLoss=  82.97s | Teleports= 18 | Speed= 8.42 | real=0.482s
+[36/50] LIMITADO  | tauff=5.00 | Fin=2387 | TimeLoss= 146.78s | Teleports=145 | Speed= 7.51 | real=1.735s
+[37/50] LIMITADO  | tauff=5.50 | Fin=2628 | TimeLoss= 144.60s | Teleports=127 | Speed= 7.40 | real=1.558s
+[38/50] LIMITADO  | tauff=6.00 | Fin=2276 | TimeLoss= 178.04s | Teleports=174 | Speed= 6.90 | real=1.339s
+[39/50] SIN_CTRL  | tauff=3.00 | Fin=4860 | TimeLoss=  21.77s | Teleports=  0 | Speed=10.92 | real=0.318s
+[40/50] SIN_CTRL  | tauff=6.00 | Fin=4807 | TimeLoss=  59.05s | Teleports=  0 | Speed= 8.39 | real=0.308s
+
+=========================================================================================================
+ EXPERIMENTO - 5500 VEHICULOS
+=========================================================================================================
+[41/50] MICRO     | tauff=  -  | Fin=2888 | TimeLoss= 179.94s | Teleports=122 | Speed= 6.71 | real=6.651s
+[42/50] LIMITADO  | tauff=1.13 | Fin=5360 | TimeLoss=  16.56s | Teleports=  0 | Speed=11.49 | real=0.299s
+[43/50] LIMITADO  | tauff=3.00 | Fin=5353 | TimeLoss=  22.52s | Teleports=  0 | Speed=10.86 | real=0.315s
+[44/50] LIMITADO  | tauff=4.00 | Fin=2579 | TimeLoss= 102.34s | Teleports=185 | Speed= 8.69 | real=2.449s
+[45/50] LIMITADO  | tauff=4.50 | Fin=2541 | TimeLoss= 125.65s | Teleports=168 | Speed= 7.97 | real=2.293s
+[46/50] LIMITADO  | tauff=5.00 | Fin=2100 | TimeLoss= 174.34s | Teleports=236 | Speed= 7.50 | real=2.172s
+[47/50] LIMITADO  | tauff=5.50 | Fin=2114 | TimeLoss= 182.95s | Teleports=216 | Speed= 7.15 | real=2.188s
+[48/50] LIMITADO  | tauff=6.00 | Fin=2045 | TimeLoss= 212.82s | Teleports=242 | Speed= 6.53 | real=2.376s
+[49/50] SIN_CTRL  | tauff=3.00 | Fin=5354 | TimeLoss=  22.97s | Teleports=  0 | Speed=10.80 | real=0.344s
+[50/50] SIN_CTRL  | tauff=6.00 | Fin=5245 | TimeLoss=  70.64s | Teleports=  0 | Speed= 7.80 | real=0.318s
+
+
+=========================================================================================================
+ COMPARACION FINAL - CONTROL LIMITADO FRENTE A MICRO
+=========================================================================================================
+ Vehiculos   Tauff     Fin   Tele   TimeLoss   Dif.Loss   Dif.Fin  Dif.Tele
+---------------------------------------------------------------------------------------------------------
+      3500   MICRO    3368      0      36.88          -         -         -
+      3500    1.13    3405      0      15.11     -21.77       +37        +0
+      3500    3.00    3403      0      17.44     -19.44       +35        +0
+      3500    4.00    3400      0      18.98     -17.90       +32        +0
+      3500    4.50    3401      0      22.07     -14.81       +33        +0
+      3500    5.00    3396      0      24.61     -12.27       +28        +0
+      3500    5.50    3386      0      28.03      -8.85       +18        +0
+      3500    6.00    3388      0      32.59      -4.29       +20        +0
+---------------------------------------------------------------------------------------------------------
+      4000   MICRO    3792      0      57.44          -         -         -
+      4000    1.13    3891      0      15.62     -41.82       +99        +0
+      4000    3.00    3889      0      18.61     -38.83       +97        +0
+      4000    4.00    3883      0      23.15     -34.29       +91        +0
+      4000    4.50    3882      0      26.49     -30.95       +90        +0
+      4000    5.00    3876      0      31.87     -25.57       +84        +0
+      4000    5.50    3871      0      36.66     -20.78       +79        +0
+      4000    6.00    3867      0      44.72     -12.72       +75        +0
+---------------------------------------------------------------------------------------------------------
+      4500   MICRO    4124      0      92.71          -         -         -
+      4500    1.13    4383      0      15.92     -76.79      +259        +0
+      4500    3.00    4380      0      19.66     -73.05      +256        +0
+      4500    4.00    4371      0      29.54     -63.17      +247        +0
+      4500    4.50    4367      0      36.66     -56.05      +243        +0
+      4500    5.00    4351      0      45.82     -46.89      +227        +0
+      4500    5.50    4328      0      55.56     -37.15      +204        +0
+      4500    6.00    4022      0      82.49     -10.22      -102        +0
+---------------------------------------------------------------------------------------------------------
+      5000   MICRO    2684     96     165.64          -         -         -
+      5000    1.13    4867      0      16.23    -149.41     +2183       -96
+      5000    3.00    4863      0      21.16    -144.48     +2179       -96
+      5000    4.00    4779      0      49.04    -116.60     +2095       -96
+      5000    4.50    4111     18      82.97     -82.67     +1427       -78
+      5000    5.00    2387    145     146.78     -18.86      -297       +49
+      5000    5.50    2628    127     144.60     -21.04       -56       +31
+      5000    6.00    2276    174     178.04     +12.40      -408       +78
+---------------------------------------------------------------------------------------------------------
+      5500   MICRO    2888    122     179.94          -         -         -
+      5500    1.13    5360      0      16.56    -163.38     +2472      -122
+      5500    3.00    5353      0      22.52    -157.42     +2465      -122
+      5500    4.00    2579    185     102.34     -77.60      -309       +63
+      5500    4.50    2541    168     125.65     -54.29      -347       +46
+      5500    5.00    2100    236     174.34      -5.60      -788      +114
+      5500    5.50    2114    216     182.95      +3.01      -774       +94
+      5500    6.00    2045    242     212.82     +32.88      -843      +120
+---------------------------------------------------------------------------------------------------------
+
+=========================================================================================================
+ INFLUENCIA DEL CONTROL LIMITADO
+=========================================================================================================
+ Vehiculos   Tauff      Control  Finalizados  Teleports   TimeLoss
+---------------------------------------------------------------------------------------------------------
+      3500    3.00     SIN_CTRL         3402          0      18.13
+      3500    3.00     LIMITADO         3403          0      17.44
+      3500    6.00     SIN_CTRL         3391          0      31.31
+      3500    6.00     LIMITADO         3388          0      32.59
+      4000    3.00     SIN_CTRL         3890          0      19.43
+      4000    3.00     LIMITADO         3889          0      18.61
+      4000    6.00     SIN_CTRL         3863          0      37.53
+      4000    6.00     LIMITADO         3867          0      44.72
+      4500    3.00     SIN_CTRL         4377          0      20.48
+      4500    3.00     LIMITADO         4380          0      19.66
+      4500    6.00     SIN_CTRL         4359          0      45.17
+      4500    6.00     LIMITADO         4022          0      82.49
+      5000    3.00     SIN_CTRL         4860          0      21.77
+      5000    3.00     LIMITADO         4863          0      21.16
+      5000    6.00     SIN_CTRL         4807          0      59.05
+      5000    6.00     LIMITADO         2276        174     178.04
+      5500    3.00     SIN_CTRL         5354          0      22.97
+      5500    3.00     LIMITADO         5353          0      22.52
+      5500    6.00     SIN_CTRL         5245          0      70.64
+      5500    6.00     LIMITADO         2045        242     212.82
+
+=========================================================================================================
+SIMULACIONES COMPLETADAS: 50/50
+LOG GUARDADO EN: /home/fel1xrr/Escritorio/Proyectos de investigacion/REPO BECA ATC/MAPA SINTÉTICO V3/PRUEBAS MESO/PRUEBA 01 - CALIBRACION TAUFF/logs/resultados_20261111_162512_854796.log
+=========================================================================================================

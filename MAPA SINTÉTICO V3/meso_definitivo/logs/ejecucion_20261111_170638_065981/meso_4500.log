@@ -1,0 +1,98 @@
+===========================================================
+SIMULACION MESOSCOPICA DEFINITIVA - 4500 VEHICULOS
+===========================================================
+
+FECHA: 2026-11-11 17:06:39.037680
+
+CONFIGURACION:
+Modelo: MESO convencional
+Control intersecciones: true
+Control limitado: true
+Penalizacion: 4 segundos
+Tauff: 6.00 segundos
+Taufj: 1.13 segundos
+Taujf: 1.73 segundos
+Taujj: 1.40 segundos
+Meso edgelength: 98 metros
+Jam threshold: -1
+Meso recheck: 0
+Meso overtaking: false
+Tiempo simulado: 0 - 3600 segundos
+Time to teleport: 300 segundos
+
+===========================================================
+VEHICULOS
+===========================================================
+
+Loaded:       4500
+Inserted:     4488
+Finished:     4022
+Running:      466
+Waiting:      12
+Teleports:    0
+Teleports Jam:0
+
+===========================================================
+ESTADISTICAS MEDIAS DE VEHICULOS FINALIZADOS
+===========================================================
+
+RouteLength:  1101.09 m
+Speed:        8.07 m/s
+Speed:        29.05 km/h
+Duration:     163.04 s
+WaitingTime:  12.22 s
+TimeLoss:     82.49 s
+DepartDelay:  1.22 s
+
+===========================================================
+TIEMPOS LIMPIOS - MEDICION ANTERIOR
+===========================================================
+
+real: 0.286 s
+user: 0.261 s
+sys:  0.024 s
+
+===========================================================
+TIEMPOS DE ESTA EJECUCION
+===========================================================
+
+real: 0.280 s
+user: 0.262 s
+sys:  0.017 s
+
+===========================================================
+COMANDO UTILIZADO
+===========================================================
+
+sumo -n '/home/fel1xrr/Escritorio/Proyectos de investigacion/REPO BECA ATC/MAPA SINTÉTICO V3/red_5x5/red_5x5.net.xml' -r '/home/fel1xrr/Escritorio/Proyectos de investigacion/REPO BECA ATC/MAPA SINTÉTICO V3/red_5x5/4500_rutas/rutas_4500.rou.xml' --mesosim true --meso-ltm false --meso-junction-control true --meso-junction-control.limited true --meso-minor-penalty 4 --meso-tauff 6.00 --meso-taufj 1.13 --meso-taujf 1.73 --meso-taujj 1.40 --meso-edgelength 98 --meso-jam-threshold -1 --meso-recheck 0 --meso-overtaking false --begin 0 --end 3600 --time-to-teleport 300 --duration-log.statistics true --no-step-log true --no-warnings true
+
+===========================================================
+SALIDA ORIGINAL DE SUMO
+===========================================================
+
+Loading net-file from '/home/fel1xrr/Escritorio/Proyectos de investigacion/REPO BECA ATC/MAPA SINTÉTICO V3/red_5x5/red_5x5.net.xml' ... done (5ms).
+Loading route-files incrementally from '/home/fel1xrr/Escritorio/Proyectos de investigacion/REPO BECA ATC/MAPA SINTÉTICO V3/red_5x5/4500_rutas/rutas_4500.rou.xml'
+Loading done.
+Simulation version 1.28.0 started with time: 0.00.
+Simulation ended at time: 3600.00.
+Reason: The final simulation step has been reached.
+Performance:
+ Duration: 0.21s
+ Real time factor: 17307.7
+ UPS: 3778927.884615
+Vehicles:
+ Inserted: 4488 (Loaded: 4500)
+ Running: 466
+ Waiting: 12
+Statistics (avg of 4022):
+ RouteLength: 1101.09
+ Speed: 8.07
+ Duration: 163.04
+ WaitingTime: 12.22
+ TimeLoss: 82.49
+ DepartDelay: 1.22
+
+
+===========================================================
+FIN DEL LOG
+===========================================================

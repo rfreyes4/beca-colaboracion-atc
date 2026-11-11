@@ -1,0 +1,419 @@
+====================================================================================================
+PRUEBA 02 - CALIBRACION TAUFF + PENALIZACION
+====================================================================================================
+Fecha: 2026-11-11 16:46:22.641153
+Red: /home/fel1xrr/Escritorio/Proyectos de investigacion/REPO BECA ATC/MAPA SINTÉTICO V3/red_5x5/red_5x5.net.xml
+Vehiculos: [3500, 4000, 4500, 5000, 5500]
+Tauff: [3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0]
+Penalizaciones: [0, 2, 4, 6, 8, 9, 10]
+Control limitado: ACTIVADO
+Modelo: MESO convencional
+Penalizacion y tauff: variables
+Pesos error: 50% Loss / 30% Fin / 20% Tele
+Total simulaciones: 250
+
+=== REFERENCIA MICRO ===
+[001/250] MICRO N=3500 | Fin=3368 | TimeLoss=36.88s | Teleports=0 | real=0.880s
+[002/250] MICRO N=4000 | Fin=3792 | TimeLoss=57.44s | Teleports=0 | real=1.161s
+[003/250] MICRO N=4500 | Fin=4124 | TimeLoss=92.71s | Teleports=0 | real=1.565s
+[004/250] MICRO N=5000 | Fin=2684 | TimeLoss=165.64s | Teleports=96 | real=5.009s
+[005/250] MICRO N=5500 | Fin=2888 | TimeLoss=179.94s | Teleports=122 | real=5.967s
+
+=== CALIBRACION MESO ===
+
+--- TAUFF=3.0 PENALIZACION=0 ---
+[006/250] MESO N=3500 | tauff=3.0 | penalty= 0 | Fin=3411 | TimeLoss=   4.05s | Teleports=  0 | Error= 44.89 | real=0.220s
+[007/250] MESO N=4000 | tauff=3.0 | penalty= 0 | Fin=3905 | TimeLoss=   5.23s | Teleports=  0 | Error= 46.34 | real=0.235s
+[008/250] MESO N=4500 | tauff=3.0 | penalty= 0 | Fin=4394 | TimeLoss=   6.17s | Teleports=  0 | Error= 48.64 | real=0.261s
+[009/250] MESO N=5000 | tauff=3.0 | penalty= 0 | Fin=4876 | TimeLoss=   7.39s | Teleports=  0 | Error= 92.27 | real=0.280s
+[010/250] MESO N=5500 | tauff=3.0 | penalty= 0 | Fin=5371 | TimeLoss=   8.95s | Teleports=  0 | Error= 93.31 | real=0.301s
+
+--- TAUFF=3.0 PENALIZACION=2 ---
+[011/250] MESO N=3500 | tauff=3.0 | penalty= 2 | Fin=3408 | TimeLoss=  10.49s | Teleports=  0 | Error= 36.13 | real=0.218s
+[012/250] MESO N=4000 | tauff=3.0 | penalty= 2 | Fin=3897 | TimeLoss=  11.57s | Teleports=  0 | Error= 40.76 | real=0.242s
+[013/250] MESO N=4500 | tauff=3.0 | penalty= 2 | Fin=4385 | TimeLoss=  12.53s | Teleports=  0 | Error= 45.14 | real=0.258s
+[014/250] MESO N=5000 | tauff=3.0 | penalty= 2 | Fin=4871 | TimeLoss=  13.85s | Teleports=  0 | Error= 90.26 | real=0.276s
+[015/250] MESO N=5500 | tauff=3.0 | penalty= 2 | Fin=5362 | TimeLoss=  15.24s | Teleports=  0 | Error= 91.46 | real=0.300s
+
+--- TAUFF=3.0 PENALIZACION=4 ---
+[016/250] MESO N=3500 | tauff=3.0 | penalty= 4 | Fin=3403 | TimeLoss=  17.44s | Teleports=  0 | Error= 26.67 | real=0.219s
+[017/250] MESO N=4000 | tauff=3.0 | penalty= 4 | Fin=3889 | TimeLoss=  18.61s | Teleports=  0 | Error= 34.57 | real=0.235s
+[018/250] MESO N=4500 | tauff=3.0 | penalty= 4 | Fin=4380 | TimeLoss=  19.66s | Teleports=  0 | Error= 41.26 | real=0.261s
+[019/250] MESO N=5000 | tauff=3.0 | penalty= 4 | Fin=4863 | TimeLoss=  21.16s | Teleports=  0 | Error= 87.97 | real=0.279s
+[020/250] MESO N=5500 | tauff=3.0 | penalty= 4 | Fin=5353 | TimeLoss=  22.52s | Teleports=  0 | Error= 89.35 | real=0.301s
+
+--- TAUFF=3.0 PENALIZACION=6 ---
+[021/250] MESO N=3500 | tauff=3.0 | penalty= 6 | Fin=3396 | TimeLoss=  24.81s | Teleports=  0 | Error= 16.61 | real=0.221s
+[022/250] MESO N=4000 | tauff=3.0 | penalty= 6 | Fin=3880 | TimeLoss=  26.21s | Teleports=  0 | Error= 27.88 | real=0.247s
+[023/250] MESO N=4500 | tauff=3.0 | penalty= 6 | Fin=4369 | TimeLoss=  27.22s | Teleports=  0 | Error= 37.10 | real=0.260s
+[024/250] MESO N=5000 | tauff=3.0 | penalty= 6 | Fin=4856 | TimeLoss=  28.60s | Teleports=  0 | Error= 85.64 | real=0.282s
+[025/250] MESO N=5500 | tauff=3.0 | penalty= 6 | Fin=5350 | TimeLoss=  29.82s | Teleports=  0 | Error= 87.29 | real=0.307s
+
+--- TAUFF=3.0 PENALIZACION=8 ---
+[026/250] MESO N=3500 | tauff=3.0 | penalty= 8 | Fin=3390 | TimeLoss=  32.13s | Teleports=  0 | Error=  6.64 | real=0.224s
+[027/250] MESO N=4000 | tauff=3.0 | penalty= 8 | Fin=3870 | TimeLoss=  33.96s | Teleports=  0 | Error= 21.06 | real=0.236s
+[028/250] MESO N=4500 | tauff=3.0 | penalty= 8 | Fin=4362 | TimeLoss=  35.00s | Teleports=  0 | Error= 32.86 | real=0.267s
+[029/250] MESO N=5000 | tauff=3.0 | penalty= 8 | Fin=4851 | TimeLoss=  36.38s | Teleports=  0 | Error= 83.24 | real=0.281s
+[030/250] MESO N=5500 | tauff=3.0 | penalty= 8 | Fin=5338 | TimeLoss=  37.79s | Teleports=  0 | Error= 84.95 | real=0.311s
+
+--- TAUFF=3.0 PENALIZACION=9 ---
+[031/250] MESO N=3500 | tauff=3.0 | penalty= 9 | Fin=3386 | TimeLoss=  36.16s | Teleports=  0 | Error=  1.14 | real=0.220s
+[032/250] MESO N=4000 | tauff=3.0 | penalty= 9 | Fin=3868 | TimeLoss=  37.68s | Teleports=  0 | Error= 17.80 | real=0.243s
+[033/250] MESO N=4500 | tauff=3.0 | penalty= 9 | Fin=4360 | TimeLoss=  38.83s | Teleports=  0 | Error= 30.78 | real=0.262s
+[034/250] MESO N=5000 | tauff=3.0 | penalty= 9 | Fin=4845 | TimeLoss=  40.31s | Teleports=  0 | Error= 81.99 | real=0.280s
+[035/250] MESO N=5500 | tauff=3.0 | penalty= 9 | Fin=5335 | TimeLoss=  41.90s | Teleports=  0 | Error= 83.78 | real=0.301s
+
+--- TAUFF=3.0 PENALIZACION=10 ---
+[036/250] MESO N=3500 | tauff=3.0 | penalty=10 | Fin=3384 | TimeLoss=  40.20s | Teleports=  0 | Error=  4.64 | real=0.217s
+[037/250] MESO N=4000 | tauff=3.0 | penalty=10 | Fin=3864 | TimeLoss=  41.70s | Teleports=  0 | Error= 14.27 | real=0.241s
+[038/250] MESO N=4500 | tauff=3.0 | penalty=10 | Fin=4358 | TimeLoss=  42.91s | Teleports=  0 | Error= 28.56 | real=0.263s
+[039/250] MESO N=5000 | tauff=3.0 | penalty=10 | Fin=4847 | TimeLoss=  44.61s | Teleports=  0 | Error= 80.71 | real=0.288s
+[040/250] MESO N=5500 | tauff=3.0 | penalty=10 | Fin=5321 | TimeLoss=  46.15s | Teleports=  0 | Error= 82.45 | real=0.304s
+
+--- TAUFF=3.5 PENALIZACION=0 ---
+[041/250] MESO N=3500 | tauff=3.5 | penalty= 0 | Fin=3411 | TimeLoss=   7.18s | Teleports=  0 | Error= 40.65 | real=0.226s
+[042/250] MESO N=4000 | tauff=3.5 | penalty= 0 | Fin=3902 | TimeLoss=  10.59s | Teleports=  0 | Error= 41.65 | real=0.245s
+[043/250] MESO N=4500 | tauff=3.5 | penalty= 0 | Fin=4388 | TimeLoss=  15.27s | Teleports=  0 | Error= 43.69 | real=0.262s
+[044/250] MESO N=5000 | tauff=3.5 | penalty= 0 | Fin=4865 | TimeLoss=  23.50s | Teleports=  0 | Error= 87.28 | real=0.288s
+[045/250] MESO N=5500 | tauff=3.5 | penalty= 0 | Fin=3881 | TimeLoss=  73.45s | Teleports= 54 | Error= 51.05 | real=0.441s
+
+--- TAUFF=3.5 PENALIZACION=2 ---
+[046/250] MESO N=3500 | tauff=3.5 | penalty= 2 | Fin=3406 | TimeLoss=  11.68s | Teleports=  0 | Error= 34.50 | real=0.223s
+[047/250] MESO N=4000 | tauff=3.5 | penalty= 2 | Fin=3894 | TimeLoss=  14.83s | Teleports=  0 | Error= 37.90 | real=0.247s
+[048/250] MESO N=4500 | tauff=3.5 | penalty= 2 | Fin=4379 | TimeLoss=  19.65s | Teleports=  0 | Error= 41.26 | real=0.264s
+[049/250] MESO N=5000 | tauff=3.5 | penalty= 2 | Fin=4853 | TimeLoss=  30.39s | Teleports=  0 | Error= 85.07 | real=0.296s
+[050/250] MESO N=5500 | tauff=3.5 | penalty= 2 | Fin=3276 | TimeLoss=  75.12s | Teleports=114 | Error= 34.47 | real=1.550s
+
+--- TAUFF=3.5 PENALIZACION=4 ---
+[051/250] MESO N=3500 | tauff=3.5 | penalty= 4 | Fin=3405 | TimeLoss=  17.26s | Teleports=  0 | Error= 26.93 | real=0.223s
+[052/250] MESO N=4000 | tauff=3.5 | penalty= 4 | Fin=3887 | TimeLoss=  19.84s | Teleports=  0 | Error= 33.48 | real=0.240s
+[053/250] MESO N=4500 | tauff=3.5 | penalty= 4 | Fin=4371 | TimeLoss=  25.03s | Teleports=  0 | Error= 38.30 | real=0.263s
+[054/250] MESO N=5000 | tauff=3.5 | penalty= 4 | Fin=4856 | TimeLoss=  35.21s | Teleports=  0 | Error= 83.65 | real=0.286s
+[055/250] MESO N=5500 | tauff=3.5 | penalty= 4 | Fin=4614 | TimeLoss=  65.81s | Teleports= 10 | Error= 68.00 | real=0.503s
+
+--- TAUFF=3.5 PENALIZACION=6 ---
+[056/250] MESO N=3500 | tauff=3.5 | penalty= 6 | Fin=3396 | TimeLoss=  23.37s | Teleports=  0 | Error= 18.57 | real=0.220s
+[057/250] MESO N=4000 | tauff=3.5 | penalty= 6 | Fin=3882 | TimeLoss=  26.46s | Teleports=  0 | Error= 27.68 | real=0.241s
+[058/250] MESO N=4500 | tauff=3.5 | penalty= 6 | Fin=4366 | TimeLoss=  30.80s | Teleports=  0 | Error= 35.15 | real=0.267s
+[059/250] MESO N=5000 | tauff=3.5 | penalty= 6 | Fin=4847 | TimeLoss=  39.55s | Teleports=  0 | Error= 82.24 | real=0.293s
+[060/250] MESO N=5500 | tauff=3.5 | penalty= 6 | Fin=4623 | TimeLoss=  74.01s | Teleports=  7 | Error= 66.31 | real=0.490s
+
+--- TAUFF=3.5 PENALIZACION=8 ---
+[061/250] MESO N=3500 | tauff=3.5 | penalty= 8 | Fin=3391 | TimeLoss=  29.02s | Teleports=  0 | Error= 10.86 | real=0.223s
+[062/250] MESO N=4000 | tauff=3.5 | penalty= 8 | Fin=3878 | TimeLoss=  32.17s | Teleports=  0 | Error= 22.68 | real=0.248s
+[063/250] MESO N=4500 | tauff=3.5 | penalty= 8 | Fin=4360 | TimeLoss=  36.34s | Teleports=  0 | Error= 32.12 | real=0.272s
+[064/250] MESO N=5000 | tauff=3.5 | penalty= 8 | Fin=4843 | TimeLoss=  47.02s | Teleports=  0 | Error= 79.94 | real=0.296s
+[065/250] MESO N=5500 | tauff=3.5 | penalty= 8 | Fin=3494 | TimeLoss=  97.82s | Teleports= 78 | Error= 36.33 | real=0.979s
+
+--- TAUFF=3.5 PENALIZACION=9 ---
+[066/250] MESO N=3500 | tauff=3.5 | penalty= 9 | Fin=3386 | TimeLoss=  32.97s | Teleports=  0 | Error=  5.46 | real=0.224s
+[067/250] MESO N=4000 | tauff=3.5 | penalty= 9 | Fin=3871 | TimeLoss=  35.72s | Teleports=  0 | Error= 19.53 | real=0.240s
+[068/250] MESO N=4500 | tauff=3.5 | penalty= 9 | Fin=4360 | TimeLoss=  39.82s | Teleports=  0 | Error= 30.24 | real=0.264s
+[069/250] MESO N=5000 | tauff=3.5 | penalty= 9 | Fin=4845 | TimeLoss=  48.22s | Teleports=  0 | Error= 79.60 | real=0.285s
+[070/250] MESO N=5500 | tauff=3.5 | penalty= 9 | Fin=3959 | TimeLoss=  89.32s | Teleports= 46 | Error= 48.76 | real=0.833s
+
+--- TAUFF=3.5 PENALIZACION=10 ---
+[071/250] MESO N=3500 | tauff=3.5 | penalty=10 | Fin=3383 | TimeLoss=  35.87s | Teleports=  0 | Error=  1.50 | real=0.223s
+[072/250] MESO N=4000 | tauff=3.5 | penalty=10 | Fin=3869 | TimeLoss=  38.37s | Teleports=  0 | Error= 17.21 | real=0.257s
+[073/250] MESO N=4500 | tauff=3.5 | penalty=10 | Fin=4353 | TimeLoss=  42.66s | Teleports=  0 | Error= 28.66 | real=0.285s
+[074/250] MESO N=5000 | tauff=3.5 | penalty=10 | Fin=4842 | TimeLoss=  52.86s | Teleports=  0 | Error= 78.16 | real=0.319s
+[075/250] MESO N=5500 | tauff=3.5 | penalty=10 | Fin=3695 | TimeLoss= 102.35s | Teleports= 55 | Error= 40.93 | real=1.126s
+
+--- TAUFF=4.0 PENALIZACION=0 ---
+[076/250] MESO N=3500 | tauff=4.0 | penalty= 0 | Fin=3407 | TimeLoss=   8.89s | Teleports=  0 | Error= 38.29 | real=0.235s
+[077/250] MESO N=4000 | tauff=4.0 | penalty= 0 | Fin=3897 | TimeLoss=  13.44s | Teleports=  0 | Error= 39.13 | real=0.269s
+[078/250] MESO N=4500 | tauff=4.0 | penalty= 0 | Fin=4382 | TimeLoss=  20.31s | Teleports=  0 | Error= 40.92 | real=0.291s
+[079/250] MESO N=5000 | tauff=4.0 | penalty= 0 | Fin=4846 | TimeLoss=  34.65s | Teleports=  0 | Error= 83.71 | real=0.320s
+[080/250] MESO N=5500 | tauff=4.0 | penalty= 0 | Fin=3231 | TimeLoss=  84.15s | Teleports=112 | Error= 31.82 | real=1.369s
+
+--- TAUFF=4.0 PENALIZACION=2 ---
+[081/250] MESO N=3500 | tauff=4.0 | penalty= 2 | Fin=3408 | TimeLoss=  13.74s | Teleports=  0 | Error= 31.73 | real=0.234s
+[082/250] MESO N=4000 | tauff=4.0 | penalty= 2 | Fin=3891 | TimeLoss=  17.66s | Teleports=  0 | Error= 35.41 | real=0.249s
+[083/250] MESO N=4500 | tauff=4.0 | penalty= 2 | Fin=4372 | TimeLoss=  24.14s | Teleports=  0 | Error= 38.78 | real=0.303s
+[084/250] MESO N=5000 | tauff=4.0 | penalty= 2 | Fin=4813 | TimeLoss=  42.53s | Teleports=  0 | Error= 80.96 | real=0.300s
+[085/250] MESO N=5500 | tauff=4.0 | penalty= 2 | Fin=2950 | TimeLoss=  89.84s | Teleports=151 | Error= 30.43 | real=1.531s
+
+--- TAUFF=4.0 PENALIZACION=4 ---
+[086/250] MESO N=3500 | tauff=4.0 | penalty= 4 | Fin=3400 | TimeLoss=  18.98s | Teleports=  0 | Error= 24.55 | real=0.236s
+[087/250] MESO N=4000 | tauff=4.0 | penalty= 4 | Fin=3883 | TimeLoss=  23.15s | Teleports=  0 | Error= 30.57 | real=0.261s
+[088/250] MESO N=4500 | tauff=4.0 | penalty= 4 | Fin=4371 | TimeLoss=  29.54s | Teleports=  0 | Error= 35.87 | real=0.273s
+[089/250] MESO N=5000 | tauff=4.0 | penalty= 4 | Fin=4779 | TimeLoss=  49.04s | Teleports=  0 | Error= 78.61 | real=0.300s
+[090/250] MESO N=5500 | tauff=4.0 | penalty= 4 | Fin=2579 | TimeLoss= 102.34s | Teleports=185 | Error= 35.10 | real=2.402s
+
+--- TAUFF=4.0 PENALIZACION=6 ---
+[091/250] MESO N=3500 | tauff=4.0 | penalty= 6 | Fin=3395 | TimeLoss=  25.26s | Teleports=  0 | Error= 15.99 | real=0.223s
+[092/250] MESO N=4000 | tauff=4.0 | penalty= 6 | Fin=3878 | TimeLoss=  28.96s | Teleports=  0 | Error= 25.47 | real=0.243s
+[093/250] MESO N=4500 | tauff=4.0 | penalty= 6 | Fin=4361 | TimeLoss=  35.26s | Teleports=  0 | Error= 32.71 | real=0.297s
+[094/250] MESO N=5000 | tauff=4.0 | penalty= 6 | Fin=4573 | TimeLoss=  58.49s | Teleports=  3 | Error= 72.83 | real=0.308s
+[095/250] MESO N=5500 | tauff=4.0 | penalty= 6 | Fin=2791 | TimeLoss= 113.67s | Teleports=175 | Error= 28.11 | real=1.527s
+
+--- TAUFF=4.0 PENALIZACION=8 ---
+[096/250] MESO N=3500 | tauff=4.0 | penalty= 8 | Fin=3389 | TimeLoss=  31.14s | Teleports=  0 | Error=  7.97 | real=0.227s
+[097/250] MESO N=4000 | tauff=4.0 | penalty= 8 | Fin=3873 | TimeLoss=  36.28s | Teleports=  0 | Error= 19.06 | real=0.261s
+[098/250] MESO N=4500 | tauff=4.0 | penalty= 8 | Fin=4351 | TimeLoss=  40.92s | Teleports=  0 | Error= 29.58 | real=0.281s
+[099/250] MESO N=5000 | tauff=4.0 | penalty= 8 | Fin=4810 | TimeLoss=  56.38s | Teleports=  0 | Error= 76.74 | real=0.292s
+[100/250] MESO N=5500 | tauff=4.0 | penalty= 8 | Fin=3192 | TimeLoss= 106.76s | Teleports=109 | Error= 25.62 | real=0.971s
+
+--- TAUFF=4.0 PENALIZACION=9 ---
+[101/250] MESO N=3500 | tauff=4.0 | penalty= 9 | Fin=3387 | TimeLoss=  34.95s | Teleports=  0 | Error=  2.79 | real=0.235s
+[102/250] MESO N=4000 | tauff=4.0 | penalty= 9 | Fin=3870 | TimeLoss=  38.88s | Teleports=  0 | Error= 16.77 | real=0.249s
+[103/250] MESO N=4500 | tauff=4.0 | penalty= 9 | Fin=4349 | TimeLoss=  45.00s | Teleports=  0 | Error= 27.37 | real=0.263s
+[104/250] MESO N=5000 | tauff=4.0 | penalty= 9 | Fin=4752 | TimeLoss=  60.20s | Teleports=  0 | Error= 74.94 | real=0.308s
+[105/250] MESO N=5500 | tauff=4.0 | penalty= 9 | Fin=2727 | TimeLoss= 119.60s | Teleports=164 | Error= 25.32 | real=1.830s
+
+--- TAUFF=4.0 PENALIZACION=10 ---
+[106/250] MESO N=3500 | tauff=4.0 | penalty=10 | Fin=3386 | TimeLoss=  38.97s | Teleports=  0 | Error=  2.99 | real=0.227s
+[107/250] MESO N=4000 | tauff=4.0 | penalty=10 | Fin=3872 | TimeLoss=  42.90s | Teleports=  0 | Error= 13.29 | real=0.248s
+[108/250] MESO N=4500 | tauff=4.0 | penalty=10 | Fin=4351 | TimeLoss=  48.31s | Teleports=  0 | Error= 25.60 | real=0.276s
+[109/250] MESO N=5000 | tauff=4.0 | penalty=10 | Fin=4771 | TimeLoss=  66.33s | Teleports=  0 | Error= 73.30 | real=0.294s
+[110/250] MESO N=5500 | tauff=4.0 | penalty=10 | Fin=2969 | TimeLoss= 135.16s | Teleports=124 | Error= 13.61 | real=1.403s
+
+--- TAUFF=4.5 PENALIZACION=0 ---
+[111/250] MESO N=3500 | tauff=4.5 | penalty= 0 | Fin=3408 | TimeLoss=  11.74s | Teleports=  0 | Error= 34.44 | real=0.217s
+[112/250] MESO N=4000 | tauff=4.5 | penalty= 0 | Fin=3893 | TimeLoss=  16.62s | Teleports=  0 | Error= 36.33 | real=0.246s
+[113/250] MESO N=4500 | tauff=4.5 | penalty= 0 | Fin=4377 | TimeLoss=  25.84s | Teleports=  0 | Error= 37.90 | real=0.267s
+[114/250] MESO N=5000 | tauff=4.5 | penalty= 0 | Fin=4001 | TimeLoss=  71.86s | Teleports= 16 | Error= 59.70 | real=0.556s
+[115/250] MESO N=5500 | tauff=4.5 | penalty= 0 | Fin=2369 | TimeLoss= 142.73s | Teleports=193 | Error= 27.37 | real=2.156s
+
+--- TAUFF=4.5 PENALIZACION=2 ---
+[116/250] MESO N=3500 | tauff=4.5 | penalty= 2 | Fin=3404 | TimeLoss=  16.02s | Teleports=  0 | Error= 28.60 | real=0.223s
+[117/250] MESO N=4000 | tauff=4.5 | penalty= 2 | Fin=3885 | TimeLoss=  20.92s | Teleports=  0 | Error= 32.53 | real=0.271s
+[118/250] MESO N=4500 | tauff=4.5 | penalty= 2 | Fin=4366 | TimeLoss=  29.96s | Teleports=  0 | Error= 35.60 | real=0.278s
+[119/250] MESO N=5000 | tauff=4.5 | penalty= 2 | Fin=3029 | TimeLoss= 102.07s | Teleports= 91 | Error= 24.09 | real=1.354s
+[120/250] MESO N=5500 | tauff=4.5 | penalty= 2 | Fin=2225 | TimeLoss= 140.50s | Teleports=219 | Error= 33.75 | real=2.261s
+
+--- TAUFF=4.5 PENALIZACION=4 ---
+[121/250] MESO N=3500 | tauff=4.5 | penalty= 4 | Fin=3401 | TimeLoss=  22.07s | Teleports=  0 | Error= 20.37 | real=0.219s
+[122/250] MESO N=4000 | tauff=4.5 | penalty= 4 | Fin=3882 | TimeLoss=  26.49s | Teleports=  0 | Error= 27.65 | real=0.261s
+[123/250] MESO N=4500 | tauff=4.5 | penalty= 4 | Fin=4367 | TimeLoss=  36.66s | Teleports=  0 | Error= 32.00 | real=0.269s
+[124/250] MESO N=5000 | tauff=4.5 | penalty= 4 | Fin=4111 | TimeLoss=  82.97s | Teleports= 18 | Error= 57.15 | real=0.453s
+[125/250] MESO N=5500 | tauff=4.5 | penalty= 4 | Fin=2541 | TimeLoss= 125.65s | Teleports=168 | Error= 26.23 | real=2.319s
+
+--- TAUFF=4.5 PENALIZACION=6 ---
+[126/250] MESO N=3500 | tauff=4.5 | penalty= 6 | Fin=3396 | TimeLoss=  27.48s | Teleports=  0 | Error= 12.99 | real=0.226s
+[127/250] MESO N=4000 | tauff=4.5 | penalty= 6 | Fin=3881 | TimeLoss=  33.03s | Teleports=  0 | Error= 21.95 | real=0.247s
+[128/250] MESO N=4500 | tauff=4.5 | penalty= 6 | Fin=4359 | TimeLoss=  40.79s | Teleports=  0 | Error= 29.71 | real=0.269s
+[129/250] MESO N=5000 | tauff=4.5 | penalty= 6 | Fin=3728 | TimeLoss=  80.69s | Teleports= 36 | Error= 49.81 | real=0.691s
+[130/250] MESO N=5500 | tauff=4.5 | penalty= 6 | Fin=2500 | TimeLoss= 162.51s | Teleports=182 | Error= 18.71 | real=1.539s
+
+--- TAUFF=4.5 PENALIZACION=8 ---
+[131/250] MESO N=3500 | tauff=4.5 | penalty= 8 | Fin=3386 | TimeLoss=  34.43s | Teleports=  0 | Error=  3.48 | real=0.225s
+[132/250] MESO N=4000 | tauff=4.5 | penalty= 8 | Fin=3870 | TimeLoss=  38.80s | Teleports=  0 | Error= 16.84 | real=0.248s
+[133/250] MESO N=4500 | tauff=4.5 | penalty= 8 | Fin=4352 | TimeLoss=  46.90s | Teleports=  0 | Error= 26.36 | real=0.275s
+[134/250] MESO N=5000 | tauff=4.5 | penalty= 8 | Fin=3783 | TimeLoss=  95.65s | Teleports= 23 | Error= 48.62 | real=0.715s
+[135/250] MESO N=5500 | tauff=4.5 | penalty= 8 | Fin=2164 | TimeLoss= 174.71s | Teleports=227 | Error= 26.19 | real=2.037s
+
+--- TAUFF=4.5 PENALIZACION=9 ---
+[136/250] MESO N=3500 | tauff=4.5 | penalty= 9 | Fin=3386 | TimeLoss=  37.21s | Teleports=  0 | Error=  0.61 | real=0.226s
+[137/250] MESO N=4000 | tauff=4.5 | penalty= 9 | Fin=3865 | TimeLoss=  42.38s | Teleports=  0 | Error= 13.69 | real=0.246s
+[138/250] MESO N=4500 | tauff=4.5 | penalty= 9 | Fin=4345 | TimeLoss=  51.54s | Teleports=  0 | Error= 23.81 | real=0.274s
+[139/250] MESO N=5000 | tauff=4.5 | penalty= 9 | Fin=2777 | TimeLoss= 121.27s | Teleports=120 | Error= 19.43 | real=1.729s
+[140/250] MESO N=5500 | tauff=4.5 | penalty= 9 | Fin=2073 | TimeLoss= 191.01s | Teleports=239 | Error= 30.72 | real=2.910s
+
+--- TAUFF=4.5 PENALIZACION=10 ---
+[141/250] MESO N=3500 | tauff=4.5 | penalty=10 | Fin=3380 | TimeLoss=  41.43s | Teleports=  0 | Error=  6.28 | real=0.216s
+[142/250] MESO N=4000 | tauff=4.5 | penalty=10 | Fin=3862 | TimeLoss=  46.48s | Teleports=  0 | Error= 10.09 | real=0.251s
+[143/250] MESO N=4500 | tauff=4.5 | penalty=10 | Fin=4340 | TimeLoss=  55.77s | Teleports=  0 | Error= 21.49 | real=0.278s
+[144/250] MESO N=5000 | tauff=4.5 | penalty=10 | Fin=4054 | TimeLoss= 111.38s | Teleports= 13 | Error= 48.98 | real=0.412s
+[145/250] MESO N=5500 | tauff=4.5 | penalty=10 | Fin=2496 | TimeLoss= 152.82s | Teleports=190 | Error= 22.76 | real=2.937s
+
+--- TAUFF=5.0 PENALIZACION=0 ---
+[146/250] MESO N=3500 | tauff=5.0 | penalty= 0 | Fin=3407 | TimeLoss=  14.26s | Teleports=  0 | Error= 31.01 | real=0.224s
+[147/250] MESO N=4000 | tauff=5.0 | penalty= 0 | Fin=3885 | TimeLoss=  21.02s | Teleports=  0 | Error= 32.44 | real=0.245s
+[148/250] MESO N=4500 | tauff=5.0 | penalty= 0 | Fin=4364 | TimeLoss=  34.41s | Teleports=  0 | Error= 33.19 | real=0.272s
+[149/250] MESO N=5000 | tauff=5.0 | penalty= 0 | Fin=2719 | TimeLoss= 129.94s | Teleports=125 | Error= 17.21 | real=1.792s
+[150/250] MESO N=5500 | tauff=5.0 | penalty= 0 | Fin=2436 | TimeLoss= 163.26s | Teleports=196 | Error= 21.46 | real=1.874s
+
+--- TAUFF=5.0 PENALIZACION=2 ---
+[151/250] MESO N=3500 | tauff=5.0 | penalty= 2 | Fin=3400 | TimeLoss=  18.64s | Teleports=  0 | Error= 25.01 | real=0.213s
+[152/250] MESO N=4000 | tauff=5.0 | penalty= 2 | Fin=3877 | TimeLoss=  25.65s | Teleports=  0 | Error= 28.34 | real=0.235s
+[153/250] MESO N=4500 | tauff=5.0 | penalty= 2 | Fin=4356 | TimeLoss=  37.22s | Teleports=  0 | Error= 31.61 | real=0.257s
+[154/250] MESO N=5000 | tauff=5.0 | penalty= 2 | Fin=2318 | TimeLoss= 140.11s | Teleports=155 | Error= 24.09 | real=1.498s
+[155/250] MESO N=5500 | tauff=5.0 | penalty= 2 | Fin=2053 | TimeLoss= 191.00s | Teleports=250 | Error= 32.73 | real=2.341s
+
+--- TAUFF=5.0 PENALIZACION=4 ---
+[156/250] MESO N=3500 | tauff=5.0 | penalty= 4 | Fin=3396 | TimeLoss=  24.61s | Teleports=  0 | Error= 16.88 | real=0.221s
+[157/250] MESO N=4000 | tauff=5.0 | penalty= 4 | Fin=3876 | TimeLoss=  31.87s | Teleports=  0 | Error= 22.92 | real=0.248s
+[158/250] MESO N=4500 | tauff=5.0 | penalty= 4 | Fin=4351 | TimeLoss=  45.82s | Teleports=  0 | Error= 26.94 | real=0.270s
+[159/250] MESO N=5000 | tauff=5.0 | penalty= 4 | Fin=2387 | TimeLoss= 146.78s | Teleports=145 | Error= 19.22 | real=1.673s
+[160/250] MESO N=5500 | tauff=5.0 | penalty= 4 | Fin=2100 | TimeLoss= 174.34s | Teleports=236 | Error= 28.43 | real=2.167s
+
+--- TAUFF=5.0 PENALIZACION=6 ---
+[161/250] MESO N=3500 | tauff=5.0 | penalty= 6 | Fin=3392 | TimeLoss=  31.11s | Teleports=  0 | Error=  8.04 | real=0.225s
+[162/250] MESO N=4000 | tauff=5.0 | penalty= 6 | Fin=3870 | TimeLoss=  37.70s | Teleports=  0 | Error= 17.80 | real=0.247s
+[163/250] MESO N=4500 | tauff=5.0 | penalty= 6 | Fin=4345 | TimeLoss=  51.23s | Teleports=  0 | Error= 23.98 | real=0.271s
+[164/250] MESO N=5000 | tauff=5.0 | penalty= 6 | Fin=3028 | TimeLoss= 119.77s | Teleports= 98 | Error= 18.11 | real=1.377s
+[165/250] MESO N=5500 | tauff=5.0 | penalty= 6 | Fin=2007 | TimeLoss= 191.27s | Teleports=245 | Error= 32.46 | real=2.224s
+
+--- TAUFF=5.0 PENALIZACION=8 ---
+[166/250] MESO N=3500 | tauff=5.0 | penalty= 8 | Fin=3384 | TimeLoss=  37.28s | Teleports=  0 | Error=  0.68 | real=0.222s
+[167/250] MESO N=4000 | tauff=5.0 | penalty= 8 | Fin=3868 | TimeLoss=  44.56s | Teleports=  0 | Error= 11.81 | real=0.243s
+[168/250] MESO N=4500 | tauff=5.0 | penalty= 8 | Fin=4323 | TimeLoss=  57.22s | Teleports=  0 | Error= 20.59 | real=0.266s
+[169/250] MESO N=5000 | tauff=5.0 | penalty= 8 | Fin=3030 | TimeLoss= 124.02s | Teleports= 89 | Error= 17.89 | real=1.115s
+[170/250] MESO N=5500 | tauff=5.0 | penalty= 8 | Fin=2049 | TimeLoss= 178.65s | Teleports=241 | Error= 28.58 | real=2.270s
+
+--- TAUFF=5.0 PENALIZACION=9 ---
+[171/250] MESO N=3500 | tauff=5.0 | penalty= 9 | Fin=3384 | TimeLoss=  40.41s | Teleports=  0 | Error=  4.93 | real=0.221s
+[172/250] MESO N=4000 | tauff=5.0 | penalty= 9 | Fin=3859 | TimeLoss=  47.91s | Teleports=  0 | Error=  8.83 | real=0.243s
+[173/250] MESO N=4500 | tauff=5.0 | penalty= 9 | Fin=4323 | TimeLoss=  59.07s | Teleports=  0 | Error= 19.59 | real=0.273s
+[174/250] MESO N=5000 | tauff=5.0 | penalty= 9 | Fin=2928 | TimeLoss= 134.49s | Teleports=115 | Error= 16.09 | real=1.052s
+[175/250] MESO N=5500 | tauff=5.0 | penalty= 9 | Fin=1975 | TimeLoss= 198.39s | Teleports=260 | Error= 37.23 | real=2.286s
+
+--- TAUFF=5.0 PENALIZACION=10 ---
+[176/250] MESO N=3500 | tauff=5.0 | penalty=10 | Fin=3377 | TimeLoss=  44.21s | Teleports=  0 | Error= 10.02 | real=0.225s
+[177/250] MESO N=4000 | tauff=5.0 | penalty=10 | Fin=3861 | TimeLoss=  51.24s | Teleports=  0 | Error=  5.94 | real=0.243s
+[178/250] MESO N=4500 | tauff=5.0 | penalty=10 | Fin=4332 | TimeLoss=  62.88s | Teleports=  0 | Error= 17.60 | real=0.264s
+[179/250] MESO N=5000 | tauff=5.0 | penalty=10 | Fin=2589 | TimeLoss= 138.65s | Teleports=146 | Error= 19.63 | real=1.606s
+[180/250] MESO N=5500 | tauff=5.0 | penalty=10 | Fin=2128 | TimeLoss= 179.70s | Teleports=226 | Error= 25.01 | real=2.004s
+
+--- TAUFF=5.5 PENALIZACION=0 ---
+[181/250] MESO N=3500 | tauff=5.5 | penalty= 0 | Fin=3405 | TimeLoss=  17.71s | Teleports=  0 | Error= 26.32 | real=0.223s
+[182/250] MESO N=4000 | tauff=5.5 | penalty= 0 | Fin=3874 | TimeLoss=  27.93s | Teleports=  0 | Error= 26.34 | real=0.241s
+[183/250] MESO N=4500 | tauff=5.5 | penalty= 0 | Fin=4345 | TimeLoss=  45.73s | Teleports=  0 | Error= 26.94 | real=0.269s
+[184/250] MESO N=5000 | tauff=5.5 | penalty= 0 | Fin=2489 | TimeLoss= 152.76s | Teleports=142 | Error= 15.65 | real=1.421s
+[185/250] MESO N=5500 | tauff=5.5 | penalty= 0 | Fin=2022 | TimeLoss= 168.35s | Teleports=226 | Error= 29.27 | real=1.940s
+
+--- TAUFF=5.5 PENALIZACION=2 ---
+[186/250] MESO N=3500 | tauff=5.5 | penalty= 2 | Fin=3396 | TimeLoss=  22.34s | Teleports=  0 | Error= 19.96 | real=0.222s
+[187/250] MESO N=4000 | tauff=5.5 | penalty= 2 | Fin=3883 | TimeLoss=  30.92s | Teleports=  0 | Error= 23.80 | real=0.245s
+[188/250] MESO N=4500 | tauff=5.5 | penalty= 2 | Fin=4337 | TimeLoss=  49.51s | Teleports=  0 | Error= 24.85 | real=0.266s
+[189/250] MESO N=5000 | tauff=5.5 | penalty= 2 | Fin=2129 | TimeLoss= 181.54s | Teleports=194 | Error= 31.42 | real=1.234s
+[190/250] MESO N=5500 | tauff=5.5 | penalty= 2 | Fin=1994 | TimeLoss= 188.83s | Teleports=242 | Error= 31.43 | real=2.213s
+
+--- TAUFF=5.5 PENALIZACION=4 ---
+[191/250] MESO N=3500 | tauff=5.5 | penalty= 4 | Fin=3386 | TimeLoss=  28.03s | Teleports=  0 | Error= 12.16 | real=0.227s
+[192/250] MESO N=4000 | tauff=5.5 | penalty= 4 | Fin=3871 | TimeLoss=  36.66s | Teleports=  0 | Error= 18.71 | real=0.248s
+[193/250] MESO N=4500 | tauff=5.5 | penalty= 4 | Fin=4328 | TimeLoss=  55.56s | Teleports=  0 | Error= 21.52 | real=0.270s
+[194/250] MESO N=5000 | tauff=5.5 | penalty= 4 | Fin=2628 | TimeLoss= 144.60s | Teleports=127 | Error= 13.44 | real=1.486s
+[195/250] MESO N=5500 | tauff=5.5 | penalty= 4 | Fin=2114 | TimeLoss= 182.95s | Teleports=216 | Error= 24.29 | real=2.064s
+
+--- TAUFF=5.5 PENALIZACION=6 ---
+[196/250] MESO N=3500 | tauff=5.5 | penalty= 6 | Fin=3386 | TimeLoss=  34.10s | Teleports=  0 | Error=  3.93 | real=0.222s
+[197/250] MESO N=4000 | tauff=5.5 | penalty= 6 | Fin=3862 | TimeLoss=  43.98s | Teleports=  0 | Error= 12.27 | real=0.245s
+[198/250] MESO N=4500 | tauff=5.5 | penalty= 6 | Fin=4289 | TimeLoss=  64.89s | Teleports=  0 | Error= 16.20 | real=0.272s
+[199/250] MESO N=5000 | tauff=5.5 | penalty= 6 | Fin=2067 | TimeLoss= 200.54s | Teleports=188 | Error= 36.60 | real=1.252s
+[200/250] MESO N=5500 | tauff=5.5 | penalty= 6 | Fin=1987 | TimeLoss= 191.97s | Teleports=248 | Error= 33.36 | real=1.902s
+
+--- TAUFF=5.5 PENALIZACION=8 ---
+[201/250] MESO N=3500 | tauff=5.5 | penalty= 8 | Fin=3377 | TimeLoss=  40.88s | Teleports=  0 | Error=  5.50 | real=0.222s
+[202/250] MESO N=4000 | tauff=5.5 | penalty= 8 | Fin=3847 | TimeLoss=  50.94s | Teleports=  0 | Error=  6.09 | real=0.247s
+[203/250] MESO N=4500 | tauff=5.5 | penalty= 8 | Fin=4279 | TimeLoss=  72.87s | Teleports=  0 | Error= 11.83 | real=0.274s
+[204/250] MESO N=5000 | tauff=5.5 | penalty= 8 | Fin=2581 | TimeLoss= 153.92s | Teleports=149 | Error= 15.73 | real=1.649s
+[205/250] MESO N=5500 | tauff=5.5 | penalty= 8 | Fin=1851 | TimeLoss= 212.28s | Teleports=247 | Error= 40.25 | real=2.773s
+
+--- TAUFF=5.5 PENALIZACION=9 ---
+[206/250] MESO N=3500 | tauff=5.5 | penalty= 9 | Fin=3378 | TimeLoss=  45.98s | Teleports=  0 | Error= 12.43 | real=0.226s
+[207/250] MESO N=4000 | tauff=5.5 | penalty= 9 | Fin=3851 | TimeLoss=  53.00s | Teleports=  0 | Error=  4.33 | real=0.247s
+[208/250] MESO N=4500 | tauff=5.5 | penalty= 9 | Fin=4315 | TimeLoss=  69.72s | Teleports=  0 | Error= 13.79 | real=0.275s
+[209/250] MESO N=5000 | tauff=5.5 | penalty= 9 | Fin=2443 | TimeLoss= 170.90s | Teleports=143 | Error= 14.07 | real=1.350s
+[210/250] MESO N=5500 | tauff=5.5 | penalty= 9 | Fin=2087 | TimeLoss= 183.25s | Teleports=225 | Error= 26.13 | real=2.513s
+
+--- TAUFF=5.5 PENALIZACION=10 ---
+[211/250] MESO N=3500 | tauff=5.5 | penalty=10 | Fin=3374 | TimeLoss=  48.02s | Teleports=  0 | Error= 15.16 | real=0.226s
+[212/250] MESO N=4000 | tauff=5.5 | penalty=10 | Fin=3855 | TimeLoss=  56.08s | Teleports=  0 | Error=  1.68 | real=0.262s
+[213/250] MESO N=4500 | tauff=5.5 | penalty=10 | Fin=4297 | TimeLoss=  76.20s | Teleports=  0 | Error= 10.16 | real=0.273s
+[214/250] MESO N=5000 | tauff=5.5 | penalty=10 | Fin=1768 | TimeLoss= 204.96s | Teleports=237 | Error= 51.48 | real=2.425s
+[215/250] MESO N=5500 | tauff=5.5 | penalty=10 | Fin=1910 | TimeLoss= 220.04s | Teleports=251 | Error= 42.45 | real=2.132s
+
+--- TAUFF=6.0 PENALIZACION=0 ---
+[216/250] MESO N=3500 | tauff=6.0 | penalty= 0 | Fin=3398 | TimeLoss=  21.50s | Teleports=  0 | Error= 21.12 | real=0.221s
+[217/250] MESO N=4000 | tauff=6.0 | penalty= 0 | Fin=3866 | TimeLoss=  37.06s | Teleports=  0 | Error= 18.33 | real=0.248s
+[218/250] MESO N=4500 | tauff=6.0 | penalty= 0 | Fin=4020 | TimeLoss=  70.37s | Teleports=  0 | Error= 12.80 | real=0.270s
+[219/250] MESO N=5000 | tauff=6.0 | penalty= 0 | Fin=2359 | TimeLoss= 154.97s | Teleports=160 | Error= 20.19 | real=1.704s
+[220/250] MESO N=5500 | tauff=6.0 | penalty= 0 | Fin=1922 | TimeLoss= 200.67s | Teleports=258 | Error= 38.09 | real=2.425s
+
+--- TAUFF=6.0 PENALIZACION=2 ---
+[221/250] MESO N=3500 | tauff=6.0 | penalty= 2 | Fin=3388 | TimeLoss=  27.07s | Teleports=  0 | Error= 13.48 | real=0.220s
+[222/250] MESO N=4000 | tauff=6.0 | penalty= 2 | Fin=3858 | TimeLoss=  40.34s | Teleports=  0 | Error= 15.41 | real=0.244s
+[223/250] MESO N=4500 | tauff=6.0 | penalty= 2 | Fin=3544 | TimeLoss=  75.81s | Teleports= 19 | Error= 20.93 | real=0.467s
+[224/250] MESO N=5000 | tauff=6.0 | penalty= 2 | Fin=2020 | TimeLoss= 183.82s | Teleports=196 | Error= 33.74 | real=1.496s
+[225/250] MESO N=5500 | tauff=6.0 | penalty= 2 | Fin=1657 | TimeLoss= 256.40s | Teleports=261 | Error= 56.82 | real=2.660s
+
+--- TAUFF=6.0 PENALIZACION=4 ---
+[226/250] MESO N=3500 | tauff=6.0 | penalty= 4 | Fin=3388 | TimeLoss=  32.59s | Teleports=  0 | Error=  5.99 | real=0.218s
+[227/250] MESO N=4000 | tauff=6.0 | penalty= 4 | Fin=3867 | TimeLoss=  44.72s | Teleports=  0 | Error= 11.67 | real=0.242s
+[228/250] MESO N=4500 | tauff=6.0 | penalty= 4 | Fin=4022 | TimeLoss=  82.49s | Teleports=  0 | Error=  6.25 | real=0.264s
+[229/250] MESO N=5000 | tauff=6.0 | penalty= 4 | Fin=2276 | TimeLoss= 178.04s | Teleports=174 | Error= 24.55 | real=1.277s
+[230/250] MESO N=5500 | tauff=6.0 | penalty= 4 | Fin=2045 | TimeLoss= 212.82s | Teleports=242 | Error= 37.57 | real=2.186s
+
+--- TAUFF=6.0 PENALIZACION=6 ---
+[231/250] MESO N=3500 | tauff=6.0 | penalty= 6 | Fin=3383 | TimeLoss=  40.16s | Teleports=  0 | Error=  4.58 | real=0.222s
+[232/250] MESO N=4000 | tauff=6.0 | penalty= 6 | Fin=3848 | TimeLoss=  52.10s | Teleports=  0 | Error=  5.09 | real=0.245s
+[233/250] MESO N=4500 | tauff=6.0 | penalty= 6 | Fin=4253 | TimeLoss=  79.65s | Teleports=  0 | Error=  7.98 | real=0.276s
+[234/250] MESO N=5000 | tauff=6.0 | penalty= 6 | Fin=1963 | TimeLoss= 194.63s | Teleports=224 | Error= 43.48 | real=1.859s
+[235/250] MESO N=5500 | tauff=6.0 | penalty= 6 | Fin=1972 | TimeLoss= 206.27s | Teleports=252 | Error= 38.14 | real=2.212s
+
+--- TAUFF=6.0 PENALIZACION=8 ---
+[236/250] MESO N=3500 | tauff=6.0 | penalty= 8 | Fin=3375 | TimeLoss=  45.27s | Teleports=  0 | Error= 11.44 | real=0.225s
+[237/250] MESO N=4000 | tauff=6.0 | penalty= 8 | Fin=3846 | TimeLoss=  56.23s | Teleports=  0 | Error=  1.48 | real=0.243s
+[238/250] MESO N=4500 | tauff=6.0 | penalty= 8 | Fin=3848 | TimeLoss= 100.31s | Teleports=  3 | Error=  7.31 | real=0.269s
+[239/250] MESO N=5000 | tauff=6.0 | penalty= 8 | Fin=2346 | TimeLoss= 183.42s | Teleports=164 | Error= 23.31 | real=1.348s
+[240/250] MESO N=5500 | tauff=6.0 | penalty= 8 | Fin=1662 | TimeLoss= 248.94s | Teleports=267 | Error= 55.68 | real=2.482s
+
+--- TAUFF=6.0 PENALIZACION=9 ---
+[241/250] MESO N=3500 | tauff=6.0 | penalty= 9 | Fin=3373 | TimeLoss=  48.40s | Teleports=  0 | Error= 15.66 | real=0.221s
+[242/250] MESO N=4000 | tauff=6.0 | penalty= 9 | Fin=3846 | TimeLoss=  60.34s | Teleports=  0 | Error=  2.95 | real=0.246s
+[243/250] MESO N=4500 | tauff=6.0 | penalty= 9 | Fin=4233 | TimeLoss=  89.68s | Teleports=  0 | Error=  2.43 | real=0.268s
+[244/250] MESO N=5000 | tauff=6.0 | penalty= 9 | Fin=2079 | TimeLoss= 202.22s | Teleports=222 | Error= 44.05 | real=1.497s
+[245/250] MESO N=5500 | tauff=6.0 | penalty= 9 | Fin=1862 | TimeLoss= 240.53s | Teleports=271 | Error= 51.92 | real=2.706s
+
+--- TAUFF=6.0 PENALIZACION=10 ---
+[246/250] MESO N=3500 | tauff=6.0 | penalty=10 | Fin=3362 | TimeLoss=  52.27s | Teleports=  0 | Error= 20.92 | real=0.221s
+[247/250] MESO N=4000 | tauff=6.0 | penalty=10 | Fin=3839 | TimeLoss=  65.02s | Teleports=  0 | Error=  6.97 | real=0.247s
+[248/250] MESO N=4500 | tauff=6.0 | penalty=10 | Fin=4248 | TimeLoss=  93.37s | Teleports=  0 | Error=  1.26 | real=0.272s
+[249/250] MESO N=5000 | tauff=6.0 | penalty=10 | Fin=1883 | TimeLoss= 222.61s | Teleports=226 | Error= 53.23 | real=2.384s
+[250/250] MESO N=5500 | tauff=6.0 | penalty=10 | Fin=1884 | TimeLoss= 227.56s | Teleports=250 | Error= 44.65 | real=2.350s
+
+====================================================================================================
+TOP 15 CONFIGURACIONES - MENOR ERROR
+====================================================================================================
+Puesto   Tauff  Penalty     Score   ErrLoss%    ErrFin%   ErrTele%
+     1     5.5        9     14.15      12.44       8.64      26.68
+     2     5.0       10     15.64      15.85       7.40      27.47
+     3     5.5        8     15.88      13.72       9.04      31.53
+     4     5.0        8     15.91      17.53       9.85      20.97
+     5     6.0        4     17.21      14.11       9.89      35.92
+     6     5.0        9     17.33      18.30       9.55      26.58
+     7     4.5        9     17.65      20.89       7.90      24.18
+     8     5.5        4     18.02      22.92       7.29      21.87
+     9     6.0        8     19.84      16.43      12.67      39.14
+    10     6.0        6     19.85      12.88      12.73      47.98
+    11     5.0        6     20.08      25.75      10.29      20.58
+    12     5.5        6     20.47      17.75      12.11      39.82
+    13     4.5       10     21.92      23.82      14.41      28.44
+    14     6.0        0     22.11      23.85      10.18      35.63
+    15     5.0        4     22.88      28.57       9.38      28.90
+
+====================================================================================================
+GANADORA VS CONFIGURACION ANTERIOR 6/4
+====================================================================================================
+
+MEJOR PRUEBA 02: tauff=5.5, penalty=9
+    N  Fin MICRO   Fin MESO  Loss MICRO  Loss MESO  Tele MICRO  Tele MESO    Error
+ 3500       3368       3378       36.88      45.98           0          0    12.43
+ 4000       3792       3851       57.44      53.00           0          0     4.33
+ 4500       4124       4315       92.71      69.72           0          0    13.79
+ 5000       2684       2443      165.64     170.90          96        143    14.07
+ 5500       2888       2087      179.94     183.25         122        225    26.13
+
+ANTERIOR 6/4: tauff=6.0, penalty=4
+    N  Fin MICRO   Fin MESO  Loss MICRO  Loss MESO  Tele MICRO  Tele MESO    Error
+ 3500       3368       3388       36.88      32.59           0          0     5.99
+ 4000       3792       3867       57.44      44.72           0          0    11.67
+ 4500       4124       4022       92.71      82.49           0          0     6.25
+ 5000       2684       2276      165.64     178.04          96        174    24.55
+ 5500       2888       2045      179.94     212.82         122        242    37.57
+
+====================================================================================================
+MEJOR CONFIGURACION POR CANTIDAD DE VEHICULOS
+====================================================================================================
+N=3500 | tauff=4.5 | penalty=9 | Error=0.61
+N=4000 | tauff=6.0 | penalty=8 | Error=1.48
+N=4500 | tauff=6.0 | penalty=10 | Error=1.26
+N=5000 | tauff=5.5 | penalty=4 | Error=13.44
+N=5500 | tauff=4.0 | penalty=10 | Error=13.61
+
+====================================================================================================
+SIMULACIONES COMPLETADAS: 250/250
+LOG GUARDADO: /home/fel1xrr/Escritorio/Proyectos de investigacion/REPO BECA ATC/MAPA SINTÉTICO V3/PRUEBAS MESO/PRUEBA 02 - CALIBRACION TAUFF Y PENALIZACION/logs/resultados_20261111_164622.log
+====================================================================================================
