@@ -1,0 +1,63 @@
+Loading net-file from 'red_7x7/red_7x7.net.xml' ... done (11ms).
+Loading additional-files from 'red_7x7/semaforos.add.xml' ... done (3ms).
+Loading route-files incrementally from 'red_7x7/6000_rutas/rutas_6000.rou.xml'
+Loading done.
+Simulation version 1.28.0 started with time: 0.00.
+Warning: Teleporting vehicle '3533'; waited too long, from edge 'e-j-2-5-a-j-1-5':3, time=2707.42.
+Warning: Vehicle '3533' ends teleporting on edge 'e-j-1-4-a-j-1-3':0, time=2721.82.
+Warning: Teleporting vehicle '4316'; waited too long, from edge 'e-j-2-4-a-j-2-5':3, time=2940.67.
+Warning: Vehicle '4316' ends teleporting on edge 'e-j-1-5-a-j-0-5':0, time=2955.07.
+Warning: Teleporting vehicle '4125'; waited too long, from edge 'e-j-0-5-a-j-1-5':3, time=3090.52.
+Warning: Teleporting vehicle '3837'; waited too long, from edge 'e-j-2-5-a-j-1-5':3, time=3091.85.
+Warning: Vehicle '4125' ends teleporting on edge 'e-j-1-4-a-j-1-3':0, time=3104.92.
+Warning: Vehicle '3837' ends teleporting on edge 'e-j-1-4-a-j-1-3':0, time=3106.25.
+Warning: Teleporting vehicle '4649'; waited too long, from edge 'e-j-3-6-a-j-3-5':3, time=3134.51.
+Warning: Teleporting vehicle '4276'; waited too long, from edge 'e-j-0-6-a-j-0-5':2, time=3134.86.
+Warning: Teleporting vehicle '4573'; waited too long, from edge 'e-j-0-6-a-j-0-5':3, time=3137.92.
+Warning: Vehicle '4649' ends teleporting on edge 'e-j-2-5-a-j-2-4':0, time=3148.91.
+Warning: Vehicle '4276' ends teleporting on edge 'e-j-0-4-a-ext-n-4':0, time=3149.26.
+Warning: Vehicle '4573' ends teleporting on edge 'e-j-1-5-a-j-2-5':0, time=3152.32.
+Warning: Teleporting vehicle '4482'; waited too long, from edge 'e-j-0-4-a-j-0-5':3, time=3160.76.
+Warning: Vehicle '4482' ends teleporting on edge 'e-j-1-5-a-j-2-5':1, time=3175.16.
+Warning: Teleporting vehicle '4617'; waited too long, from edge 'e-j-1-4-a-j-2-4':3, time=3199.28.
+Warning: Vehicle '4617' teleports beyond arrival edge 'e-j-2-5-a-j-1-5', time=3228.07.
+Warning: Teleporting vehicle '4624'; waited too long, from edge 'e-j-2-6-a-j-2-5':3, time=3231.21.
+Warning: Teleporting vehicle '4419'; waited too long, from edge 'e-j-3-4-a-j-3-5':3, time=3232.44.
+Warning: Teleporting vehicle '3748'; waited too long, from edge 'e-j-2-4-a-j-2-5':3, time=3240.67.
+Warning: Vehicle '3748' teleports beyond arrival edge 'e-j-2-5-a-j-1-5', time=3255.07.
+Warning: Vehicle '4624' ends teleporting on edge 'e-j-1-5-a-j-1-6':0, time=3245.61.
+Warning: Vehicle '4419' ends teleporting on edge 'e-j-2-5-a-j-2-4':2, time=3246.84.
+Warning: Teleporting vehicle '5013'; waited too long, from edge 'e-j-3-3-a-j-2-3':3, time=3486.26.
+Warning: Vehicle '5013' teleports beyond arrival edge 'e-j-1-5-a-j-1-4', time=3543.86.
+Warning: Teleporting vehicle '5370'; waited too long, from edge 'e-j-1-2-a-j-0-2':3 to edge 'e-j-0-2-a-j-0-3':1, time=3532.33.
+Warning: Teleporting vehicle '4315'; waited too long, from edge 'e-j-3-4-a-j-3-5':3, time=3536.98.
+Warning: Vehicle '4315' teleports beyond arrival edge 'e-j-3-5-a-j-2-5', time=3551.38.
+Warning: Teleporting vehicle '5039'; waited too long, from edge 'e-j-3-3-a-j-3-4':3, time=3547.44.
+Warning: Vehicle '5039' ends teleporting on edge 'e-j-3-5-a-j-4-5':0, time=3561.84.
+Warning: Teleporting vehicle '5029'; waited too long, from edge 'e-j-1-3-a-j-2-3':3, time=3571.55.
+Warning: Teleporting vehicle '4752'; waited too long, from edge 'e-j-2-4-a-j-3-4':3, time=3577.79.
+Warning: Vehicle '4752' teleports beyond arrival edge 'e-j-3-4-a-j-3-5', time=3592.19.
+Warning: Vehicle '5029' ends teleporting on edge 'e-j-2-4-a-j-3-4':0, time=3585.95.
+Warning: Teleporting vehicle '4997'; waited too long, from edge 'e-j-1-4-a-j-2-4':3, time=3591.24.
+Warning: Teleporting vehicle '5309'; waited too long, from edge 'e-j-3-2-a-j-2-2':3, time=3598.66.
+Simulation ended at time: 3600.00.
+Reason: The final simulation step has been reached.
+Performance:
+ Duration: 0.49s
+ Real time factor: 7377.05
+ UPS: 4031536.885246
+Vehicles:
+ Inserted: 5979 (Loaded: 6001)
+ Running: 1014
+ Waiting: 22
+ Teleports: 20 (Jam: 20)
+Statistics (avg of 4965):
+ RouteLength: 1521.81
+ Speed: 5.44
+ Duration: 311.13
+ WaitingTime: 58.11
+ TimeLoss: 199.87
+ DepartDelay: 0.50
+real 0,55
+user 0,53
+sys 0,02

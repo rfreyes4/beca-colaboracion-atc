@@ -1,328 +1,134 @@
-# Mapa sintético V4 — Red 7×7 con semáforos
+# Mapa sintético V4 — MICRO con semáforos progresivos
 
-Notas de las pruebas realizadas con **SUMO 1.28.0** sobre una red sintética de 7×7 intersecciones, con tramos de 200 m y un carril por sentido. Se compara la **simulación microscópica con rutas estáticas** frente al **reenrutamiento dinámico**.
+Pruebas realizadas con **SUMO 1.28.0** sobre una red sintética de **7×7 intersecciones**, tramos de **200 m** y **un carril por sentido**. Se comparan el **enrutamiento estático y el dinámico** con semaforización coordinada.
 
 ## 1. Semaforización
 
-La red 7×7 cuenta con 49 intersecciones reguladas por semáforos.
-Cada semáforo utiliza un ciclo de 96 segundos, dividido en
-cuatro fases principales y sus correspondientes transiciones.
+La red cuenta con **49 semáforos**. Se mantiene el ciclo de **96 segundos** y las reglas de paso; la coordinación progresiva introduce **desfases (`offset`) entre intersecciones**, calculados con `tlsCoordinator.py` a partir de 28 recorridos rectos de referencia y un factor de velocidad `0.9`. Esos recorridos solo se usan para calcular la coordinación, **no sustituyen las rutas de las simulaciones**.
 
-### Funcionamiento
+| Fase principal | Duración | Funcionamiento |
+|---|---:|---|
+| Norte-Sur | 30 s | Recto y derecha con prioridad (`G`); izquierda permitida cediendo el paso (`g`). |
+| Izquierda Norte-Sur | 8 s | Izquierda protegida (`G`). |
+| Este-Oeste | 30 s | Recto y derecha con prioridad (`G`); izquierda permitida cediendo el paso (`g`). |
+| Izquierda Este-Oeste | 8 s | Izquierda protegida (`G`). |
 
-Durante el verde principal, los vehículos pueden circular
-recto o girar a la derecha con prioridad.
+Entre fases: **3 s de amarillo (`y`) y 2 s de rojo general (`r`)**; cuatro transiciones por ciclo. Total: **96 s**.
 
-También pueden girar a la izquierda, pero deben ceder el
-paso a los vehículos que circulan de frente.
+**Archivos utilizados conjuntamente:** `red_7x7/semaforos.add.xml` (fases y prioridades) y `red_7x7/semaforos_progresivos_rectas.add.xml` (coordinación temporal). Previamente se realizaron pruebas sin coordinación progresiva; sus resultados se conservan aparte y **no se mezclan** con los que aparecen aquí.
 
-Después se activa una fase exclusiva para girar a la
-izquierda, en la que estos vehículos tienen prioridad.
+## 2. Configuración de las simulaciones MICRO
 
-### Fases del semáforo
-
-| Fase | Duración | Funcionamiento |
-|---|---|---|
-| 1. Norte-Sur | 30 s | Recto y derecha con prioridad. Izquierda permitida cediendo el paso. |
-| 2. Izquierda Norte-Sur | 8 s | Giro a la izquierda con prioridad. |
-| 3. Este-Oeste | 30 s | Recto y derecha con prioridad. Izquierda permitida cediendo el paso. |
-| 4. Izquierda Este-Oeste | 8 s | Giro a la izquierda con prioridad. |
-
-Entre cada fase se utilizan:
-- Amarillo: 3 segundos.
-- Rojo general: 2 segundos.
-
-**Duración total del ciclo: 96 segundos.**
-
-### Estados utilizados en SUMO
-
-- `G` (verde): circulación permitida con prioridad.
-- `g` (verde permisivo): circulación permitida, pero cediendo el paso.
-- `y` (amarillo): transición antes del rojo.
-- `r` (rojo): circulación prohibida.
-
-El estado `g` permite que los vehículos giren a la izquierda
-mientras otros circulan recto, siempre que exista un hueco
-seguro para realizar el giro.
-
-## 2. Simulación microscópica
-
-La simulación microscópica representa el movimiento individual de cada vehículo, sus frenadas, esperas, cruces y posibles bloqueos. **Las dos modalidades utilizan la misma red, los mismos semáforos y el mismo fichero de rutas inicial para cada demanda.**
-
-### Configuración utilizada
-
-| Parámetro | Valor | Explicación |
-|---|---|---|
-| Red (`-n`) | `red_7x7/red_7x7.net.xml` | Red de calles por la que circulan los vehículos. |
-| Rutas (`-r`) | `red_7x7/N_rutas/rutas_N.rou.xml` | Demanda `N` generada previamente con RandomTrips. |
-| Semáforos (`-a`) | `red_7x7/semaforos.add.xml` | Carga el programa semafórico descrito arriba. |
-| `--begin` / `--end` | `0` / `3600` | Se simula una hora; al llegar al segundo 3600 se detiene aunque queden vehículos por terminar. |
-| `--seed` | `42` | Fija la semilla aleatoria de SUMO para facilitar la reproducción. |
-| `--time-to-teleport` | `300` s | SUMO puede recolocar un vehículo tras un bloqueo prolongado de 300 s. |
-| `--no-step-log` | `true` | Oculta el progreso de cada paso para reducir texto en la terminal. |
-| `--duration-log.statistics` | `true` en prueba completa | Muestra promedios de recorrido, velocidad, duración y esperas al finalizar. |
-| `--verbose` | `true` en prueba completa | Muestra información adicional de carga y rendimiento. |
-
-Los ficheros de demanda se generaron con **RandomTrips**, semilla 42, entre los segundos 0 y 3600, con salidas aleatorias. El parámetro `-p` representa el intervalo medio entre vehículos solicitados: su valor disminuye cuando aumenta la demanda.
-
-| Demanda nominal | `-p` (s) | Vehículos cargados en estas pruebas |
-|---|---:|---:|
-| 3000 | 1.2 | 3001 |
-| 4000 | 0.9 | 4000 |
-| 5000 | 0.72 | 5001 |
-| 6000 | 0.6 | 6001 |
-| 7000 | 0.514286 | 7000 |
-| 8000 | 0.45 | 8001 |
-| 9000 | 0.4 | 9000 |
-| 11000 | 0.327273 | 11000 |
-
-### Enrutamiento estático frente a dinámico
-
-| Modalidad | Parámetros utilizados | Funcionamiento |
-|---|---|---|
-| **Estático** | `--device.rerouting.probability 0` | El vehículo sigue la ruta calculada inicialmente, sin recalcularla periódicamente durante el recorrido. |
-| **Dinámico** | `--device.rerouting.probability 1` y `--device.rerouting.period 120` | Todos los vehículos reciben el dispositivo de reenrutamiento y pueden recalcular su ruta cada 120 segundos según los costes estimados de las vías. |
-
-**Importante:** el enrutamiento dinámico **no garantiza una mejora**. Si muchos conductores escogen caminos alternativos, pueden hacer recorridos más largos y desplazar la congestión a otras calles.
-
-### Qué significa cada resultado
-
-| Métrica | Significado |
+| Parámetro | Valor usado |
 |---|---|
-| **Loaded** | Vehículos definidos/cargados por la demanda. |
-| **Inserted** | Vehículos que han logrado entrar físicamente en la red antes del segundo 3600. |
-| **Finished** | Vehículos que han llegado a su destino antes del final de la simulación. En estos resultados equivale a `Inserted − Running`. |
-| **Running** | Vehículos que seguían circulando al terminar la hora simulada. |
-| **Waiting** | Vehículos aún **pendientes de entrar** en la red al final por falta de espacio. No equivale a `WaitingTime`. |
-| **Teleports** | Recolocaciones para resolver bloqueos; **Jam** indica atasco y **Yield** dificultades prolongadas al ceder el paso. |
-| **Emergency Braking** | Frenadas de emergencia detectadas durante la simulación. |
-| **RouteLength** | Longitud media del trayecto de los vehículos incluidos en las estadísticas, en metros. |
-| **Speed** | Velocidad media durante el viaje, en m/s. Para pasar a km/h se multiplica por 3,6. |
-| **Duration** | Tiempo medio transcurrido desde que un vehículo entra hasta que acaba su recorrido. |
-| **WaitingTime** | Tiempo medio que un vehículo permanece parado o casi parado durante su viaje. |
-| **TimeLoss** | Tiempo medio perdido respecto a la circulación de referencia sin esas demoras. |
-| **DepartDelay** | Retraso medio entre la salida prevista y la entrada efectiva en la red. |
-| **Statistics (avg of …)** | Número de recorridos finalizados sobre los que se calculan las medias anteriores. |
-| **Performance Duration** | Tiempo de cálculo informado por SUMO, en segundos; no es la duración de los viajes. |
-| **`real` completo** | Tiempo de reloj de `time -p` cuando se muestran avisos y estadísticas. |
-| **`real` limpio** | Tiempo de reloj con la salida suprimida mediante `> /dev/null 2>&1`. «Limpio» se refiere a la **salida de terminal**, no a una red sin tráfico. |
-| **`user` / `sys`** | Tiempo de CPU ejecutando el programa / trabajando en el núcleo del sistema operativo. |
-| **Dijkstra (consultas)** | Cantidad de búsquedas de rutas registradas al utilizar el reenrutamiento dinámico. |
+| Red (`-n`) | `red_7x7/red_7x7.net.xml` |
+| Rutas (`-r`) | `red_7x7/N_rutas/rutas_N.rou.xml` |
+| Semáforos (`-a`) | `red_7x7/semaforos.add.xml,red_7x7/semaforos_progresivos_rectas.add.xml` |
+| Intervalo (`--begin`, `--end`) | `0` a `3600` s |
+| Semilla (`--seed`) | `42` |
+| Teletransporte (`--time-to-teleport`) | `300` s |
+| Enrutamiento estático | `--device.rerouting.probability 0` |
+| Enrutamiento dinámico | `--device.rerouting.probability 1` y `--device.rerouting.period 120` |
+| Resultados completos | `--no-step-log true`, `--duration-log.statistics true`, `--verbose true` |
+| Medición limpia | Misma simulación, suprimiendo la salida para medir `real`, `user` y `sys` |
 
-En cada apartado se muestran **las mediciones completas** y, al final, **el tiempo limpio**. Los valores de velocidad, duración, espera y recorrido son promedios de los vehículos que finalizaron, no de los que permanecían dentro o esperando para entrar.
+Los archivos de demanda proceden de **RandomTrips** (semilla 42, salidas aleatorias entre 0 y 3600 s); demandas nominales de 3000, 4000, 5000, 6000, 7000, 8000, 9000 y 11 000. Se reutilizan las mismas rutas de entrada en ambos enrutamientos.
 
-### 2.1. Demanda de 3000 vehículos
+## 3. Resultados MICRO con semáforos progresivos
 
-| Métrica | Estático | Dinámico |
-|---|---:|---:|
-| Cargados (Loaded) | 3001 | 3001 |
-| Insertados | 2960 | 2964 |
-| Finalizados | 2692 | 2702 |
-| Circulando al finalizar | 268 | 262 |
-| Pendientes de entrar | 41 | 37 |
-| Teleports (Jam / Yield) | 0 (0 / 0) | 0 (0 / 0) |
-| Frenadas de emergencia | 1 | 0 |
-| Longitud media (m) | 1525.43 | 1538.72 |
-| Velocidad media (m/s) | 5.60 | 5.63 |
-| Duración media (s) | 283.28 | 284.48 |
-| WaitingTime (s) | 134.65 | 130.69 |
-| TimeLoss (s) | 171.90 | 172.08 |
-| DepartDelay (s) | 37.22 | 26.27 |
-| Performance Duration (s) | 1.27 | 1.51 |
-| **Tiempo completo `real` (s)** | **1.34** | **1.58** |
-| **Tiempo limpio `real` (s)** | **1.24** | **1.54** |
-| Consultas Dijkstra | — | 8171 |
-| Tiempo Dijkstra (s) | — | 0.09 |
+### 3.1. Vehículos y bloqueos
 
-### 2.2. Demanda de 4000 vehículos
+| Tipo | Demanda | Cargados | Insertados | Finalizados | Circulando | Pendientes | Teleports (Jam / Yield) | Frenadas emergencia |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Estático | 3000 | 3001 | 2946 | **2649** | 297 | 55 | 0 (0 / 0) | 1 |
+| Estático | 4000 | 4000 | 3853 | **3464** | 389 | 147 | 0 (0 / 0) | 0 |
+| Estático | 5000 | 5001 | 4614 | **4070** | 544 | 387 | 0 (0 / 0) | 0 |
+| Estático | 6000 | 6001 | 5186 | **4403** | 783 | 815 | 6 (2 / 4) | 0 |
+| Estático | 7000 | 7000 | 5596 | **4419** | 1177 | 1404 | 46 (14 / 32) | 0 |
+| Estático | 8000 | 8001 | 5731 | **3804** | 1927 | 2270 | 128 (44 / 84) | 0 |
+| Estático | 9000 | 9000 | 6063 | **4068** | 1995 | 2937 | 129 (41 / 88) | 0 |
+| Estático | 11000 | 11000 | 6132 | **3722** | 2410 | 4866 | 249 (74 / 175) | 0 |
+| Dinámico | 3000 | 3001 | 2956 | **2664** | 292 | 45 | 0 (0 / 0) | 0 |
+| Dinámico | 4000 | 4000 | 3907 | **3473** | 434 | 93 | 0 (0 / 0) | 1 |
+| Dinámico | 5000 | 5001 | 4753 | **4132** | 621 | 248 | 0 (0 / 0) | 0 |
+| Dinámico | 6000 | 6001 | 5437 | **4483** | 954 | 564 | 0 (0 / 0) | 0 |
+| Dinámico | 7000 | 7000 | 5683 | **4402** | 1281 | 1317 | 0 (0 / 0) | 4 |
+| Dinámico | 8000 | 8001 | 5869 | **4267** | 1602 | 2132 | 0 (0 / 0) | 0 |
+| Dinámico | 9000 | 9000 | 6010 | **4293** | 1717 | 2990 | 0 (0 / 0) | 0 |
+| Dinámico | 11000 | 11000 | 5815 | **3691** | 2124 | 5183 | 2 (0 / 2) | 0 |
 
-| Métrica | Estático | Dinámico |
-|---|---:|---:|
-| Cargados (Loaded) | 4000 | 4000 |
-| Insertados | 3869 | 3932 |
-| Finalizados | 3498 | 3496 |
-| Circulando al finalizar | 371 | 436 |
-| Pendientes de entrar | 131 | 68 |
-| Teleports (Jam / Yield) | 0 (0 / 0) | 0 (0 / 0) |
-| Frenadas de emergencia | 0 | 1 |
-| Longitud media (m) | 1523.20 | 1557.31 |
-| Velocidad media (m/s) | 5.24 | 5.04 |
-| Duración media (s) | 304.75 | 326.96 |
-| WaitingTime (s) | 150.35 | 160.25 |
-| TimeLoss (s) | 193.44 | 213.22 |
-| DepartDelay (s) | 65.00 | 45.92 |
-| Performance Duration (s) | 1.96 | 2.55 |
-| **Tiempo completo `real` (s)** | **2.03** | **2.62** |
-| **Tiempo limpio `real` (s)** | **1.92** | **2.72** |
-| Consultas Dijkstra | — | 12502 |
-| Tiempo Dijkstra (s) | — | 0.11 |
+**Finalizados = insertados − circulando**. «Pendientes» son vehículos que no han entrado en la red cuando termina la simulación; no debe confundirse con el tiempo de espera durante un viaje.
 
-### 2.3. Demanda de 5000 vehículos
+### 3.2. Medias de los viajes finalizados
 
-| Métrica | Estático | Dinámico |
-|---|---:|---:|
-| Cargados (Loaded) | 5001 | 5001 |
-| Insertados | 4693 | 4824 |
-| Finalizados | 4203 | 4229 |
-| Circulando al finalizar | 490 | 595 |
-| Pendientes de entrar | 308 | 177 |
-| Teleports (Jam / Yield) | 0 (0 / 0) | 0 (0 / 0) |
-| Frenadas de emergencia | 0 | 0 |
-| Longitud media (m) | 1520.67 | 1590.64 |
-| Velocidad media (m/s) | 4.77 | 4.38 |
-| Duración media (s) | 344.73 | 396.07 |
-| WaitingTime (s) | 180.15 | 209.85 |
-| TimeLoss (s) | 233.54 | 279.83 |
-| DepartDelay (s) | 81.78 | 74.02 |
-| Performance Duration (s) | 3.58 | 4.90 |
-| **Tiempo completo `real` (s)** | **3.65** | **4.97** |
-| **Tiempo limpio `real` (s)** | **3.08** | **4.78** |
-| Consultas Dijkstra | — | 18446 |
-| Tiempo Dijkstra (s) | — | 0.20 |
+| Tipo | Demanda | RouteLength (m) | Speed (m/s) | Duration (s) | WaitingTime (s) | TimeLoss (s) | DepartDelay (s) |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Estático | 3000 | 1524,68 | 5,32 | 311,72 | 155,76 | 200,28 | 57,58 |
+| Estático | 4000 | 1525,62 | 5,09 | 324,83 | 163,50 | 213,46 | 81,10 |
+| Estático | 5000 | 1526,05 | 4,67 | 361,38 | 190,95 | 249,89 | 103,88 |
+| Estático | 6000 | 1524,68 | 4,32 | 405,38 | 225,16 | 293,97 | 130,82 |
+| Estático | 7000 | 1510,54 | 4,00 | 455,93 | 269,46 | 345,15 | 147,72 |
+| Estático | 8000 | 1504,84 | 3,97 | 481,11 | 295,87 | 369,55 | 174,25 |
+| Estático | 9000 | 1500,31 | 3,78 | 488,60 | 295,73 | 377,21 | 183,81 |
+| Estático | 11000 | 1490,23 | 3,42 | 565,29 | 362,24 | 453,11 | 178,29 |
+| Dinámico | 3000 | 1547,00 | 5,19 | 319,56 | 156,44 | 206,48 | 48,30 |
+| Dinámico | 4000 | 1566,97 | 4,75 | 354,75 | 179,38 | 240,30 | 69,73 |
+| Dinámico | 5000 | 1582,85 | 4,35 | 399,70 | 211,09 | 283,96 | 106,74 |
+| Dinámico | 6000 | 1639,69 | 3,79 | 486,78 | 272,92 | 366,99 | 141,84 |
+| Dinámico | 7000 | 1703,31 | 3,39 | 583,86 | 344,52 | 459,44 | 175,85 |
+| Dinámico | 8000 | 1723,14 | 3,23 | 642,09 | 390,64 | 516,27 | 190,94 |
+| Dinámico | 9000 | 1718,92 | 3,05 | 680,88 | 423,16 | 555,21 | 202,62 |
+| Dinámico | 11000 | 1761,63 | 2,73 | 818,36 | 537,06 | 689,54 | 196,08 |
 
-### 2.4. Demanda de 6000 vehículos
+`Duration` es el tiempo de viaje; `WaitingTime`, el tiempo parado o casi parado; `TimeLoss`, el tiempo perdido frente a condiciones de referencia; y `DepartDelay`, el retraso de inserción. **Todas las medias corresponden a vehículos que finalizaron**, por lo que deben interpretarse junto con el número de finalizados.
 
-| Métrica | Estático | Dinámico |
-|---|---:|---:|
-| Cargados (Loaded) | 6001 | 6001 |
-| Insertados | 5316 | 5513 |
-| Finalizados | 4578 | 4416 |
-| Circulando al finalizar | 738 | 1097 |
-| Pendientes de entrar | 685 | 488 |
-| Teleports (Jam / Yield) | 5 (0 / 5) | 0 (0 / 0) |
-| Frenadas de emergencia | 0 | 0 |
-| Longitud media (m) | 1516.61 | 1652.15 |
-| Velocidad media (m/s) | 4.43 | 3.72 |
-| Duración media (s) | 385.89 | 506.83 |
-| WaitingTime (s) | 213.04 | 291.95 |
-| TimeLoss (s) | 275.06 | 386.14 |
-| DepartDelay (s) | 112.95 | 121.72 |
-| Performance Duration (s) | 6.13 | 9.46 |
-| **Tiempo completo `real` (s)** | **6.21** | **9.53** |
-| **Tiempo limpio `real` (s)** | **5.31** | **9.10** |
-| Consultas Dijkstra | — | 26581 |
-| Tiempo Dijkstra (s) | — | 0.31 |
+### 3.3. Rendimiento computacional
 
-### 2.5. Demanda de 7000 vehículos
+| Tipo | Demanda | Performance Duration (s) | `real` completo (s) | `real` limpio (s) | `user` limpio (s) | `sys` limpio (s) | Dijkstra: consultas / tiempo (s) |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Estático | 3000 | 1,45 | 1,52 | **1,49** | 1,46 | 0,02 | — |
+| Estático | 4000 | 2,32 | 2,39 | **2,10** | 2,07 | 0,02 | — |
+| Estático | 5000 | 3,69 | 3,76 | **3,55** | 3,52 | 0,02 | — |
+| Estático | 6000 | 6,48 | 6,56 | **6,08** | 6,04 | 0,03 | — |
+| Estático | 7000 | 9,63 | 9,71 | **8,86** | 8,81 | 0,03 | — |
+| Estático | 8000 | 13,15 | 13,24 | **11,88** | 11,82 | 0,05 | — |
+| Estático | 9000 | 14,44 | 14,53 | **13,33** | 13,28 | 0,03 | — |
+| Estático | 11000 | 20,19 | 20,29 | **18,97** | 18,91 | 0,04 | — |
+| Dinámico | 3000 | 2,18 | 2,25 | **2,58** | 2,56 | 0,02 | 9207 / 0,11 |
+| Dinámico | 4000 | 4,77 | 4,87 | **4,15** | 4,11 | 0,03 | 13547 / 0,21 |
+| Dinámico | 5000 | 5,54 | 5,62 | **5,10** | 5,08 | 0,02 | 18430 / 0,24 |
+| Dinámico | 6000 | 9,11 | 9,19 | **8,98** | 8,93 | 0,03 | 25198 / 0,30 |
+| Dinámico | 7000 | 13,50 | 13,59 | **12,97** | 12,93 | 0,03 | 31930 / 0,38 |
+| Dinámico | 8000 | 17,85 | 17,95 | **17,17** | 17,12 | 0,04 | 37666 / 0,47 |
+| Dinámico | 9000 | 20,96 | 21,06 | **20,24** | 20,19 | 0,04 | 41875 / 0,56 |
+| Dinámico | 11000 | 28,84 | 28,96 | **28,23** | 28,13 | 0,06 | 51149 / 0,71 |
 
-| Métrica | Estático | Dinámico |
-|---|---:|---:|
-| Cargados (Loaded) | 7000 | 7000 |
-| Insertados | 5737 | 5787 |
-| Finalizados | 4635 | 4296 |
-| Circulando al finalizar | 1102 | 1491 |
-| Pendientes de entrar | 1263 | 1213 |
-| Teleports (Jam / Yield) | 31 (8 / 23) | 0 (0 / 0) |
-| Frenadas de emergencia | 1 | 0 |
-| Longitud media (m) | 1517.14 | 1703.51 |
-| Velocidad media (m/s) | 4.15 | 3.32 |
-| Duración media (s) | 427.75 | 607.14 |
-| WaitingTime (s) | 247.00 | 366.24 |
-| TimeLoss (s) | 316.41 | 482.71 |
-| DepartDelay (s) | 139.93 | 144.48 |
-| Performance Duration (s) | 8.67 | 14.18 |
-| **Tiempo completo `real` (s)** | **8.75** | **14.26** |
-| **Tiempo limpio `real` (s)** | **7.70** | **14.92** |
-| Consultas Dijkstra | — | 34505 |
-| Tiempo Dijkstra (s) | — | 0.38 |
+La ejecución **completa** muestra estadísticas y avisos. La medición **limpia** se ejecuta con la salida suprimida; no cambia las reglas de circulación. Los valores `real` son tiempos de reloj y pueden variar entre ejecuciones.
 
-### 2.6. Demanda de 8000 vehículos
-
-| Métrica | Estático | Dinámico |
-|---|---:|---:|
-| Cargados (Loaded) | 8001 | 8001 |
-| Insertados | 5869 | 5849 |
-| Finalizados | 4020 | 4043 |
-| Circulando al finalizar | 1849 | 1806 |
-| Pendientes de entrar | 2132 | 2152 |
-| Teleports (Jam / Yield) | 122 (37 / 85) | 0 (0 / 0) |
-| Frenadas de emergencia | 0 | 0 |
-| Longitud media (m) | 1505.90 | 1738.70 |
-| Velocidad media (m/s) | 3.92 | 3.10 |
-| Duración media (s) | 477.40 | 685.36 |
-| WaitingTime (s) | 293.28 | 428.71 |
-| TimeLoss (s) | 365.48 | 558.33 |
-| DepartDelay (s) | 163.78 | 172.20 |
-| Performance Duration (s) | 12.61 | 18.60 |
-| **Tiempo completo `real` (s)** | **12.70** | **18.69** |
-| **Tiempo limpio `real` (s)** | **12.97** | **18.01** |
-| Consultas Dijkstra | — | 40601 |
-| Tiempo Dijkstra (s) | — | 0.54 |
-
-### 2.7. Demanda de 9000 vehículos
-
-| Métrica | Estático | Dinámico |
-|---|---:|---:|
-| Cargados (Loaded) | 9000 | 9000 |
-| Insertados | 6252 | 5799 |
-| Finalizados | 4327 | 3749 |
-| Circulando al finalizar | 1925 | 2050 |
-| Pendientes de entrar | 2748 | 3201 |
-| Teleports (Jam / Yield) | 136 (34 / 102) | 1 (0 / 1) |
-| Frenadas de emergencia | 0 | 2 |
-| Longitud media (m) | 1496.63 | 1731.15 |
-| Velocidad media (m/s) | 3.85 | 2.94 |
-| Duración media (s) | 464.50 | 737.18 |
-| WaitingTime (s) | 277.56 | 474.41 |
-| TimeLoss (s) | 353.71 | 610.63 |
-| DepartDelay (s) | 161.84 | 168.08 |
-| Performance Duration (s) | 13.91 | 23.15 |
-| **Tiempo completo `real` (s)** | **14.00** | **23.25** |
-| **Tiempo limpio `real` (s)** | **13.23** | **21.85** |
-| Consultas Dijkstra | — | 46736 |
-| Tiempo Dijkstra (s) | — | 0.61 |
-
-### 2.8. Demanda de 11 000 vehículos
-
-| Métrica | Estático | Dinámico |
-|---|---:|---:|
-| Cargados (Loaded) | 11000 | 11000 |
-| Insertados | 6449 | 6051 |
-| Finalizados | 4188 | 3913 |
-| Circulando al finalizar | 2261 | 2138 |
-| Pendientes de entrar | 4549 | 4947 |
-| Teleports (Jam / Yield) | 184 (56 / 128) | 1 (1 / 0) |
-| Frenadas de emergencia | 0 | 0 |
-| Longitud media (m) | 1497.77 | 1753.09 |
-| Velocidad media (m/s) | 3.37 | 2.67 |
-| Duración media (s) | 570.01 | 816.31 |
-| WaitingTime (s) | 369.90 | 534.56 |
-| TimeLoss (s) | 458.73 | 688.18 |
-| DepartDelay (s) | 211.75 | 207.14 |
-| Performance Duration (s) | 21.81 | 28.75 |
-| **Tiempo completo `real` (s)** | **21.92** | **28.87** |
-| **Tiempo limpio `real` (s)** | **18.90** | **27.91** |
-| Consultas Dijkstra | — | 52142 |
-| Tiempo Dijkstra (s) | — | 0.70 |
-
-## 3. Comparación general de los tiempos y el tráfico
+## 4. Comparación general
 
 | Demanda | Finalizados estático | Finalizados dinámico | Teleports estático | Teleports dinámico | Limpio estático (s) | Limpio dinámico (s) |
 |---|---:|---:|---:|---:|---:|---:|
-| 3000 | 2692 | 2702 | 0 | 0 | 1.24 | 1.54 |
-| 4000 | 3498 | 3496 | 0 | 0 | 1.92 | 2.72 |
-| 5000 | 4203 | 4229 | 0 | 0 | 3.08 | 4.78 |
-| 6000 | 4578 | 4416 | 5 | 0 | 5.31 | 9.10 |
-| 7000 | 4635 | 4296 | 31 | 0 | 7.70 | 14.92 |
-| 8000 | 4020 | 4043 | 122 | 0 | 12.97 | 18.01 |
-| 9000 | 4327 | 3749 | 136 | 1 | 13.23 | 21.85 |
-| 11000 | 4188 | 3913 | 184 | 1 | 18.90 | 27.91 |
+| 3000 | 2649 | 2664 | 0 | 0 | 1,49 | 2,58 |
+| 4000 | 3464 | 3473 | 0 | 0 | 2,10 | 4,15 |
+| 5000 | 4070 | 4132 | 0 | 0 | 3,55 | 5,10 |
+| 6000 | 4403 | 4483 | 6 | 0 | 6,08 | 8,98 |
+| 7000 | 4419 | 4402 | 46 | 0 | 8,86 | 12,97 |
+| 8000 | 3804 | 4267 | 128 | 0 | 11,88 | 17,17 |
+| 9000 | 4068 | 4293 | 129 | 0 | 13,33 | 20,24 |
+| 11000 | 3722 | 3691 | 249 | 2 | 18,97 | 28,23 |
 
-### Observaciones de las pruebas
+### Observaciones
 
-1. **Hasta 5000 vehículos:** no aparecen teleports y ambos métodos obtienen resultados similares, aunque el dinámico tarda más en ejecutarse.
+1. **Hasta 5000 vehículos** no se registran teletransportes y los dos enrutamientos completan un número similar de viajes.
+2. **Desde 6000 vehículos**, el enrutamiento estático presenta teletransportes que aumentan con la demanda (hasta **249** con 11 000), mientras que el dinámico registra **0** hasta 9000 y **2** con 11 000.
+3. El **dinámico** finaliza más viajes en **6 de las 8 demandas**; sin embargo, suele recorrer más distancia y presenta mayores tiempos medios de viaje.
+4. La ejecución **estática es más rápida** computacionalmente en todas las demandas. Con 11 000 vehículos: **18,97 s** frente a **28,23 s** en la medición limpia.
 
-2. **A partir de 6000 vehículos:** comienza a aumentar la congestión. El estático presenta más teleports, mientras que el dinámico consigue reducirlos.
+**Conclusión:** con semáforos progresivos, el reenrutamiento dinámico reduce notablemente los teletransportes, pero no reduce los tiempos medios de viaje. Para la posterior comparación MICRO–MESO se tomará como referencia principal **MICRO estático con estos mismos semáforos progresivos**.
 
-3. **Entre 7000 y 11 000 vehículos:** el dinámico realiza recorridos más largos y presenta mayores tiempos de viaje y espera.
+## Referencias
 
-4. **Con 11 000 vehículos:** la red está muy congestionada. Finalizan 4188 vehículos en estático y 3913 en dinámico.
-
-5. **Tiempo de ejecución:** el método estático es más rápido de ejecutar en todas las pruebas.
-
-**Conclusión:** el enrutamiento dinámico reduce los teleports, pero en estas pruebas no consigue mejorar los tiempos de viaje respecto al estático.
-### Referencias breves
-
-- [SUMO — Traffic Lights](https://sumo.dlr.de/docs/Simulation/Traffic_Lights.html): estados `G`, `g`, `y` y `r` y reglas de prioridad.
-- [SUMO — Statistics](https://sumo.dlr.de/docs/Simulation/Output/StatisticOutput.html): significado de las estadísticas de vehículos.
-- [SUMO — Vehicle Insertion](https://sumo.dlr.de/docs/Simulation/VehicleInsertion.html): cola de inserción y retrasos de salida.
+- [SUMO — Traffic Lights](https://sumo.dlr.de/docs/Simulation/Traffic_Lights.html)
+- [SUMO — Statistics](https://sumo.dlr.de/docs/Simulation/Output/StatisticOutput.html)
+- [SUMO — Vehicle Insertion](https://sumo.dlr.de/docs/Simulation/VehicleInsertion.html)

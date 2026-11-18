@@ -1,0 +1,28 @@
+Loading net-file from 'red_7x7/red_7x7.net.xml' ... done (12ms).
+Loading additional-files from 'red_7x7/semaforos.add.xml' ... done (3ms).
+Loading additional-files from 'red_7x7/semaforos_progresivos_rectas.add.xml' ... done (31ms).
+Loading route-files incrementally from 'red_7x7/5000_rutas/rutas_5000.rou.xml'
+Loading done.
+Simulation version 1.28.0 started with time: 0.00.
+Simulation ended at time: 3600.00.
+Reason: The final simulation step has been reached.
+Performance:
+ Duration: 5.54s
+ Real time factor: 649.819
+ UPS: 325634.657040
+Vehicles:
+ Inserted: 4753 (Loaded: 5001)
+ Running: 621
+ Waiting: 248
+Statistics (avg of 4132):
+ RouteLength: 1582.85
+ Speed: 4.35
+ Duration: 399.70
+ WaitingTime: 211.09
+ TimeLoss: 283.96
+ DepartDelay: 106.74
+DijkstraRouter answered 18430 queries and explored 79.72 edges on average.
+DijkstraRouter spent 0.24s answering queries (0.01ms on average).
+real 5,62
+user 5,58
+sys 0,03

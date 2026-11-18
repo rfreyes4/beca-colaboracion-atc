@@ -1,0 +1,28 @@
+Loading net-file from 'red_7x7/red_7x7.net.xml' ... done (11ms).
+Loading additional-files from 'red_7x7/semaforos.add.xml' ... done (3ms).
+Loading additional-files from 'red_7x7/semaforos_progresivos_rectas.add.xml' ... done (31ms).
+Loading route-files incrementally from 'red_7x7/3000_rutas/rutas_3000.rou.xml'
+Loading done.
+Simulation version 1.28.0 started with time: 0.00.
+Warning: Vehicle '707' performs emergency braking on lane 'e-ext-o-6-a-j-6-0_0' with decel=9.00, wished=4.50, severity=1.00, time=912.00.
+Simulation ended at time: 3600.00.
+Reason: The final simulation step has been reached.
+Performance:
+ Duration: 1.45s
+ Real time factor: 2484.47
+ UPS: 606222.912353
+Vehicles:
+ Inserted: 2946 (Loaded: 3001)
+ Running: 297
+ Waiting: 55
+ Emergency Braking: 1
+Statistics (avg of 2649):
+ RouteLength: 1524.68
+ Speed: 5.32
+ Duration: 311.72
+ WaitingTime: 155.76
+ TimeLoss: 200.28
+ DepartDelay: 57.58
+real 1,52
+user 1,49
+sys 0,02

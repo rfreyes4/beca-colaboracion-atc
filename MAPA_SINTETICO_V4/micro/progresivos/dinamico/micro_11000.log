@@ -1,0 +1,33 @@
+Loading net-file from 'red_7x7/red_7x7.net.xml' ... done (11ms).
+Loading additional-files from 'red_7x7/semaforos.add.xml' ... done (3ms).
+Loading additional-files from 'red_7x7/semaforos_progresivos_rectas.add.xml' ... done (32ms).
+Loading route-files incrementally from 'red_7x7/11000_rutas/rutas_11000.rou.xml'
+Loading done.
+Simulation version 1.28.0 started with time: 0.00.
+Warning: Teleporting vehicle '5576'; waited too long (yield), lane='e-j-5-5-a-j-5-4_0', time=2987.00.
+Warning: Teleporting vehicle '6137'; waited too long (yield), lane='e-j-6-6-a-j-5-6_0', time=3048.00.
+Warning: Vehicle '6137' ends teleporting on edge 'e-j-5-6-a-j-5-5', time=3094.00.
+Warning: Vehicle '5576' ends teleporting on edge 'e-j-5-3-a-j-4-3', time=3200.00.
+Simulation ended at time: 3600.00.
+Reason: The final simulation step has been reached.
+Performance:
+ Duration: 28.84s
+ Real time factor: 124.822
+ UPS: 178285.322978
+Vehicles:
+ Inserted: 5815 (Loaded: 11000)
+ Running: 2124
+ Waiting: 5183
+ Teleports: 2 (Yield: 2)
+Statistics (avg of 3691):
+ RouteLength: 1761.63
+ Speed: 2.73
+ Duration: 818.36
+ WaitingTime: 537.06
+ TimeLoss: 689.54
+ DepartDelay: 196.08
+DijkstraRouter answered 51149 queries and explored 89.12 edges on average.
+DijkstraRouter spent 0.71s answering queries (0.01ms on average).
+real 28,96
+user 28,88
+sys 0,06

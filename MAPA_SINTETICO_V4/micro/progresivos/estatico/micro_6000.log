@@ -1,0 +1,39 @@
+Loading net-file from 'red_7x7/red_7x7.net.xml' ... done (11ms).
+Loading additional-files from 'red_7x7/semaforos.add.xml' ... done (3ms).
+Loading additional-files from 'red_7x7/semaforos_progresivos_rectas.add.xml' ... done (31ms).
+Loading route-files incrementally from 'red_7x7/6000_rutas/rutas_6000.rou.xml'
+Loading done.
+Simulation version 1.28.0 started with time: 0.00.
+Warning: Teleporting vehicle '3075'; waited too long (yield), lane='e-j-0-6-a-j-0-5_0', time=2238.00.
+Warning: Vehicle '3075' ends teleporting on edge 'e-j-0-5-a-j-0-4', time=2260.00.
+Warning: Teleporting vehicle '3868'; waited too long (yield), lane='e-j-0-6-a-j-0-5_0', time=3059.00.
+Warning: Vehicle '3868' ends teleporting on edge 'e-j-0-5-a-j-0-4', time=3090.00.
+Warning: Teleporting vehicle '4303'; waited too long (yield), lane='e-j-1-6-a-j-0-6_0', time=3097.00.
+Warning: Teleporting vehicle '4691'; waited too long (jam), lane='e-ext-e-0-a-j-0-6_0', time=3130.00.
+Warning: Vehicle '4303' ends teleporting on edge 'e-j-0-6-a-j-0-5', time=3263.00.
+Warning: Vehicle '4691' ends teleporting on edge 'e-j-0-6-a-j-0-5', time=3263.00.
+Warning: Teleporting vehicle '5091'; waited too long (jam), lane='e-j-2-6-a-j-1-6_0', time=3457.00.
+Warning: Vehicle '5091' ends teleporting on edge 'e-j-1-6-a-j-0-6', time=3522.00.
+Warning: Teleporting vehicle '4417'; waited too long (yield), lane='e-j-1-5-a-j-1-4_0', time=3531.00.
+Warning: Vehicle '4417' ends teleporting on edge 'e-j-1-4-a-j-1-3', time=3542.00.
+Simulation ended at time: 3600.00.
+Reason: The final simulation step has been reached.
+Performance:
+ Duration: 6.48s
+ Real time factor: 555.213
+ UPS: 320297.655768
+Vehicles:
+ Inserted: 5186 (Loaded: 6001)
+ Running: 783
+ Waiting: 815
+ Teleports: 6 (Jam: 2, Yield: 4)
+Statistics (avg of 4403):
+ RouteLength: 1524.68
+ Speed: 4.32
+ Duration: 405.38
+ WaitingTime: 225.16
+ TimeLoss: 293.97
+ DepartDelay: 130.82
+real 6,56
+user 6,52
+sys 0,03

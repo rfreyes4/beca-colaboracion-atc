@@ -1,0 +1,33 @@
+Loading net-file from 'red_7x7/red_7x7.net.xml' ... done (12ms).
+Loading additional-files from 'red_7x7/semaforos.add.xml' ... done (3ms).
+Loading additional-files from 'red_7x7/semaforos_progresivos_rectas.add.xml' ... done (41ms).
+Loading route-files incrementally from 'red_7x7/7000_rutas/rutas_7000.rou.xml'
+Loading done.
+Simulation version 1.28.0 started with time: 0.00.
+Warning: Vehicle '882' performs emergency braking on lane 'e-j-0-1-a-j-1-1_0' with decel=9.00, wished=4.50, severity=1.00, time=512.00.
+Warning: Vehicle '1519' performs emergency braking on lane 'e-j-5-0-a-j-6-0_0' with decel=9.00, wished=4.50, severity=1.00, time=1632.00.
+Warning: Vehicle '3197' performs emergency braking on lane 'e-j-2-6-a-j-1-6_0' with decel=9.00, wished=4.50, severity=1.00, time=1712.00.
+Warning: Vehicle '4262' performs emergency braking on lane 'e-ext-e-2-a-j-2-6_0' with decel=9.00, wished=4.50, severity=1.00, time=2227.00.
+Simulation ended at time: 3600.00.
+Reason: The final simulation step has been reached.
+Performance:
+ Duration: 13.50s
+ Real time factor: 266.686
+ UPS: 236931.994963
+Vehicles:
+ Inserted: 5683 (Loaded: 7000)
+ Running: 1281
+ Waiting: 1317
+ Emergency Braking: 4
+Statistics (avg of 4402):
+ RouteLength: 1703.31
+ Speed: 3.39
+ Duration: 583.86
+ WaitingTime: 344.52
+ TimeLoss: 459.44
+ DepartDelay: 175.85
+DijkstraRouter answered 31930 queries and explored 81.50 edges on average.
+DijkstraRouter spent 0.38s answering queries (0.01ms on average).
+real 13,59
+user 13,53
+sys 0,04
