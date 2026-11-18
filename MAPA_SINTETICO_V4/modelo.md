@@ -310,14 +310,17 @@ En cada apartado se muestran **las mediciones completas** y, al final, **el tiem
 
 ### Observaciones de las pruebas
 
-1. **Hasta 5000 vehículos** no aparecen teleports en ninguna modalidad. Los resultados de viajes finalizados son próximos, aunque el enrutamiento dinámico consume más tiempo de cálculo.
-2. **Desde 6000 vehículos** la red empieza a mostrar bloqueos prolongados en el modo estático, y la demanda pendiente de inserción aumenta claramente. El dinámico reduce casi por completo los teleports, pero eso **no significa que haga llegar antes a los vehículos**.
-3. **Con 7000–11 000 vehículos** el dinámico suele recorrer más distancia y registrar mayores `Duration`, `WaitingTime` y `TimeLoss`. En estos ensayos, la posibilidad de cambiar de ruta no compensa la congestión y el mayor recorrido.
-4. **Con 11 000 vehículos**, de los 11 000 cargados terminaron **4188 en estático y 3913 en dinámico**. Permanecían pendientes de insertarse **4549 y 4947**, respectivamente: la red está claramente saturada a los 3600 s.
-5. Los tiempos `real` corresponden **a la ejecución del programa en el ordenador**, no a los segundos simulados ni al tiempo medio de un trayecto. Son mediciones individuales y pueden variar ligeramente por la carga del equipo.
+1. **Hasta 5000 vehículos:** no aparecen teleports y ambos métodos obtienen resultados similares, aunque el dinámico tarda más en ejecutarse.
 
-**Cautela al interpretar las medias:** las estadísticas se refieren a los viajes que terminaron antes de los 3600 s. Cuando la red está muy saturada, quedan fuera muchos vehículos lentos que seguían circulando o que todavía no pudieron entrar, por lo que una menor duración media **no implica necesariamente una mejora general**.
+2. **A partir de 6000 vehículos:** comienza a aumentar la congestión. El estático presenta más teleports, mientras que el dinámico consigue reducirlos.
 
+3. **Entre 7000 y 11 000 vehículos:** el dinámico realiza recorridos más largos y presenta mayores tiempos de viaje y espera.
+
+4. **Con 11 000 vehículos:** la red está muy congestionada. Finalizan 4188 vehículos en estático y 3913 en dinámico.
+
+5. **Tiempo de ejecución:** el método estático es más rápido de ejecutar en todas las pruebas.
+
+**Conclusión:** el enrutamiento dinámico reduce los teleports, pero en estas pruebas no consigue mejorar los tiempos de viaje respecto al estático.
 ### Referencias breves
 
 - [SUMO — Traffic Lights](https://sumo.dlr.de/docs/Simulation/Traffic_Lights.html): estados `G`, `g`, `y` y `r` y reglas de prioridad.
