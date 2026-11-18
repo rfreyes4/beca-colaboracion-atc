@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='utf-8'?>
+<routes>
+    <vehicle id="recta_oeste_este_fila_0" depart="0.00">
+        <route edges="e-ext-o-0-a-j-0-0 e-j-0-0-a-j-0-1 e-j-0-1-a-j-0-2 e-j-0-2-a-j-0-3 e-j-0-3-a-j-0-4 e-j-0-4-a-j-0-5 e-j-0-5-a-j-0-6 e-j-0-6-a-ext-e-0" />
+    </vehicle>
+    <vehicle id="recta_este_oeste_fila_0" depart="0.00">
+        <route edges="e-ext-e-0-a-j-0-6 e-j-0-6-a-j-0-5 e-j-0-5-a-j-0-4 e-j-0-4-a-j-0-3 e-j-0-3-a-j-0-2 e-j-0-2-a-j-0-1 e-j-0-1-a-j-0-0 e-j-0-0-a-ext-o-0" />
+    </vehicle>
+    <vehicle id="recta_oeste_este_fila_1" depart="0.00">
+        <route edges="e-ext-o-1-a-j-1-0 e-j-1-0-a-j-1-1 e-j-1-1-a-j-1-2 e-j-1-2-a-j-1-3 e-j-1-3-a-j-1-4 e-j-1-4-a-j-1-5 e-j-1-5-a-j-1-6 e-j-1-6-a-ext-e-1" />
+    </vehicle>
+    <vehicle id="recta_este_oeste_fila_1" depart="0.00">
+        <route edges="e-ext-e-1-a-j-1-6 e-j-1-6-a-j-1-5 e-j-1-5-a-j-1-4 e-j-1-4-a-j-1-3 e-j-1-3-a-j-1-2 e-j-1-2-a-j-1-1 e-j-1-1-a-j-1-0 e-j-1-0-a-ext-o-1" />
+    </vehicle>
+    <vehicle id="recta_oeste_este_fila_2" depart="0.00">
+        <route edges="e-ext-o-2-a-j-2-0 e-j-2-0-a-j-2-1 e-j-2-1-a-j-2-2 e-j-2-2-a-j-2-3 e-j-2-3-a-j-2-4 e-j-2-4-a-j-2-5 e-j-2-5-a-j-2-6 e-j-2-6-a-ext-e-2" />
+    </vehicle>
+    <vehicle id="recta_este_oeste_fila_2" depart="0.00">
+        <route edges="e-ext-e-2-a-j-2-6 e-j-2-6-a-j-2-5 e-j-2-5-a-j-2-4 e-j-2-4-a-j-2-3 e-j-2-3-a-j-2-2 e-j-2-2-a-j-2-1 e-j-2-1-a-j-2-0 e-j-2-0-a-ext-o-2" />
+    </vehicle>
+    <vehicle id="recta_oeste_este_fila_3" depart="0.00">
+        <route edges="e-ext-o-3-a-j-3-0 e-j-3-0-a-j-3-1 e-j-3-1-a-j-3-2 e-j-3-2-a-j-3-3 e-j-3-3-a-j-3-4 e-j-3-4-a-j-3-5 e-j-3-5-a-j-3-6 e-j-3-6-a-ext-e-3" />
+    </vehicle>
+    <vehicle id="recta_este_oeste_fila_3" depart="0.00">
+        <route edges="e-ext-e-3-a-j-3-6 e-j-3-6-a-j-3-5 e-j-3-5-a-j-3-4 e-j-3-4-a-j-3-3 e-j-3-3-a-j-3-2 e-j-3-2-a-j-3-1 e-j-3-1-a-j-3-0 e-j-3-0-a-ext-o-3" />
+    </vehicle>
+    <vehicle id="recta_oeste_este_fila_4" depart="0.00">
+        <route edges="e-ext-o-4-a-j-4-0 e-j-4-0-a-j-4-1 e-j-4-1-a-j-4-2 e-j-4-2-a-j-4-3 e-j-4-3-a-j-4-4 e-j-4-4-a-j-4-5 e-j-4-5-a-j-4-6 e-j-4-6-a-ext-e-4" />
+    </vehicle>
+    <vehicle id="recta_este_oeste_fila_4" depart="0.00">
+        <route edges="e-ext-e-4-a-j-4-6 e-j-4-6-a-j-4-5 e-j-4-5-a-j-4-4 e-j-4-4-a-j-4-3 e-j-4-3-a-j-4-2 e-j-4-2-a-j-4-1 e-j-4-1-a-j-4-0 e-j-4-0-a-ext-o-4" />
+    </vehicle>
+    <vehicle id="recta_oeste_este_fila_5" depart="0.00">
+        <route edges="e-ext-o-5-a-j-5-0 e-j-5-0-a-j-5-1 e-j-5-1-a-j-5-2 e-j-5-2-a-j-5-3 e-j-5-3-a-j-5-4 e-j-5-4-a-j-5-5 e-j-5-5-a-j-5-6 e-j-5-6-a-ext-e-5" />
+    </vehicle>
+    <vehicle id="recta_este_oeste_fila_5" depart="0.00">
+        <route edges="e-ext-e-5-a-j-5-6 e-j-5-6-a-j-5-5 e-j-5-5-a-j-5-4 e-j-5-4-a-j-5-3 e-j-5-3-a-j-5-2 e-j-5-2-a-j-5-1 e-j-5-1-a-j-5-0 e-j-5-0-a-ext-o-5" />
+    </vehicle>
+    <vehicle id="recta_oeste_este_fila_6" depart="0.00">
+        <route edges="e-ext-o-6-a-j-6-0 e-j-6-0-a-j-6-1 e-j-6-1-a-j-6-2 e-j-6-2-a-j-6-3 e-j-6-3-a-j-6-4 e-j-6-4-a-j-6-5 e-j-6-5-a-j-6-6 e-j-6-6-a-ext-e-6" />
+    </vehicle>
+    <vehicle id="recta_este_oeste_fila_6" depart="0.00">
+        <route edges="e-ext-e-6-a-j-6-6 e-j-6-6-a-j-6-5 e-j-6-5-a-j-6-4 e-j-6-4-a-j-6-3 e-j-6-3-a-j-6-2 e-j-6-2-a-j-6-1 e-j-6-1-a-j-6-0 e-j-6-0-a-ext-o-6" />
+    </vehicle>
+    <vehicle id="recta_norte_sur_columna_0" depart="0.00">
+        <route edges="e-ext-n-0-a-j-0-0 e-j-0-0-a-j-1-0 e-j-1-0-a-j-2-0 e-j-2-0-a-j-3-0 e-j-3-0-a-j-4-0 e-j-4-0-a-j-5-0 e-j-5-0-a-j-6-0 e-j-6-0-a-ext-s-0" />
+    </vehicle>
+    <vehicle id="recta_sur_norte_columna_0" depart="0.00">
+        <route edges="e-ext-s-0-a-j-6-0 e-j-6-0-a-j-5-0 e-j-5-0-a-j-4-0 e-j-4-0-a-j-3-0 e-j-3-0-a-j-2-0 e-j-2-0-a-j-1-0 e-j-1-0-a-j-0-0 e-j-0-0-a-ext-n-0" />
+    </vehicle>
+    <vehicle id="recta_norte_sur_columna_1" depart="0.00">
+        <route edges="e-ext-n-1-a-j-0-1 e-j-0-1-a-j-1-1 e-j-1-1-a-j-2-1 e-j-2-1-a-j-3-1 e-j-3-1-a-j-4-1 e-j-4-1-a-j-5-1 e-j-5-1-a-j-6-1 e-j-6-1-a-ext-s-1" />
+    </vehicle>
+    <vehicle id="recta_sur_norte_columna_1" depart="0.00">
+        <route edges="e-ext-s-1-a-j-6-1 e-j-6-1-a-j-5-1 e-j-5-1-a-j-4-1 e-j-4-1-a-j-3-1 e-j-3-1-a-j-2-1 e-j-2-1-a-j-1-1 e-j-1-1-a-j-0-1 e-j-0-1-a-ext-n-1" />
+    </vehicle>
+    <vehicle id="recta_norte_sur_columna_2" depart="0.00">
+        <route edges="e-ext-n-2-a-j-0-2 e-j-0-2-a-j-1-2 e-j-1-2-a-j-2-2 e-j-2-2-a-j-3-2 e-j-3-2-a-j-4-2 e-j-4-2-a-j-5-2 e-j-5-2-a-j-6-2 e-j-6-2-a-ext-s-2" />
+    </vehicle>
+    <vehicle id="recta_sur_norte_columna_2" depart="0.00">
+        <route edges="e-ext-s-2-a-j-6-2 e-j-6-2-a-j-5-2 e-j-5-2-a-j-4-2 e-j-4-2-a-j-3-2 e-j-3-2-a-j-2-2 e-j-2-2-a-j-1-2 e-j-1-2-a-j-0-2 e-j-0-2-a-ext-n-2" />
+    </vehicle>
+    <vehicle id="recta_norte_sur_columna_3" depart="0.00">
+        <route edges="e-ext-n-3-a-j-0-3 e-j-0-3-a-j-1-3 e-j-1-3-a-j-2-3 e-j-2-3-a-j-3-3 e-j-3-3-a-j-4-3 e-j-4-3-a-j-5-3 e-j-5-3-a-j-6-3 e-j-6-3-a-ext-s-3" />
+    </vehicle>
+    <vehicle id="recta_sur_norte_columna_3" depart="0.00">
+        <route edges="e-ext-s-3-a-j-6-3 e-j-6-3-a-j-5-3 e-j-5-3-a-j-4-3 e-j-4-3-a-j-3-3 e-j-3-3-a-j-2-3 e-j-2-3-a-j-1-3 e-j-1-3-a-j-0-3 e-j-0-3-a-ext-n-3" />
+    </vehicle>
+    <vehicle id="recta_norte_sur_columna_4" depart="0.00">
+        <route edges="e-ext-n-4-a-j-0-4 e-j-0-4-a-j-1-4 e-j-1-4-a-j-2-4 e-j-2-4-a-j-3-4 e-j-3-4-a-j-4-4 e-j-4-4-a-j-5-4 e-j-5-4-a-j-6-4 e-j-6-4-a-ext-s-4" />
+    </vehicle>
+    <vehicle id="recta_sur_norte_columna_4" depart="0.00">
+        <route edges="e-ext-s-4-a-j-6-4 e-j-6-4-a-j-5-4 e-j-5-4-a-j-4-4 e-j-4-4-a-j-3-4 e-j-3-4-a-j-2-4 e-j-2-4-a-j-1-4 e-j-1-4-a-j-0-4 e-j-0-4-a-ext-n-4" />
+    </vehicle>
+    <vehicle id="recta_norte_sur_columna_5" depart="0.00">
+        <route edges="e-ext-n-5-a-j-0-5 e-j-0-5-a-j-1-5 e-j-1-5-a-j-2-5 e-j-2-5-a-j-3-5 e-j-3-5-a-j-4-5 e-j-4-5-a-j-5-5 e-j-5-5-a-j-6-5 e-j-6-5-a-ext-s-5" />
+    </vehicle>
+    <vehicle id="recta_sur_norte_columna_5" depart="0.00">
+        <route edges="e-ext-s-5-a-j-6-5 e-j-6-5-a-j-5-5 e-j-5-5-a-j-4-5 e-j-4-5-a-j-3-5 e-j-3-5-a-j-2-5 e-j-2-5-a-j-1-5 e-j-1-5-a-j-0-5 e-j-0-5-a-ext-n-5" />
+    </vehicle>
+    <vehicle id="recta_norte_sur_columna_6" depart="0.00">
+        <route edges="e-ext-n-6-a-j-0-6 e-j-0-6-a-j-1-6 e-j-1-6-a-j-2-6 e-j-2-6-a-j-3-6 e-j-3-6-a-j-4-6 e-j-4-6-a-j-5-6 e-j-5-6-a-j-6-6 e-j-6-6-a-ext-s-6" />
+    </vehicle>
+    <vehicle id="recta_sur_norte_columna_6" depart="0.00">
+        <route edges="e-ext-s-6-a-j-6-6 e-j-6-6-a-j-5-6 e-j-5-6-a-j-4-6 e-j-4-6-a-j-3-6 e-j-3-6-a-j-2-6 e-j-2-6-a-j-1-6 e-j-1-6-a-j-0-6 e-j-0-6-a-ext-n-6" />
+    </vehicle>
+</routes>

@@ -1,0 +1,689 @@
+<?xml version='1.0' encoding='utf-8'?>
+<additional>
+  <tlLogic id="j-0-0" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-0-1" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-0-2" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-0-3" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-0-4" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-0-5" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-0-6" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-1-0" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-1-1" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-1-2" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-1-3" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-1-4" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-1-5" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-1-6" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-2-0" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-2-1" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-2-2" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-2-3" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-2-4" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-2-5" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-2-6" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-3-0" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-3-1" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-3-2" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-3-3" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-3-4" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-3-5" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-3-6" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-4-0" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-4-1" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-4-2" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-4-3" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-4-4" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-4-5" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-4-6" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-5-0" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-5-1" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-5-2" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-5-3" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-5-4" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-5-5" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-5-6" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-6-0" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-6-1" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-6-2" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-6-3" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-6-4" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-6-5" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+  <tlLogic id="j-6-6" type="static" programID="manual_4_fases" offset="0">
+    <phase duration="45" state="GGrrrrGGrrrr" name="Norte-sur recto y derecha" />
+    <phase duration="4" state="yyrrrryyrrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrGrrrrrGrrr" name="Norte-sur izquierda" />
+    <phase duration="4" state="rryrrrrryrrr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="45" state="rrrGGrrrrGGr" name="Este-oeste recto y derecha" />
+    <phase duration="4" state="rrryyrrrryyr" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+    <phase duration="15" state="rrrrrGrrrrrG" name="Este-oeste izquierda" />
+    <phase duration="4" state="rrrrryrrrrry" name="Amarillo" />
+    <phase duration="2" state="rrrrrrrrrrrr" name="Rojo general" />
+  </tlLogic>
+</additional>

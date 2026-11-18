@@ -1,0 +1,629 @@
+
+cd "$HOME/Escritorio/Proyectos de investigacion/REPO BECA ATC/MAPA SINTÉTICO V3" || exit 1
+
+-------------------- MICRO — 3000 vehiculos --------------------
+
+A) LIMPIO — solo tiempo real / user / sys:
+time sumo \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/3000_rutas/rutas_3000.rou.xml \
+  --begin 0 --end 3600 \
+  --time-to-teleport 300 \
+  --verbose false \
+  --no-step-log true \
+  --no-warnings true > /dev/null 2>&1
+
+B) COMPLETO — estadisticas + dos logs guardados:
+mkdir -p "registros_v3/micro/3000"
+{ time sumo \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/3000_rutas/rutas_3000.rou.xml \
+  --begin 0 --end 3600 \
+  --time-to-teleport 300 \
+  --duration-log.statistics true \
+  --no-step-log true \
+  --no-warnings true \
+  --statistic-output registros_v3/micro/3000/estadisticas.xml; } 2>&1 | tee "registros_v3/micro/3000/terminal.log"
+
+C) GUI — visualizacion:
+sumo-gui \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/3000_rutas/rutas_3000.rou.xml \
+  --begin 0 --end 3600 \
+  --time-to-teleport 300
+
+
+-------------------- MICRO — 3500 vehiculos --------------------
+
+A) LIMPIO — solo tiempo real / user / sys:
+time sumo \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/3500_rutas/rutas_3500.rou.xml \
+  --begin 0 --end 3600 \
+  --time-to-teleport 300 \
+  --verbose false \
+  --no-step-log true \
+  --no-warnings true > /dev/null 2>&1
+
+B) COMPLETO — estadisticas + dos logs guardados:
+mkdir -p "registros_v3/micro/3500"
+{ time sumo \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/3500_rutas/rutas_3500.rou.xml \
+  --begin 0 --end 3600 \
+  --time-to-teleport 300 \
+  --duration-log.statistics true \
+  --no-step-log true \
+  --no-warnings true \
+  --statistic-output registros_v3/micro/3500/estadisticas.xml; } 2>&1 | tee "registros_v3/micro/3500/terminal.log"
+
+C) GUI — visualizacion:
+sumo-gui \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/3500_rutas/rutas_3500.rou.xml \
+  --begin 0 --end 3600 \
+  --time-to-teleport 300
+
+
+-------------------- MICRO — 4000 vehiculos --------------------
+
+A) LIMPIO — solo tiempo real / user / sys:
+time sumo \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/4000_rutas/rutas_4000.rou.xml \
+  --begin 0 --end 3600 \
+  --time-to-teleport 300 \
+  --verbose false \
+  --no-step-log true \
+  --no-warnings true > /dev/null 2>&1
+
+B) COMPLETO — estadisticas + dos logs guardados:
+mkdir -p "registros_v3/micro/4000"
+{ time sumo \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/4000_rutas/rutas_4000.rou.xml \
+  --begin 0 --end 3600 \
+  --time-to-teleport 300 \
+  --duration-log.statistics true \
+  --no-step-log true \
+  --no-warnings true \
+  --statistic-output registros_v3/micro/4000/estadisticas.xml; } 2>&1 | tee "registros_v3/micro/4000/terminal.log"
+
+C) GUI — visualizacion:
+sumo-gui \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/4000_rutas/rutas_4000.rou.xml \
+  --begin 0 --end 3600 \
+  --time-to-teleport 300
+
+
+-------------------- MICRO — 4500 vehiculos --------------------
+
+A) LIMPIO — solo tiempo real / user / sys:
+time sumo \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/4500_rutas/rutas_4500.rou.xml \
+  --begin 0 --end 3600 \
+  --time-to-teleport 300 \
+  --verbose false \
+  --no-step-log true \
+  --no-warnings true > /dev/null 2>&1
+
+B) COMPLETO — estadisticas + dos logs guardados:
+mkdir -p "registros_v3/micro/4500"
+{ time sumo \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/4500_rutas/rutas_4500.rou.xml \
+  --begin 0 --end 3600 \
+  --time-to-teleport 300 \
+  --duration-log.statistics true \
+  --no-step-log true \
+  --no-warnings true \
+  --statistic-output registros_v3/micro/4500/estadisticas.xml; } 2>&1 | tee "registros_v3/micro/4500/terminal.log"
+
+C) GUI — visualizacion:
+sumo-gui \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/4500_rutas/rutas_4500.rou.xml \
+  --begin 0 --end 3600 \
+  --time-to-teleport 300
+
+
+-------------------- MICRO — 5000 vehiculos --------------------
+
+A) LIMPIO — solo tiempo real / user / sys:
+time sumo \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/5000_rutas/rutas_5000.rou.xml \
+  --begin 0 --end 3600 \
+  --time-to-teleport 300 \
+  --verbose false \
+  --no-step-log true \
+  --no-warnings true > /dev/null 2>&1
+
+B) COMPLETO — estadisticas + dos logs guardados:
+mkdir -p "registros_v3/micro/5000"
+{ time sumo \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/5000_rutas/rutas_5000.rou.xml \
+  --begin 0 --end 3600 \
+  --time-to-teleport 300 \
+  --duration-log.statistics true \
+  --no-step-log true \
+  --no-warnings true \
+  --statistic-output registros_v3/micro/5000/estadisticas.xml; } 2>&1 | tee "registros_v3/micro/5000/terminal.log"
+
+C) GUI — visualizacion:
+sumo-gui \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/5000_rutas/rutas_5000.rou.xml \
+  --begin 0 --end 3600 \
+  --time-to-teleport 300
+
+
+-------------------- MICRO — 5500 vehiculos --------------------
+
+A) LIMPIO — solo tiempo real / user / sys:
+time sumo \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/5500_rutas/rutas_5500.rou.xml \
+  --begin 0 --end 3600 \
+  --time-to-teleport 300 \
+  --verbose false \
+  --no-step-log true \
+  --no-warnings true > /dev/null 2>&1
+
+B) COMPLETO — estadisticas + dos logs guardados:
+mkdir -p "registros_v3/micro/5500"
+{ time sumo \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/5500_rutas/rutas_5500.rou.xml \
+  --begin 0 --end 3600 \
+  --time-to-teleport 300 \
+  --duration-log.statistics true \
+  --no-step-log true \
+  --no-warnings true \
+  --statistic-output registros_v3/micro/5500/estadisticas.xml; } 2>&1 | tee "registros_v3/micro/5500/terminal.log"
+
+C) GUI — visualizacion:
+sumo-gui \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/5500_rutas/rutas_5500.rou.xml \
+  --begin 0 --end 3600 \
+  --time-to-teleport 300
+
+================================================================================
+                         MODELO MESO
+================================================================================
+
+-------------------- MESO — 3000 vehiculos --------------------
+
+A) LIMPIO — solo tiempo real / user / sys:
+time sumo \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/3000_rutas/rutas_3000.rou.xml \
+  --mesosim true \
+  --meso-ltm false \
+  --meso-junction-control true \
+  --meso-junction-control.limited true \
+  --meso-minor-penalty 4 \
+  --meso-tauff 6.00 \
+  --meso-taufj 1.13 \
+  --meso-taujf 1.73 \
+  --meso-taujj 1.40 \
+  --meso-edgelength 98 \
+  --meso-jam-threshold -1 \
+  --meso-recheck 0 \
+  --meso-overtaking false \
+  --begin 0 --end 3600 \
+  --time-to-teleport 300 \
+  --verbose false \
+  --no-step-log true \
+  --no-warnings true > /dev/null 2>&1
+
+B) COMPLETO — estadisticas + dos logs guardados:
+mkdir -p "registros_v3/meso/3000"
+{ time sumo \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/3000_rutas/rutas_3000.rou.xml \
+  --mesosim true \
+  --meso-ltm false \
+  --meso-junction-control true \
+  --meso-junction-control.limited true \
+  --meso-minor-penalty 4 \
+  --meso-tauff 6.00 \
+  --meso-taufj 1.13 \
+  --meso-taujf 1.73 \
+  --meso-taujj 1.40 \
+  --meso-edgelength 98 \
+  --meso-jam-threshold -1 \
+  --meso-recheck 0 \
+  --meso-overtaking false \
+  --begin 0 --end 3600 \
+  --time-to-teleport 300 \
+  --duration-log.statistics true \
+  --no-step-log true \
+  --no-warnings true \
+  --statistic-output registros_v3/meso/3000/estadisticas.xml; } 2>&1 | tee "registros_v3/meso/3000/terminal.log"
+
+C) GUI — visualizacion:
+sumo-gui \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/3000_rutas/rutas_3000.rou.xml \
+  --mesosim true \
+  --meso-ltm false \
+  --meso-junction-control true \
+  --meso-junction-control.limited true \
+  --meso-minor-penalty 4 \
+  --meso-tauff 6.00 \
+  --meso-taufj 1.13 \
+  --meso-taujf 1.73 \
+  --meso-taujj 1.40 \
+  --meso-edgelength 98 \
+  --meso-jam-threshold -1 \
+  --meso-recheck 0 \
+  --meso-overtaking false \
+  --begin 0 --end 3600 \
+  --time-to-teleport 300
+
+
+-------------------- MESO — 3500 vehiculos --------------------
+
+A) LIMPIO — solo tiempo real / user / sys:
+time sumo \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/3500_rutas/rutas_3500.rou.xml \
+  --mesosim true \
+  --meso-ltm false \
+  --meso-junction-control true \
+  --meso-junction-control.limited true \
+  --meso-minor-penalty 4 \
+  --meso-tauff 6.00 \
+  --meso-taufj 1.13 \
+  --meso-taujf 1.73 \
+  --meso-taujj 1.40 \
+  --meso-edgelength 98 \
+  --meso-jam-threshold -1 \
+  --meso-recheck 0 \
+  --meso-overtaking false \
+  --begin 0 --end 3600 \
+  --time-to-teleport 300 \
+  --verbose false \
+  --no-step-log true \
+  --no-warnings true > /dev/null 2>&1
+
+B) COMPLETO — estadisticas + dos logs guardados:
+mkdir -p "registros_v3/meso/3500"
+{ time sumo \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/3500_rutas/rutas_3500.rou.xml \
+  --mesosim true \
+  --meso-ltm false \
+  --meso-junction-control true \
+  --meso-junction-control.limited true \
+  --meso-minor-penalty 4 \
+  --meso-tauff 6.00 \
+  --meso-taufj 1.13 \
+  --meso-taujf 1.73 \
+  --meso-taujj 1.40 \
+  --meso-edgelength 98 \
+  --meso-jam-threshold -1 \
+  --meso-recheck 0 \
+  --meso-overtaking false \
+  --begin 0 --end 3600 \
+  --time-to-teleport 300 \
+  --duration-log.statistics true \
+  --no-step-log true \
+  --no-warnings true \
+  --statistic-output registros_v3/meso/3500/estadisticas.xml; } 2>&1 | tee "registros_v3/meso/3500/terminal.log"
+
+C) GUI — visualizacion:
+sumo-gui \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/3500_rutas/rutas_3500.rou.xml \
+  --mesosim true \
+  --meso-ltm false \
+  --meso-junction-control true \
+  --meso-junction-control.limited true \
+  --meso-minor-penalty 4 \
+  --meso-tauff 6.00 \
+  --meso-taufj 1.13 \
+  --meso-taujf 1.73 \
+  --meso-taujj 1.40 \
+  --meso-edgelength 98 \
+  --meso-jam-threshold -1 \
+  --meso-recheck 0 \
+  --meso-overtaking false \
+  --begin 0 --end 3600 \
+  --time-to-teleport 300
+
+
+-------------------- MESO — 4000 vehiculos --------------------
+
+A) LIMPIO — solo tiempo real / user / sys:
+time sumo \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/4000_rutas/rutas_4000.rou.xml \
+  --mesosim true \
+  --meso-ltm false \
+  --meso-junction-control true \
+  --meso-junction-control.limited true \
+  --meso-minor-penalty 4 \
+  --meso-tauff 6.00 \
+  --meso-taufj 1.13 \
+  --meso-taujf 1.73 \
+  --meso-taujj 1.40 \
+  --meso-edgelength 98 \
+  --meso-jam-threshold -1 \
+  --meso-recheck 0 \
+  --meso-overtaking false \
+  --begin 0 --end 3600 \
+  --time-to-teleport 300 \
+  --verbose false \
+  --no-step-log true \
+  --no-warnings true > /dev/null 2>&1
+
+B) COMPLETO — estadisticas + dos logs guardados:
+mkdir -p "registros_v3/meso/4000"
+{ time sumo \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/4000_rutas/rutas_4000.rou.xml \
+  --mesosim true \
+  --meso-ltm false \
+  --meso-junction-control true \
+  --meso-junction-control.limited true \
+  --meso-minor-penalty 4 \
+  --meso-tauff 6.00 \
+  --meso-taufj 1.13 \
+  --meso-taujf 1.73 \
+  --meso-taujj 1.40 \
+  --meso-edgelength 98 \
+  --meso-jam-threshold -1 \
+  --meso-recheck 0 \
+  --meso-overtaking false \
+  --begin 0 --end 3600 \
+  --time-to-teleport 300 \
+  --duration-log.statistics true \
+  --no-step-log true \
+  --no-warnings true \
+  --statistic-output registros_v3/meso/4000/estadisticas.xml; } 2>&1 | tee "registros_v3/meso/4000/terminal.log"
+
+C) GUI — visualizacion:
+sumo-gui \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/4000_rutas/rutas_4000.rou.xml \
+  --mesosim true \
+  --meso-ltm false \
+  --meso-junction-control true \
+  --meso-junction-control.limited true \
+  --meso-minor-penalty 4 \
+  --meso-tauff 6.00 \
+  --meso-taufj 1.13 \
+  --meso-taujf 1.73 \
+  --meso-taujj 1.40 \
+  --meso-edgelength 98 \
+  --meso-jam-threshold -1 \
+  --meso-recheck 0 \
+  --meso-overtaking false \
+  --begin 0 --end 3600 \
+  --time-to-teleport 300
+
+
+-------------------- MESO — 4500 vehiculos --------------------
+
+A) LIMPIO — solo tiempo real / user / sys:
+time sumo \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/4500_rutas/rutas_4500.rou.xml \
+  --mesosim true \
+  --meso-ltm false \
+  --meso-junction-control true \
+  --meso-junction-control.limited true \
+  --meso-minor-penalty 4 \
+  --meso-tauff 6.00 \
+  --meso-taufj 1.13 \
+  --meso-taujf 1.73 \
+  --meso-taujj 1.40 \
+  --meso-edgelength 98 \
+  --meso-jam-threshold -1 \
+  --meso-recheck 0 \
+  --meso-overtaking false \
+  --begin 0 --end 3600 \
+  --time-to-teleport 300 \
+  --verbose false \
+  --no-step-log true \
+  --no-warnings true > /dev/null 2>&1
+
+B) COMPLETO — estadisticas + dos logs guardados:
+mkdir -p "registros_v3/meso/4500"
+{ time sumo \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/4500_rutas/rutas_4500.rou.xml \
+  --mesosim true \
+  --meso-ltm false \
+  --meso-junction-control true \
+  --meso-junction-control.limited true \
+  --meso-minor-penalty 4 \
+  --meso-tauff 6.00 \
+  --meso-taufj 1.13 \
+  --meso-taujf 1.73 \
+  --meso-taujj 1.40 \
+  --meso-edgelength 98 \
+  --meso-jam-threshold -1 \
+  --meso-recheck 0 \
+  --meso-overtaking false \
+  --begin 0 --end 3600 \
+  --time-to-teleport 300 \
+  --duration-log.statistics true \
+  --no-step-log true \
+  --no-warnings true \
+  --statistic-output registros_v3/meso/4500/estadisticas.xml; } 2>&1 | tee "registros_v3/meso/4500/terminal.log"
+
+C) GUI — visualizacion:
+sumo-gui \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/4500_rutas/rutas_4500.rou.xml \
+  --mesosim true \
+  --meso-ltm false \
+  --meso-junction-control true \
+  --meso-junction-control.limited true \
+  --meso-minor-penalty 4 \
+  --meso-tauff 6.00 \
+  --meso-taufj 1.13 \
+  --meso-taujf 1.73 \
+  --meso-taujj 1.40 \
+  --meso-edgelength 98 \
+  --meso-jam-threshold -1 \
+  --meso-recheck 0 \
+  --meso-overtaking false \
+  --begin 0 --end 3600 \
+  --time-to-teleport 300
+
+
+-------------------- MESO — 5000 vehiculos --------------------
+
+A) LIMPIO — solo tiempo real / user / sys:
+time sumo \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/5000_rutas/rutas_5000.rou.xml \
+  --mesosim true \
+  --meso-ltm false \
+  --meso-junction-control true \
+  --meso-junction-control.limited true \
+  --meso-minor-penalty 4 \
+  --meso-tauff 6.00 \
+  --meso-taufj 1.13 \
+  --meso-taujf 1.73 \
+  --meso-taujj 1.40 \
+  --meso-edgelength 98 \
+  --meso-jam-threshold -1 \
+  --meso-recheck 0 \
+  --meso-overtaking false \
+  --begin 0 --end 3600 \
+  --time-to-teleport 300 \
+  --verbose false \
+  --no-step-log true \
+  --no-warnings true > /dev/null 2>&1
+
+B) COMPLETO — estadisticas + dos logs guardados:
+mkdir -p "registros_v3/meso/5000"
+{ time sumo \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/5000_rutas/rutas_5000.rou.xml \
+  --mesosim true \
+  --meso-ltm false \
+  --meso-junction-control true \
+  --meso-junction-control.limited true \
+  --meso-minor-penalty 4 \
+  --meso-tauff 6.00 \
+  --meso-taufj 1.13 \
+  --meso-taujf 1.73 \
+  --meso-taujj 1.40 \
+  --meso-edgelength 98 \
+  --meso-jam-threshold -1 \
+  --meso-recheck 0 \
+  --meso-overtaking false \
+  --begin 0 --end 3600 \
+  --time-to-teleport 300 \
+  --duration-log.statistics true \
+  --no-step-log true \
+  --no-warnings true \
+  --statistic-output registros_v3/meso/5000/estadisticas.xml; } 2>&1 | tee "registros_v3/meso/5000/terminal.log"
+
+C) GUI — visualizacion:
+sumo-gui \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/5000_rutas/rutas_5000.rou.xml \
+  --mesosim true \
+  --meso-ltm false \
+  --meso-junction-control true \
+  --meso-junction-control.limited true \
+  --meso-minor-penalty 4 \
+  --meso-tauff 6.00 \
+  --meso-taufj 1.13 \
+  --meso-taujf 1.73 \
+  --meso-taujj 1.40 \
+  --meso-edgelength 98 \
+  --meso-jam-threshold -1 \
+  --meso-recheck 0 \
+  --meso-overtaking false \
+  --begin 0 --end 3600 \
+  --time-to-teleport 300
+
+
+-------------------- MESO — 5500 vehiculos --------------------
+
+A) LIMPIO — solo tiempo real / user / sys:
+time sumo \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/5500_rutas/rutas_5500.rou.xml \
+  --mesosim true \
+  --meso-ltm false \
+  --meso-junction-control true \
+  --meso-junction-control.limited true \
+  --meso-minor-penalty 4 \
+  --meso-tauff 6.00 \
+  --meso-taufj 1.13 \
+  --meso-taujf 1.73 \
+  --meso-taujj 1.40 \
+  --meso-edgelength 98 \
+  --meso-jam-threshold -1 \
+  --meso-recheck 0 \
+  --meso-overtaking false \
+  --begin 0 --end 3600 \
+  --time-to-teleport 300 \
+  --verbose false \
+  --no-step-log true \
+  --no-warnings true > /dev/null 2>&1
+
+B) COMPLETO — estadisticas + dos logs guardados:
+mkdir -p "registros_v3/meso/5500"
+{ time sumo \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/5500_rutas/rutas_5500.rou.xml \
+  --mesosim true \
+  --meso-ltm false \
+  --meso-junction-control true \
+  --meso-junction-control.limited true \
+  --meso-minor-penalty 4 \
+  --meso-tauff 6.00 \
+  --meso-taufj 1.13 \
+  --meso-taujf 1.73 \
+  --meso-taujj 1.40 \
+  --meso-edgelength 98 \
+  --meso-jam-threshold -1 \
+  --meso-recheck 0 \
+  --meso-overtaking false \
+  --begin 0 --end 3600 \
+  --time-to-teleport 300 \
+  --duration-log.statistics true \
+  --no-step-log true \
+  --no-warnings true \
+  --statistic-output registros_v3/meso/5500/estadisticas.xml; } 2>&1 | tee "registros_v3/meso/5500/terminal.log"
+
+C) GUI — visualizacion:
+sumo-gui \
+  -n red_5x5/red_5x5.net.xml \
+  -r red_5x5/5500_rutas/rutas_5500.rou.xml \
+  --mesosim true \
+  --meso-ltm false \
+  --meso-junction-control true \
+  --meso-junction-control.limited true \
+  --meso-minor-penalty 4 \
+  --meso-tauff 6.00 \
+  --meso-taufj 1.13 \
+  --meso-taujf 1.73 \
+  --meso-taujj 1.40 \
+  --meso-edgelength 98 \
+  --meso-jam-threshold -1 \
+  --meso-recheck 0 \
+  --meso-overtaking false \
+  --begin 0 --end 3600 \
+  --time-to-teleport 300
+
+--------------------------------------------------
+CONSULTA DE UN LOG, EJEMPLO MESO 5000:
+cat "registros_v3/meso/5000/terminal.log"
+CONSULTA DE UN LOG, EJEMPLO MICRO 5000:
+cat "registros_v3/micro/5000/terminal.log"
+--------------------------------------------------

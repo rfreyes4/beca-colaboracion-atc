@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-11-18 11:43:34.102677 by Eclipse SUMO tlsCoordinator.py v1.28.0
+<configuration>
+    <net-file value="red_7x7/red_7x7.net.xml"/>
+    <output-file value="red_7x7/semaforos_progresivos_rectas.add.xml"/>
+    <route-file value="red_7x7/coordinacion_rectas.rou.xml"/>
+    <additional-file value="red_7x7/semaforos.add.xml"/>
+    <speed-factor value="0.9"/>
+</configuration>
+-->
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <tlLogic id="j-0-0" programID="manual_4_fases" offset="15.99"/>
+    <tlLogic id="j-0-1" programID="manual_4_fases" offset="-0.01"/>
+    <tlLogic id="j-0-2" programID="manual_4_fases" offset="-16.01"/>
+    <tlLogic id="j-0-3" programID="manual_4_fases" offset="-32.01"/>
+    <tlLogic id="j-0-4" programID="manual_4_fases" offset="-48.01"/>
+    <tlLogic id="j-0-5" programID="manual_4_fases" offset="79.99"/>
+    <tlLogic id="j-0-6" programID="manual_4_fases" offset="-48.01"/>
+    <tlLogic id="j-1-0" programID="manual_4_fases" offset="-0.01"/>
+    <tlLogic id="j-1-1" programID="manual_4_fases" offset="-16.01"/>
+    <tlLogic id="j-1-2" programID="manual_4_fases" offset="-32.01"/>
+    <tlLogic id="j-1-3" programID="manual_4_fases" offset="-48.01"/>
+    <tlLogic id="j-1-4" programID="manual_4_fases" offset="-64.01"/>
+    <tlLogic id="j-1-5" programID="manual_4_fases" offset="63.99"/>
+    <tlLogic id="j-1-6" programID="manual_4_fases" offset="-64.01"/>
+    <tlLogic id="j-2-0" programID="manual_4_fases" offset="-16.01"/>
+    <tlLogic id="j-2-1" programID="manual_4_fases" offset="-32.01"/>
+    <tlLogic id="j-2-2" programID="manual_4_fases" offset="-48.01"/>
+    <tlLogic id="j-2-3" programID="manual_4_fases" offset="-64.01"/>
+    <tlLogic id="j-2-4" programID="manual_4_fases" offset="-80.01"/>
+    <tlLogic id="j-2-5" programID="manual_4_fases" offset="48.00"/>
+    <tlLogic id="j-2-6" programID="manual_4_fases" offset="-80.01"/>
+    <tlLogic id="j-3-0" programID="manual_4_fases" offset="-32.01"/>
+    <tlLogic id="j-3-1" programID="manual_4_fases" offset="-48.01"/>
+    <tlLogic id="j-3-2" programID="manual_4_fases" offset="-64.01"/>
+    <tlLogic id="j-3-3" programID="manual_4_fases" offset="-80.01"/>
+    <tlLogic id="j-3-4" programID="manual_4_fases" offset="-96.00"/>
+    <tlLogic id="j-3-5" programID="manual_4_fases" offset="32.00"/>
+    <tlLogic id="j-3-6" programID="manual_4_fases" offset="-96.00"/>
+    <tlLogic id="j-4-0" programID="manual_4_fases" offset="-48.01"/>
+    <tlLogic id="j-4-1" programID="manual_4_fases" offset="-64.01"/>
+    <tlLogic id="j-4-2" programID="manual_4_fases" offset="-80.01"/>
+    <tlLogic id="j-4-3" programID="manual_4_fases" offset="-96.00"/>
+    <tlLogic id="j-4-4" programID="manual_4_fases" offset="-112.00"/>
+    <tlLogic id="j-4-5" programID="manual_4_fases" offset="16.00"/>
+    <tlLogic id="j-4-6" programID="manual_4_fases" offset="-112.00"/>
+    <tlLogic id="j-5-0" programID="manual_4_fases" offset="-64.01"/>
+    <tlLogic id="j-5-1" programID="manual_4_fases" offset="-80.01"/>
+    <tlLogic id="j-5-2" programID="manual_4_fases" offset="-96.00"/>
+    <tlLogic id="j-5-3" programID="manual_4_fases" offset="-112.00"/>
+    <tlLogic id="j-5-4" programID="manual_4_fases" offset="-128.00"/>
+    <tlLogic id="j-5-5" programID="manual_4_fases" offset="0.00"/>
+    <tlLogic id="j-5-6" programID="manual_4_fases" offset="-128.00"/>
+    <tlLogic id="j-6-0" programID="manual_4_fases" offset="95.99"/>
+    <tlLogic id="j-6-1" programID="manual_4_fases" offset="79.99"/>
+    <tlLogic id="j-6-2" programID="manual_4_fases" offset="63.99"/>
+    <tlLogic id="j-6-3" programID="manual_4_fases" offset="48.00"/>
+    <tlLogic id="j-6-4" programID="manual_4_fases" offset="32.00"/>
+    <tlLogic id="j-6-5" programID="manual_4_fases" offset="16.00"/>
+    <tlLogic id="j-6-6" programID="manual_4_fases" offset="-112.00"/>
+</additional>
