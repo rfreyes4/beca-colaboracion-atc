@@ -1,10 +1,10 @@
 # Mapa sintético V4 — MICRO y MESO con semáforos progresivos
 
-Pruebas realizadas con **SUMO 1.28.0** sobre una red sintética de **7×7 intersecciones**, tramos de **200 m** y **un carril por sentido**. En MICRO se comparan el **enrutamiento estático y el dinámico**; en MESO se estudian cuatro configuraciones con **enrutamiento estático**. Todas utilizan semáforos progresivos.
+Se ha utilizado **SUMO 1.28.0** con una red de **7×7 intersecciones**, calles de **200 m** y **un carril por sentido**. En MICRO se han probado rutas estáticas y dinámicas. En MESO se han realizado cuatro pruebas, todas con rutas estáticas. En ambos casos se usan los mismos semáforos progresivos.
 
 ## 1. Semaforización
 
-La red cuenta con **49 semáforos**. Se mantiene el ciclo de **96 segundos** y las reglas de paso; la coordinación progresiva introduce **desfases (`offset`) entre intersecciones**, calculados con `tlsCoordinator.py` a partir de 28 recorridos rectos de referencia y un factor de velocidad `0.9`. Esos recorridos solo se usan para calcular la coordinación, **no sustituyen las rutas de las simulaciones**.
+La red tiene **49 semáforos**, con ciclos de **96 segundos**. Los semáforos progresivos mantienen las mismas fases, pero cada cruce tiene un desfase (`offset`) para coordinar los verdes. Los desfases se calcularon con `tlsCoordinator.py`, usando 28 recorridos rectos de referencia y un factor de velocidad de `0.9`. Esos recorridos solo sirven para calcular la coordinación; las rutas de los vehículos no cambian.
 
 | Fase principal | Duración | Funcionamiento |
 |---|---:|---|
@@ -13,49 +13,50 @@ La red cuenta con **49 semáforos**. Se mantiene el ciclo de **96 segundos** y l
 | Este-Oeste | 30 s | Recto y derecha con prioridad (`G`); izquierda permitida cediendo el paso (`g`). |
 | Izquierda Este-Oeste | 8 s | Izquierda protegida (`G`). |
 
-Entre fases: **3 s de amarillo (`y`) y 2 s de rojo general (`r`)**; cuatro transiciones por ciclo. Total: **96 s**.
+Cada cambio de fase incluye **3 s de amarillo (`y`) y 2 s de rojo general (`r`)**. Hay cuatro cambios por ciclo, por lo que el total es **96 s**.
 
-**Archivos utilizados conjuntamente:** `red_7x7/semaforos.add.xml` (fases y prioridades) y `red_7x7/semaforos_progresivos_rectas.add.xml` (coordinación temporal). Previamente se realizaron pruebas sin coordinación progresiva; sus resultados se conservan aparte y **no se mezclan** con los que aparecen aquí.
+Se cargan dos archivos: `red_7x7/semaforos.add.xml` (fases y prioridades) y `red_7x7/semaforos_progresivos_rectas.add.xml` (desfases). Las pruebas anteriores, sin coordinación progresiva, están guardadas aparte.
 
 ## 2. Configuración de las simulaciones MICRO
 
 | Parámetro | Valor usado | Qué significa |
 |---|---|---|
-| Red (`-n`) | `red_7x7/red_7x7.net.xml` | Archivo de la red: calles, carriles, cruces y conexiones. |
-| Rutas (`-r`) | `red_7x7/N_rutas/rutas_N.rou.xml` | Vehículos y recorridos previstos para la demanda `N`. |
-| Semáforos (`-a`) | `red_7x7/semaforos.add.xml,red_7x7/semaforos_progresivos_rectas.add.xml` | Carga tanto las fases semafóricas como sus desfases de coordinación. |
-| Intervalo (`--begin`, `--end`) | `0` a `3600` s | Simula una hora. Al llegar a 3600 s se detiene aunque queden vehículos circulando o sin insertar. |
-| Semilla (`--seed`) | `42` | Fija la aleatoriedad de SUMO para poder repetir la simulación. Las rutas ya se habían generado aparte con RandomTrips. |
-| Teletransporte (`--time-to-teleport`) | `300` s | Permite teletransportar un vehículo que permanece bloqueado demasiado tiempo, para evitar esperas indefinidas. No significa que todos los vehículos se teletransporten al cumplir 300 s de viaje. |
-| Enrutamiento estático | `--device.rerouting.probability 0` | Desactiva el dispositivo de reenrutamiento: cada vehículo mantiene la ruta prevista. |
-| Enrutamiento dinámico | `--device.rerouting.probability 1` y `--device.rerouting.period 120` | Activa el dispositivo de reenrutamiento para todos los vehículos y permite revisar periódicamente su ruta cada 120 s según las condiciones de tráfico. No implica que todos cambien de ruta. |
-| Resultados completos | `--no-step-log true`, `--duration-log.statistics true`, `--verbose true` | Oculta la línea de progreso de cada paso, pero mantiene las estadísticas de viajes y la información de la ejecución. |
-| Medición limpia | Misma simulación, suprimiendo la salida para medir `real`, `user` y `sys` | Sirve para medir el tiempo de ejecución sin el coste adicional de imprimir mensajes; no modifica la circulación. |
+| Red (`-n`) | `red_7x7/red_7x7.net.xml` | Define las calles, carriles e intersecciones. |
+| Rutas (`-r`) | `red_7x7/N_rutas/rutas_N.rou.xml` | Indica qué vehículos salen y qué recorrido siguen. `N` es la demanda. |
+| Semáforos (`-a`) | `red_7x7/semaforos.add.xml,red_7x7/semaforos_progresivos_rectas.add.xml` | Aplica las fases y los desfases progresivos. |
+| Intervalo (`--begin`, `--end`) | `0` a `3600` s | Simula una hora y se detiene en el segundo 3600, aunque queden coches en la red. |
+| Semilla (`--seed`) | `42` | Permite repetir la simulación con la misma aleatoriedad. |
+| Teletransporte (`--time-to-teleport`) | `300` s | SUMO puede desplazar un vehículo si permanece bloqueado demasiado tiempo. |
+| Enrutamiento estático | `--device.rerouting.probability 0` | Los vehículos siguen la ruta asignada al principio. |
+| Enrutamiento dinámico | `--device.rerouting.probability 1` y `--device.rerouting.period 120` | Todos tienen la opción de recalcular su ruta cada 120 s según el tráfico. |
+| Resultados completos | `--no-step-log true`, `--duration-log.statistics true`, `--verbose true` | Oculta el progreso paso a paso y muestra estadísticas e información de la ejecución. |
+| Medición limpia | Misma configuración, con la salida oculta | Mide los tiempos `real`, `user` y `sys` sin imprimir los mensajes de SUMO. |
 
-Los archivos de demanda proceden de **RandomTrips** (semilla 42, salidas aleatorias entre 0 y 3600 s); demandas nominales de 3000, 4000, 5000, 6000, 7000, 8000, 9000 y 11 000. Se reutilizan las mismas rutas de entrada en ambos enrutamientos.
+Las rutas se generaron con **RandomTrips** (semilla 42 y salidas entre 0 y 3600 s). Se probaron demandas de **3000, 4000, 5000, 6000, 7000, 8000, 9000 y 11 000 vehículos**. MICRO estático y dinámico utilizan los mismos archivos de rutas.
 
-### 2.1. Cómo interpretar las medidas de SUMO (MICRO y MESO)
+### 2.1. Significado de los resultados (MICRO y MESO)
 
-Los parámetros anteriores **configuran la simulación**. En cambio, los siguientes nombres son **resultados que aparecen en los logs**; no son opciones que se hayan modificado en las pruebas.
+Estas medidas aparecen en los resultados de ambos modelos. Las cantidades indican vehículos y los tiempos se expresan en segundos.
 
-| Medida | Qué indica | Qué no debe confundirse |
-|---|---|---|
-| `Loaded` / **Cargados** | Vehículos leídos o preparados desde el archivo de rutas. | No todos consiguen incorporarse a la carretera antes del final. |
-| `Inserted` / **Insertados** | Vehículos que realmente han entrado en la red. | No equivale a la demanda nominal ni a los finalizados. |
-| `Running` / **Circulando** | Vehículos que todavía permanecen en la red cuando acaba la simulación. | Pueden estar circulando o detenidos en una cola. |
-| `Waiting` / **Pendientes** | **Número de vehículos** que siguen esperando fuera de la red porque no han podido incorporarse. | **No es** `WaitingTime`, que se mide en segundos por vehículo. |
-| **Finalizados** | En las tablas de este documento se calcula como **insertados − circulando**. | Cuenta vehículos que ya no están en la red; si hubo retiradas por teletransporte, no equivale necesariamente a llegadas normales a destino. |
-| `RouteLength` (m) | Longitud del recorrido realizado por un vehículo. | No es el tamaño de un segmento MESO. Con rutas dinámicas puede aumentar si se toma otro camino. |
-| `Speed` (m/s) | Velocidad media del viaje, expresada en metros por segundo. | No es la velocidad instantánea de un coche ni la velocidad máxima de la carretera. |
-| `Duration` (s) | Tiempo transcurrido **desde que el vehículo entra en la red hasta que termina su viaje**. Incluye los semáforos, las colas y las reducciones de velocidad. | **No incluye** el tiempo que tuvo que esperar antes de entrar (`DepartDelay`). |
-| `WaitingTime` (s) | Tiempo acumulado **dentro de la red** con velocidad muy baja (≤ 0,1 m/s), normalmente por semáforos o atascos. Las paradas planificadas no cuentan. | No es toda la duración del viaje ni la espera para incorporarse a la red. |
-| `TimeLoss` (s) | Tiempo adicional perdido por circular más despacio que la velocidad ideal del recorrido: incluye esperas por semáforos y otros retrasos **dentro de la red**. | **Incluye `WaitingTime`**; no hay que sumar ambas medidas porque se contaría parte del retraso dos veces. |
-| `DepartDelay` (s) | Retraso entre la hora de salida **programada** y la hora en la que el vehículo **consigue entrar** en la red. | No son segundos parado ante un semáforo: ese tiempo ya ocurre durante el viaje. |
-| `Teleports` | Número de veces que SUMO desplaza vehículos bloqueados para resolver situaciones de espera excesiva. | No es el número de vehículos pendientes ni demuestra por sí solo que exista un bloqueo circular. |
+| Medida | Significado |
+|---|---|
+| **Cargados (`Loaded`)** | Vehículos que SUMO ha leído del archivo de rutas para la simulación. |
+| **Insertados (`Inserted`)** | Vehículos que han conseguido entrar en la red de carreteras. |
+| **Circulando (`Running`)** | Vehículos que permanecen dentro de la red cuando termina la simulación, aunque estén parados en una cola. |
+| **Pendientes (`Waiting`)** | Vehículos que aún esperan para incorporarse a la red. Es una **cantidad de vehículos**, no un tiempo. |
+| **Finalizados** | Vehículos que ya no están circulando al terminar: **insertados − circulando**. Puede incluir vehículos retirados de la simulación. |
+| **Distancia (`RouteLength`)** | Metros recorridos por un vehículo durante su viaje. |
+| **Velocidad (`Speed`)** | Velocidad media del viaje, en metros por segundo (m/s). |
+| **Duración (`Duration`)** | Tiempo desde que el vehículo **entra en la red hasta que llega a su destino**. Incluye los semáforos, las colas y el tiempo en movimiento. |
+| **Espera (`WaitingTime`)** | Segundos que el vehículo pasa **parado o casi parado dentro de la red** (velocidad de hasta 0,1 m/s), por ejemplo ante un semáforo. No cuenta las paradas programadas. |
+| **Tiempo perdido (`TimeLoss`)** | Segundos adicionales que tarda el viaje respecto a circular a la velocidad ideal. Incluye las paradas y los retrasos por ir más despacio. **Ya incluye `WaitingTime`.** |
+| **Retraso de salida (`DepartDelay`)** | Segundos entre la hora en que el vehículo **debía salir** y el momento en que **consigue entrar en la red**. |
+| **Teletransportes (`Teleports`)** | Veces que SUMO desplaza un vehículo para resolver una situación de bloqueo prolongado. En los resultados se distinguen causas como `Jam` (atasco) y `Yield` (problemas para ceder el paso). |
+| **Frenadas de emergencia** | Número de frenadas muy bruscas detectadas durante la simulación MICRO. |
 
-**Ejemplo para distinguir los tiempos:** un vehículo tiene programada su salida en el segundo **100**, pero no consigue entrar hasta el **120** y llega a su destino en el **320**. Por tanto, su `DepartDelay` es **20 s** y su `Duration` es **200 s**. Supongamos que durante el trayecto estuvo **40 s detenido** (`WaitingTime`) y perdió **60 s frente a la circulación ideal** (`TimeLoss`): esos 60 s **ya incluyen** los 40 s parado. Desde la salida programada hasta la llegada transcurrieron **220 s = 20 + 200**; no debemos sumar también `WaitingTime` y `TimeLoss`.
+**Ejemplo:** un coche debe salir en el segundo 100, entra en el 120 y llega en el 320. Su `DepartDelay` es **20 s** y su `Duration` es **200 s**. Si pasó 40 s parado y perdió 60 s frente al viaje ideal, su `WaitingTime` es **40 s** y su `TimeLoss` es **60 s**. Los 40 s de espera ya están dentro de los 60 s perdidos; no se suman.
 
-**Importante al comparar MICRO y MESO:** las medidas tienen los mismos nombres, pero los vehículos se mueven mediante modelos diferentes (movimiento individual en MICRO y colas/segmentos en MESO). Además, las medias habituales corresponden a los viajes incluidos en las estadísticas de salida, no a todos los vehículos que se pretendían insertar. Con más congestión, los vehículos que siguen en la red a los 3600 s pueden alterar la interpretación de las medias.
+Las medias corresponden a los viajes finalizados. Cuando hay congestión, también hay que mirar cuántos coches quedan circulando o pendientes al terminar la hora de simulación.
 
 ## 3. Resultados MICRO con semáforos progresivos
 
@@ -80,7 +81,7 @@ Los parámetros anteriores **configuran la simulación**. En cambio, los siguien
 | Dinámico | 9000 | 9000 | 6010 | **4293** | 1717 | 2990 | 0 (0 / 0) | 0 |
 | Dinámico | 11000 | 11000 | 5815 | **3691** | 2124 | 5183 | 2 (0 / 2) | 0 |
 
-**Finalizados = insertados − circulando**. «Pendientes» son vehículos que no han entrado en la red cuando termina la simulación. Las diferencias entre vehículos, segundos de espera y llegadas se explican en el apartado 2.1.
+**Finalizados = insertados − circulando.** Los pendientes todavía no han entrado en la red. Las medidas se explican en el apartado 2.1.
 
 ### 3.2. Medias de los viajes finalizados
 
@@ -103,7 +104,7 @@ Los parámetros anteriores **configuran la simulación**. En cambio, los siguien
 | Dinámico | 9000 | 1718,92 | 3,05 | 680,88 | 423,16 | 555,21 | 202,62 |
 | Dinámico | 11000 | 1761,63 | 2,73 | 818,36 | 537,06 | 689,54 | 196,08 |
 
-**Cómo leer esta tabla:** `Duration` mide el tiempo de viaje una vez dentro de la red; `WaitingTime` es la parte del recorrido detenida; `TimeLoss` incluye esa espera y otros retrasos por circular más lento; y `DepartDelay` sucede **antes de entrar**. La diferencia y un ejemplo completo aparecen en el **apartado 2.1**. **Todas las medias corresponden a los viajes contabilizados en las estadísticas**, por lo que deben interpretarse junto con el número de vehículos finalizados y los que todavía están circulando.
+Las medias se refieren a los viajes finalizados. Su significado se explica en el apartado 2.1.
 
 ### 3.3. Rendimiento computacional
 
@@ -126,7 +127,7 @@ Los parámetros anteriores **configuran la simulación**. En cambio, los siguien
 | Dinámico | 9000 | 20,96 | 21,06 | **20,24** | 20,19 | 0,04 | 41875 / 0,56 |
 | Dinámico | 11000 | 28,84 | 28,96 | **28,23** | 28,13 | 0,06 | 51149 / 0,71 |
 
-La ejecución **completa** muestra estadísticas y avisos. La medición **limpia** se ejecuta con la salida suprimida; no cambia las reglas de circulación. `Performance Duration` es el tiempo de procesamiento que indica SUMO; `real` es el tiempo de reloj medido desde la terminal, `user` el tiempo de CPU en modo usuario y `sys` el tiempo de CPU dedicado al sistema operativo. **Ninguno es el tiempo que tarda un vehículo en llegar:** ese dato aparece en `Duration` (apartado 2.1). Los valores `real` pueden variar entre ejecuciones.
+La ejecución **completa** muestra las estadísticas de SUMO. En la **limpia** se ocultan los mensajes para medir el rendimiento, sin cambiar la simulación. `Performance Duration` es el tiempo de ejecución que informa SUMO; `real` es el tiempo de reloj, `user` es el tiempo de CPU del programa y `sys` el tiempo de CPU del sistema operativo. `Dijkstra` muestra cuántas búsquedas de ruta se hicieron y cuánto tiempo emplearon. Son tiempos del ordenador, no de los coches, y pueden variar ligeramente entre ejecuciones.
 
 ## 4. Comparación general
 
@@ -143,20 +144,20 @@ La ejecución **completa** muestra estadísticas y avisos. La medición **limpia
 
 ### Observaciones
 
-1. **Hasta 5000 vehículos** no se registran teletransportes y los dos enrutamientos completan un número similar de viajes.
-2. **Desde 6000 vehículos**, el enrutamiento estático presenta teletransportes que aumentan con la demanda (hasta **249** con 11 000), mientras que el dinámico registra **0** hasta 9000 y **2** con 11 000.
-3. El **dinámico** finaliza más viajes en **6 de las 8 demandas**; sin embargo, suele recorrer más distancia y presenta mayores tiempos medios de viaje.
-4. La ejecución **estática es más rápida** computacionalmente en todas las demandas. Con 11 000 vehículos: **18,97 s** frente a **28,23 s** en la medición limpia.
+1. Hasta **5000 vehículos**, los resultados son parecidos y no hay teletransportes.
+2. A partir de **6000**, el estático empieza a registrar teletransportes y llega a **249** con 11 000 vehículos. El dinámico solo registra **2** en esa demanda.
+3. El dinámico completa más viajes en **6 de las 8 demandas**, pero sus recorridos y tiempos medios suelen ser mayores.
+4. El estático tarda menos en ejecutarse. Con 11 000 vehículos, el tiempo limpio es de **18,97 s**, frente a **28,23 s** del dinámico.
 
-**Conclusión:** con semáforos progresivos, el reenrutamiento dinámico reduce notablemente los teletransportes, pero no reduce los tiempos medios de viaje. Para la posterior comparación MICRO–MESO se tomará como referencia principal **MICRO estático con estos mismos semáforos progresivos**.
+**Conclusión:** el enrutamiento dinámico reduce los teletransportes, pero los viajes no son más rápidos. Para comparar con MESO se utiliza como referencia **MICRO estático con semáforos progresivos**.
 
 ## 5. Simulación MESO con semáforos progresivos
 
-Se realizaron **cuatro pruebas mesoscópicas** en SUMO 1.28.0, utilizando la misma red 7×7, los mismos archivos de rutas y los **49 semáforos progresivos** descritos anteriormente. Todas las simulaciones MESO usan **enrutamiento estático**, para compararlas con el MICRO estático del apartado 3.
+Se hicieron **cuatro pruebas MESO** con la misma red, rutas y semáforos progresivos que en MICRO. Todas utilizan **enrutamiento estático**, para poder compararlas con MICRO estático.
 
 ### 5.1. Configuración de las cuatro pruebas
 
-El objetivo es comparar el modelo MESO convencional con distintos tamaños de segmento y el modelo alternativo **LTM**, que representa la propagación de huecos hacia atrás cuando se libera espacio en una cola. Aquí `--meso-edgelength` **no cambia la longitud real de las carreteras**: solo modifica cómo las divide internamente el simulador.
+Se compara el MESO convencional con distintos tamaños de segmento y el modelo alternativo **LTM**. El parámetro `--meso-edgelength` solo divide las carreteras en segmentos internos: **las calles siguen midiendo 200 m**.
 
 | Prueba | Modelo | `--meso-ltm` | `--meso-edgelength` | Segmentos por tramo de 200 m |
 |---|---|---|---:|---:|
@@ -165,35 +166,35 @@ El objetivo es comparar el modelo MESO convencional con distintos tamaños de se
 | **3** | MESO convencional | `false` | `50` | 4 |
 | **4** | MESO alternativo LTM | `true` | `100` | 2 |
 
-El modelo **convencional** distingue entre segmentos libres y congestionados según su ocupación, y calcula los tiempos mínimos de paso teniendo en cuenta esos estados. El modelo **LTM** utiliza la propagación de huecos: cuando un vehículo sale de un segmento, el espacio que deja se transmite progresivamente hacia atrás y permite que otros avancen. **Activar `--meso-ltm true` basta para utilizar LTM**; no se añadió ningún parámetro extra para activar los huecos. En ambos casos se conservan los mismos semáforos y rutas.
+En el modelo **convencional**, SUMO comprueba si cada segmento está libre o congestionado y calcula cuánto deben esperar los vehículos para avanzar. En **LTM**, cuando sale un vehículo, el hueco que deja se propaga hacia atrás hasta permitir que avance el siguiente. Este comportamiento se activa con `--meso-ltm true`; no se han añadido otras opciones. Las rutas y los semáforos son iguales en las cuatro pruebas.
 
 Los parámetros comunes a las cuatro pruebas fueron:
 
 | Parámetro | Valor utilizado | Función |
 |---|---|---|
-| `-n` | `red_7x7/red_7x7.net.xml` | Utiliza exactamente la misma red que MICRO. |
-| `-r` | `red_7x7/N_rutas/rutas_N.rou.xml` | Utiliza las mismas rutas de entrada para cada demanda `N`. |
-| `-a` | `red_7x7/semaforos.add.xml,red_7x7/semaforos_progresivos_rectas.add.xml` | Mantiene las fases de los 49 semáforos y sus desfases progresivos. |
-| `--begin`, `--end` | `0`, `3600` | Simula 3600 s y se detiene aunque queden vehículos en la red. |
-| `--seed` | `42` | Mantiene una semilla fija para repetir la ejecución. |
-| `--time-to-teleport` | `300` | Evita esperas indefinidas mediante el teletransporte de vehículos bloqueados durante demasiado tiempo. |
-| `--device.rerouting.probability` | `0` | Mantiene las rutas estáticas: los coches no buscan caminos alternativos durante la simulación. |
-| `--mesosim` | `true` | Cambia del modelo de movimiento individual (MICRO) al modelo de colas por segmentos (MESO). |
-| `--meso-junction-control` | `true` | Hace que MESO tenga en cuenta las reglas de paso en cruces y semáforos. |
-| `--meso-junction-control.limited` | `false` | Mantiene el control de cruces también cuando el segmento siguiente está libre; con `true`, este control se aplicaría solo al entrar en un segmento congestionado. |
-| `--meso-jam-threshold` | `-1` | En MESO convencional calcula automáticamente el umbral a partir del cual un segmento se considera congestionado. LTM no utiliza esta clasificación de estados. |
-| `--meso-overtaking` | `false` | Impide que vehículos intercambien posiciones por el mecanismo de adelantamiento mesoscópico. |
+| `-n` | `red_7x7/red_7x7.net.xml` | Red de carreteras usada también en MICRO. |
+| `-r` | `red_7x7/N_rutas/rutas_N.rou.xml` | Rutas de cada demanda. |
+| `-a` | `red_7x7/semaforos.add.xml,red_7x7/semaforos_progresivos_rectas.add.xml` | Fases y desfases de los semáforos. |
+| `--begin`, `--end` | `0`, `3600` | Simula una hora. |
+| `--seed` | `42` | Fija la semilla aleatoria. |
+| `--time-to-teleport` | `300` | Permite desplazar vehículos bloqueados durante demasiado tiempo. |
+| `--device.rerouting.probability` | `0` | Los vehículos mantienen su ruta inicial. |
+| `--mesosim` | `true` | Activa la simulación MESO, basada en colas y segmentos. |
+| `--meso-junction-control` | `true` | Aplica el control de paso en los cruces. |
+| `--meso-junction-control.limited` | `false` | Aplica ese control también cuando el siguiente segmento está libre. |
+| `--meso-jam-threshold` | `-1` | Calcula automáticamente cuándo un segmento se considera congestionado en MESO convencional. |
+| `--meso-overtaking` | `false` | Desactiva los adelantamientos internos del modelo MESO. |
 
-No se modificaron explícitamente los parámetros `meso-tauff`, `meso-taufj`, `meso-taujf` ni `meso-taujj`: se mantuvieron los **valores por defecto** de SUMO 1.28.0. Son parámetros de tiempo que condicionan la separación entre vehículos o la propagación de huecos, y **no deben confundirse con las métricas de salida** `TimeLoss`, `WaitingTime` o `DepartDelay`.
+Los cuatro parámetros `meso-tau` se dejaron con los **valores por defecto** de SUMO 1.28.0. Indican separaciones mínimas entre vehículos o tiempos de propagación de huecos, según el modelo:
 
 | Parámetro (valor por defecto) | Uso en MESO convencional | Uso en MESO LTM |
 |---|---|---|
-| `meso-tauff` (**1,13 s**) | Separación temporal mínima al pasar entre dos segmentos libres. | Separación mínima al avanzar; también interviene en la propagación hacia atrás de huecos generados en flujo libre. |
-| `meso-taufj` (**1,13 s**) | Separación temporal al pasar de un segmento libre a uno congestionado. | No interviene directamente en el modelo LTM. |
-| `meso-taujf` (**1,73 s**) | Separación temporal al salir de un segmento congestionado hacia uno libre. | Separación al volver a avanzar después de haber estado bloqueado. |
-| `meso-taujj` (**1,40 s**) | Controla cómo se transmiten hacia atrás los espacios disponibles dentro de una cola congestionada. | Tiempo de propagación hacia atrás de un hueco por cada 7,5 m cuando el vehículo no avanzaba en flujo libre. |
+| `meso-tauff` (**1,13 s**) | Tiempo mínimo entre vehículos que pasan de un segmento libre a otro libre. | Tiempo mínimo entre vehículos que avanzan y tiempo para propagar un hueco 7,5 m hacia atrás en flujo libre. |
+| `meso-taufj` (**1,13 s**) | Tiempo mínimo al pasar de un segmento libre a otro congestionado. | No se utiliza directamente. |
+| `meso-taujf` (**1,73 s**) | Tiempo mínimo al pasar de un segmento congestionado a otro libre. | Tiempo mínimo entre vehículos que vuelven a avanzar tras estar bloqueados. |
+| `meso-taujj` (**1,40 s**) | Controla la velocidad con la que se libera una cola congestionada. | Tiempo que tarda un hueco en propagarse 7,5 m hacia atrás cuando el vehículo no circulaba en flujo libre. |
 
-**Entre las cuatro pruebas solo cambian `--meso-ltm` y/o `--meso-edgelength`; los demás valores se mantienen.**
+**Solo se cambian `--meso-ltm` y `--meso-edgelength` entre las cuatro pruebas.**
 
 Los resultados se guardaron por separado en:
 
@@ -239,7 +240,7 @@ Los resultados se guardaron por separado en:
 | 4 (LTM) | 9000 | 7386 | 3062 | 4324 | 1614 | 605 |
 | 4 (LTM) | 11000 | 7223 | 2134 | 5089 | 3775 | 962 |
 
-Se mantiene el mismo criterio del apartado MICRO: **Finalizados = insertados − circulando**; «Pendientes» son vehículos que no pudieron entrar antes de los 3600 s. En condiciones de congestión, el total que deja de circular también puede incluir vehículos retirados por teletransporte, por lo que no equivale siempre a llegadas normales a destino. Estas diferencias se explican en el **apartado 2.1**.
+Como en MICRO, **finalizados = insertados − circulando**. Los pendientes no llegaron a entrar antes del segundo 3600. Si se han retirado vehículos durante la simulación, también pueden aparecer dentro del cálculo de finalizados.
 
 ### 5.3. Medias de viaje y rendimiento computacional
 
@@ -278,7 +279,7 @@ Se mantiene el mismo criterio del apartado MICRO: **Finalizados = insertados −
 | 4 (LTM) | 9000 | 3,97 | 540,08 | 77,50 | 433,06 | 3,37 |
 | 4 (LTM) | 11000 | 3,61 | 740,62 | 119,93 | 636,87 | 6,58 |
 
-Las medias proceden de los logs originales de cada prueba. **`Duration`, `WaitingTime` y `TimeLoss` son tiempos de viaje en segundos simulados** (véanse las diferencias y el ejemplo del apartado 2.1). En cambio, **`real` limpio mide segundos reales de ejecución en el ordenador**, sin imprimir los mensajes habituales. No se modificó el tráfico para esta medición. Como en MICRO, las medias deben leerse junto al número de vehículos finalizados y no representan necesariamente a toda la demanda nominal.
+Las medias son de los viajes finalizados. `Duration`, `WaitingTime` y `TimeLoss` están en **segundos de simulación**; `real` limpio es lo que tarda el ordenador en ejecutar SUMO, con los mensajes ocultos. La configuración del tráfico es la misma.
 
 ### 5.4. Comparación con MICRO estático
 
@@ -295,13 +296,12 @@ Las medias proceden de los logs originales de cada prueba. **`Duration`, `Waitin
 
 **Observaciones:**
 
-1. **3000–5000 vehículos:** las cuatro configuraciones MESO dan resultados parecidos, con **0 teletransportes** y tiempos medios de viaje inferiores a MICRO.
-2. **6000 vehículos:** la prueba 3 (50 m) y LTM mejoran claramente el número de finalizados; LTM alcanza 5403 finalizados y 0 teletransportes, aunque supera a MICRO.
-3. **7000 vehículos:** la prueba 4 (LTM) alcanza 5047 finalizados y 54 teletransportes, frente a los 4419 y 46 de MICRO. Entre los tres modelos convencionales, la prueba 2 (100 m) completa más viajes.
-4. **8000–11000 vehículos:** todas las pruebas MESO muestran congestión importante. LTM suele completar más viajes que el convencional, pero sigue lejos de MICRO a las demandas altas. Con 11 000 vehículos, LTM finaliza 2134 frente a 3722 de MICRO, y registra 962 teletransportes frente a 249.
-5. **Rendimiento:** MESO ejecuta las simulaciones mucho más rápido que MICRO. Con 11 000 vehículos, los tiempos limpios de las cuatro pruebas van de 3,04 a 7,37 s, frente a 18,97 s en MICRO estático.
+1. Entre **3000 y 5000 vehículos**, las cuatro pruebas MESO son parecidas y no tienen teletransportes.
+2. Con **6000 y 7000**, LTM completa más viajes. Por ejemplo, a 7000 llega a **5047 finalizados**, frente a **4419** de MICRO.
+3. Desde **8000 vehículos** aparece mucha congestión en MESO. Con 11 000, LTM finaliza **2134** frente a **3722** de MICRO y tiene **962 teletransportes** frente a **249**.
+4. MESO se ejecuta más rápido: con 11 000 vehículos tarda entre **3,04 y 7,37 s**, frente a **18,97 s** de MICRO estático.
 
-**Conclusión:** la prueba 2 (**MESO convencional, 100 m**) ofrece el comportamiento más equilibrado entre las configuraciones convencionales, mientras que la prueba 4 (**LTM, 100 m**) mejora el número de finalizados en las demandas medias y altas. Sin embargo, ninguna de las cuatro reproduce completamente el comportamiento del MICRO estático con semáforos progresivos, especialmente a partir de 8000 vehículos.
+**Conclusión:** entre las pruebas convencionales, la **prueba 2 (100 m)** da resultados más equilibrados. La **prueba 4 (LTM, 100 m)** completa más viajes en varias demandas medias y altas. Aun así, ninguna reproduce bien el comportamiento de MICRO cuando la demanda supera los 8000 vehículos.
 
 **Referencia técnica:** [SUMO — Simulación mesoscópica](https://sumo.dlr.de/docs/Simulation/Meso.html).
 
