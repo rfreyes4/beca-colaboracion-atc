@@ -1,0 +1,26 @@
+Loading net-file from 'red_7x7/red_7x7.net.xml' ... done (13ms).
+Loading additional-files from 'red_7x7/semaforos.add.xml' ... done (5ms).
+Loading additional-files from 'red_7x7/semaforos_progresivos_rectas.add.xml' ... done (30ms).
+Loading route-files incrementally from 'red_7x7/6000_rutas/rutas_6000.rou.xml'
+Loading done.
+Simulation version 1.28.0 started with time: 0.00.
+Simulation ended at time: 3600.00.
+Reason: The final simulation step has been reached.
+Performance:
+ Duration: 0.49s
+ Real time factor: 7361.96
+ UPS: 3682695.296524
+Vehicles:
+ Inserted: 6001
+ Running: 598
+ Waiting: 0
+Statistics (avg of 5403):
+ RouteLength: 1528.08
+ Speed: 5.49
+ Duration: 307.06
+ WaitingTime: 49.23
+ TimeLoss: 195.24
+ DepartDelay: 0.44
+real 0,56
+user 0,54
+sys 0,02

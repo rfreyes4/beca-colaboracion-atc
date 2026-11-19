@@ -1,0 +1,30 @@
+Loading net-file from '/home/fel1xrr/Escritorio/Proyectos de investigacion/REPO BECA ATC/MAPA_SINTETICO_V4/red_7x7/red_7x7.net.xml' ... done (11ms).
+Loading additional-files from '/home/fel1xrr/Escritorio/Proyectos de investigacion/REPO BECA ATC/MAPA_SINTETICO_V4/red_7x7/semaforos.add.xml' ... done (3ms).
+Loading additional-files from '/home/fel1xrr/Escritorio/Proyectos de investigacion/REPO BECA ATC/MAPA_SINTETICO_V4/red_7x7/semaforos_progresivos_rectas.add.xml' ... done (29ms).
+Loading additional-files from '/home/fel1xrr/Escritorio/Proyectos de investigacion/REPO BECA ATC/MAPA_SINTETICO_V4/meso/auditoria_4_pruebas_20261119_103243_781725/prueba_3_progresivos/6000/medidor_solo_salida.add.xml' ... done (2ms).
+Loading route-files incrementally from '/home/fel1xrr/Escritorio/Proyectos de investigacion/REPO BECA ATC/MAPA_SINTETICO_V4/red_7x7/6000_rutas/rutas_6000.rou.xml'
+Loading done.
+Simulation version 1.28.0 started with time: 0.00.
+Warning: Teleporting vehicle '4791'; waited too long, from edge 'e-j-2-5-a-j-2-6':3, time=3198.11.
+Warning: Vehicle '4791' ends teleporting on edge 'e-j-1-6-a-j-1-5':0, time=3212.50.
+Warning: Teleporting vehicle '4325'; waited too long, from edge 'e-j-2-5-a-j-2-6':3, time=3498.11.
+Warning: Vehicle '4325' teleports beyond arrival edge 'e-j-1-6-a-j-1-5', time=3526.90.
+Simulation ended at time: 3600.00.
+Reason: The final simulation step has been reached.
+Performance:
+ Duration: 0.77s
+ Real time factor: 4693.61
+ UPS: 2592316.818774
+Vehicles:
+ Inserted: 5990 (Loaded: 6001)
+ Running: 769
+ Waiting: 11
+ Teleports: 2 (Jam: 2)
+Statistics (avg of 5990):
+ RouteLength: 1429.55
+ Speed: 5.03
+ Duration: 331.94
+ WaitingTime: 57.29
+ TimeLoss: 218.01
+ DepartDelay: 0.82
+ DepartDelayWaiting: 257.73

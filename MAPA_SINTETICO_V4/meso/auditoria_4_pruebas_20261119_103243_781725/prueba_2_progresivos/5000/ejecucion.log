@@ -1,0 +1,25 @@
+Loading net-file from '/home/fel1xrr/Escritorio/Proyectos de investigacion/REPO BECA ATC/MAPA_SINTETICO_V4/red_7x7/red_7x7.net.xml' ... done (12ms).
+Loading additional-files from '/home/fel1xrr/Escritorio/Proyectos de investigacion/REPO BECA ATC/MAPA_SINTETICO_V4/red_7x7/semaforos.add.xml' ... done (3ms).
+Loading additional-files from '/home/fel1xrr/Escritorio/Proyectos de investigacion/REPO BECA ATC/MAPA_SINTETICO_V4/red_7x7/semaforos_progresivos_rectas.add.xml' ... done (28ms).
+Loading additional-files from '/home/fel1xrr/Escritorio/Proyectos de investigacion/REPO BECA ATC/MAPA_SINTETICO_V4/meso/auditoria_4_pruebas_20261119_103243_781725/prueba_2_progresivos/5000/medidor_solo_salida.add.xml' ... done (3ms).
+Loading route-files incrementally from '/home/fel1xrr/Escritorio/Proyectos de investigacion/REPO BECA ATC/MAPA_SINTETICO_V4/red_7x7/5000_rutas/rutas_5000.rou.xml'
+Loading done.
+Simulation version 1.28.0 started with time: 0.00.
+Simulation ended at time: 3600.00.
+Reason: The final simulation step has been reached.
+Performance:
+ Duration: 0.60s
+ Real time factor: 5980.07
+ UPS: 2251425.249169
+Vehicles:
+ Inserted: 5001
+ Running: 381
+ Waiting: 0
+Statistics (avg of 5001):
+ RouteLength: 1474.03
+ Speed: 5.83
+ Duration: 271.02
+ WaitingTime: 49.41
+ TimeLoss: 161.40
+ DepartDelay: 0.48
+ DepartDelayWaiting: 0.00

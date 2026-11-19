@@ -1,0 +1,31 @@
+Loading net-file from 'red_7x7/red_7x7.net.xml' ... done (11ms).
+Loading additional-files from 'red_7x7/semaforos.add.xml' ... done (6ms).
+Loading additional-files from 'red_7x7/semaforos_progresivos_rectas.add.xml' ... done (29ms).
+Loading route-files incrementally from 'red_7x7/6000_rutas/rutas_6000.rou.xml'
+Loading done.
+Simulation version 1.28.0 started with time: 0.00.
+Warning: Teleporting vehicle '4791'; waited too long, from edge 'e-j-2-5-a-j-2-6':3, time=3198.11.
+Warning: Vehicle '4791' ends teleporting on edge 'e-j-1-6-a-j-1-5':0, time=3212.50.
+Warning: Teleporting vehicle '4325'; waited too long, from edge 'e-j-2-5-a-j-2-6':3, time=3498.11.
+Warning: Vehicle '4325' teleports beyond arrival edge 'e-j-1-6-a-j-1-5', time=3526.90.
+Simulation ended at time: 3600.00.
+Reason: The final simulation step has been reached.
+Performance:
+ Duration: 0.50s
+ Real time factor: 7200
+ UPS: 3976614.000000
+Vehicles:
+ Inserted: 5990 (Loaded: 6001)
+ Running: 769
+ Waiting: 11
+ Teleports: 2 (Jam: 2)
+Statistics (avg of 5221):
+ RouteLength: 1524.61
+ Speed: 5.26
+ Duration: 330.48
+ WaitingTime: 58.02
+ TimeLoss: 218.93
+ DepartDelay: 0.48
+real 0,57
+user 0,55
+sys 0,02

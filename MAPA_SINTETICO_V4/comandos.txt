@@ -1,0 +1,114 @@
+cd "/home/fel1xrr/Escritorio/Proyectos de investigacion/REPO BECA ATC/MAPA_SINTETICO_V4" && \
+sumo-gui \
+  -n red_7x7/red_7x7.net.xml \
+  -r red_7x7/4000_rutas/rutas_4000.rou.xml \
+  -a red_7x7/semaforos_144s.add.xml \
+  --begin 0 \
+  --end 3600 \
+  --seed 42 \
+  --time-to-teleport 300 \
+  --device.rerouting.probability 0
+  
+  
+  
+  cd "/home/fel1xrr/Escritorio/Proyectos de investigacion/REPO BECA ATC/MAPA_SINTETICO_V4" && \
+sumo-gui \
+  -n red_7x7/red_7x7.net.xml \
+  -r red_7x7/4000_rutas/rutas_4000.rou.xml \
+  -a red_7x7/semaforos.add.xml,red_7x7/semaforos_progresivos_rectas.add.xml \
+  --begin 0 \
+  --end 3600 \
+  --seed 42 \
+  --time-to-teleport 300 \
+  --device.rerouting.probability 0
+  
+  cd "/home/fel1xrr/Escritorio/Proyectos de investigacion/REPO BECA ATC/MAPA_SINTETICO_V4" && \
+time sumo \
+  -n red_7x7/red_7x7.net.xml \
+  -r red_7x7/4000_rutas/rutas_4000.rou.xml \
+  -a red_7x7/semaforos.add.xml,red_7x7/semaforos_progresivos_rectas.add.xml \
+  --begin 0 \
+  --end 3600 \
+  --seed 42 \
+  --time-to-teleport 300 \
+  --device.rerouting.probability 0 \
+  --no-step-log true \
+  --duration-log.statistics true \
+  --verbose true
+  
+  
+  
+  cd "/home/fel1xrr/Escritorio/Proyectos de investigacion/REPO BECA ATC/MAPA_SINTETICO_V4" && \
+time sumo \
+  -n red_7x7/red_7x7.net.xml \
+  -r red_7x7/4000_rutas/rutas_4000.rou.xml \
+  -a red_7x7/semaforos.add.xml,red_7x7/semaforos_progresivos_rectas.add.xml \
+  --begin 0 \
+  --end 3600 \
+  --seed 42 \
+  --time-to-teleport 300 \
+  --device.rerouting.probability 0 \
+  --no-step-log true \
+  --duration-log.statistics true \
+  --verbose true \
+  > /dev/null 2>&1
+  
+  
+  
+  cd "/home/fel1xrr/Escritorio/Proyectos de investigacion/REPO BECA ATC/MAPA_SINTETICO_V4" && \
+time sumo \
+  -n red_7x7/red_7x7.net.xml \
+  -r red_7x7/4000_rutas/rutas_4000.rou.xml \
+  -a red_7x7/semaforos.add.xml,red_7x7/semaforos_progresivos_rectas.add.xml \
+  --begin 0 \
+  --end 3600 \
+  --seed 42 \
+  --time-to-teleport 300 \
+  --device.rerouting.probability 1 \
+  --device.rerouting.period 120 \
+  --no-step-log true \
+  --duration-log.statistics true \
+  --verbose true
+  
+  
+  
+  
+  cd "/home/fel1xrr/Escritorio/Proyectos de investigacion/REPO BECA ATC/MAPA_SINTETICO_V4" && \
+time sumo \
+  -n red_7x7/red_7x7.net.xml \
+  -r red_7x7/4000_rutas/rutas_4000.rou.xml \
+  -a red_7x7/semaforos.add.xml,red_7x7/semaforos_progresivos_rectas.add.xml \
+  --begin 0 \
+  --end 3600 \
+  --seed 42 \
+  --time-to-teleport 300 \
+  --device.rerouting.probability 1 \
+  --device.rerouting.period 120 \
+  --no-step-log true \
+  --duration-log.statistics true \
+  --verbose true \
+  > /dev/null 2>&1
+  
+  
+  
+  
+ cd "/home/fel1xrr/Escritorio/Proyectos de investigacion/REPO BECA ATC/MAPA_SINTETICO_V4" && \
+time sumo \
+  -n red_7x7/red_7x7.net.xml \
+  -r red_7x7/4000_rutas/rutas_4000.rou.xml \
+  -a red_7x7/semaforos.add.xml,red_7x7/semaforos_progresivos_rectas.add.xml \
+  --begin 0 \
+  --end 3600 \
+  --seed 42 \
+  --time-to-teleport 300 \
+  --device.rerouting.probability 0 \
+  --mesosim true \
+  --meso-ltm false \
+  --meso-edgelength 100 \
+  --meso-junction-control true \
+  --meso-junction-control.limited false \
+  --meso-jam-threshold -1 \
+  --meso-overtaking false \
+  --no-step-log true \
+  --duration-log.statistics true \
+  --verbose true

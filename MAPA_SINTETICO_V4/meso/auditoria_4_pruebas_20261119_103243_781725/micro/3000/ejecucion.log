@@ -1,0 +1,27 @@
+Loading net-file from '/home/fel1xrr/Escritorio/Proyectos de investigacion/REPO BECA ATC/MAPA_SINTETICO_V4/red_7x7/red_7x7.net.xml' ... done (11ms).
+Loading additional-files from '/home/fel1xrr/Escritorio/Proyectos de investigacion/REPO BECA ATC/MAPA_SINTETICO_V4/red_7x7/semaforos.add.xml' ... done (3ms).
+Loading additional-files from '/home/fel1xrr/Escritorio/Proyectos de investigacion/REPO BECA ATC/MAPA_SINTETICO_V4/red_7x7/semaforos_progresivos_rectas.add.xml' ... done (31ms).
+Loading additional-files from '/home/fel1xrr/Escritorio/Proyectos de investigacion/REPO BECA ATC/MAPA_SINTETICO_V4/meso/auditoria_4_pruebas_20261119_103243_781725/micro/3000/medidor_solo_salida.add.xml' ... done (5ms).
+Loading route-files incrementally from '/home/fel1xrr/Escritorio/Proyectos de investigacion/REPO BECA ATC/MAPA_SINTETICO_V4/red_7x7/3000_rutas/rutas_3000.rou.xml'
+Loading done.
+Simulation version 1.28.0 started with time: 0.00.
+Warning: Vehicle '707' performs emergency braking on lane 'e-ext-o-6-a-j-6-0_0' with decel=9.00, wished=4.50, severity=1.00, time=912.00.
+Simulation ended at time: 3600.00.
+Reason: The final simulation step has been reached.
+Performance:
+ Duration: 1.75s
+ Real time factor: 2059.5
+ UPS: 502526.887872
+Vehicles:
+ Inserted: 2946 (Loaded: 3001)
+ Running: 297
+ Waiting: 55
+ Emergency Braking: 1
+Statistics (avg of 2946):
+ RouteLength: 1455.56
+ Speed: 5.36
+ Duration: 298.17
+ WaitingTime: 149.11
+ TimeLoss: 191.70
+ DepartDelay: 58.81
+ DepartDelayWaiting: 202.22
